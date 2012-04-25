@@ -46,9 +46,38 @@ namespace SecureCheckout
             Stream rsp_stream = response.GetResponseStream();
             StreamReader reader = new StreamReader(rsp_stream);
 
-            
-            lbl_responce.Text = reader.ReadToEnd();
+            string strResponse = reader.ReadToEnd();
+            AddParametersToSession(strResponse);
+            UpdateResponse(strResponse);
+        }
+
+        /// <summary>
+        /// Show a Panel with parsed parameter data
+        /// </summary>
+        /// <param name="strResponse"></param>
+        private void UpdateResponse(string strResponse)
+        {
+            lblResponce.Text = strResponse;
+            lblOrderID.Text = Session["OrderID"].ToString();
+            lblAUTHKEY.Text = Session["AuthKey"].ToString();
+
+            pnl_response.Visible = true;
+        }
+
+        private void AddParametersToSession(string strResponse)
+        {
+            lblResponce.Text = strResponse;
+            string[] parameters = strResponse.Split('|');
+            string OrderID = parameters[0].Split('~')[1];
+            string AUTHKEY = parameters[1].Split('~')[1];
+            Session["OrderID"] = OrderID;
+            Session["AuthKey"] = AUTHKEY;
+
+            string url = "https://paytrace.com/api/checkout.pay?parmList=orderID~{0}|AuthKey~{1}|";
+
+            lnkSendToBilling.NavigateUrl = string.Format(url,OrderID,AUTHKEY);
 
         }
     }
+
 }

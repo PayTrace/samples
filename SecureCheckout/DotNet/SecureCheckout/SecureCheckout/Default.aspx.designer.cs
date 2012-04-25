@@ -22,12 +22,48 @@ namespace SecureCheckout {
         protected global::System.Web.UI.WebControls.Button btnStartOrder;
         
         /// <summary>
-        /// lbl_responce control.
+        /// pnl_response control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_responce;
+        protected global::System.Web.UI.WebControls.Panel pnl_response;
+        
+        /// <summary>
+        /// lblResponce control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResponce;
+        
+        /// <summary>
+        /// lblOrderID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOrderID;
+        
+        /// <summary>
+        /// lblAUTHKEY control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAUTHKEY;
+        
+        /// <summary>
+        /// lnkSendToBilling control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkSendToBilling;
     }
 }
