@@ -22,10 +22,17 @@ namespace SecureCheckout
             //format parameters for request 
             string parameters = "UN~demo123|PSWD~demo123|TERMS~Y|TRANXTYPE~Sale|";
             parameters += "ORDERID~1234|AMOUNT~1.00|";
-            SendPayTraceSecureCheckoutRequest(parameters);
+
+            string return_url = @"http://" + Request.Url.Authority + @"/finished.aspx";
+            parameters += "ReturnURL~" + return_url + "|";
+            
+            parameters += "ApproveURL~" + return_url + "|";
+
+            parameters += "DeclineURL~" + return_url + "|";
+            SendValidationRequest(parameters);
         }
 
-        private void SendPayTraceSecureCheckoutRequest(string Parameters)
+        private void SendValidationRequest(string Parameters)
         {
             string parameter_list ="PARMLIST=";
 
@@ -47,7 +54,7 @@ namespace SecureCheckout
             StreamReader reader = new StreamReader(rsp_stream);
 
             string strResponse = reader.ReadToEnd();
-            AddParametersToSession(strResponse);
+            ParseResponse(strResponse);
             UpdateResponse(strResponse);
         }
 
@@ -58,25 +65,29 @@ namespace SecureCheckout
         private void UpdateResponse(string strResponse)
         {
             lblResponce.Text = strResponse;
-            lblOrderID.Text = Session["OrderID"].ToString();
-            lblAUTHKEY.Text = Session["AuthKey"].ToString();
-
+            lblOrderID.Text =   (string)Session["OrderID"];
+            lblAUTHKEY.Text = (string)Session["AuthKey"];
+            string url = "https://paytrace.com/api/checkout.pay?parmList=orderID~{0}|AuthKey~{1}";
+            
+            lnkSendToBilling.NavigateUrl = string.Format(url, lblOrderID.Text, lblAUTHKEY.Text);
             pnl_response.Visible = true;
         }
 
-        private void AddParametersToSession(string strResponse)
+        private void ParseResponse(string strResponse)
         {
-            lblResponce.Text = strResponse;
-            string[] parameters = strResponse.Split('|');
-            string OrderID = parameters[0].Split('~')[1];
-            string AUTHKEY = parameters[1].Split('~')[1];
-            Session["OrderID"] = OrderID;
-            Session["AuthKey"] = AUTHKEY;
-
-            string url = "https://paytrace.com/api/checkout.pay?parmList=orderID~{0}|AuthKey~{1}|";
-
-            lnkSendToBilling.NavigateUrl = string.Format(url,OrderID,AUTHKEY);
-
+            if (!strResponse.Contains("ERROR"))
+            {
+                lblResponce.Text = strResponse;
+                string[] parameters = strResponse.Split('|');
+                string OrderID = parameters[0].Split('~')[1];
+                string AUTHKEY = parameters[1].Split('~')[1];
+                Session["OrderID"] = OrderID;
+                Session["AuthKey"] = AUTHKEY;
+            }
+            else
+            {
+                lblResponce.Text = strResponse;
+            }
         }
     }
 
