@@ -1,0 +1,5 @@
+C:\DevProjects\VB\SecureCheckout\bin\SecureCheckout.dll
+C:\DevProjects\VB\SecureCheckout\bin\SecureCheckout.pdb
+C:\DevProjects\VB\SecureCheckout\obj\Debug\ResolveAssemblyReference.cache
+C:\DevProjects\VB\SecureCheckout\obj\Debug\SecureCheckout.dll
+C:\DevProjects\VB\SecureCheckout\obj\Debug\SecureCheckout.pdb
