@@ -21,14 +21,13 @@ namespace SecureCheckout
         {
             //format parameters for request 
             string parameters = "UN~demo123|PSWD~demo123|TERMS~Y|TRANXTYPE~Sale|";
-            parameters += "ORDERID~1234|AMOUNT~1.00|";
+            parameters += "ORDERID~1234|AMOUNT~1.12|";
 
-            string return_url = @"http://" + Request.Url.Authority + @"/finished.aspx";
-            parameters += "ReturnURL~" + return_url + "|";
+            string return_url = @"http://" + Request.Url.Authority;
             
-            parameters += "ApproveURL~" + return_url + "|";
+            parameters += "ApproveURL~" + return_url + "/Approved.aspx|";
 
-            parameters += "DeclineURL~" + return_url + "|";
+            parameters += "DeclineURL~" + return_url + "/Declined.aspx|";
             SendValidationRequest(parameters);
         }
 
