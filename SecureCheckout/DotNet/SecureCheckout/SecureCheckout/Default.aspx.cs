@@ -20,8 +20,8 @@ namespace SecureCheckout
         protected void btnStartOrder_OnClick(object sender, EventArgs e)
         {
             //format parameters for request 
-            // to get an approval Set AMOUNT~1.00
-            // to get a decline Set AMOUNT~1.12
+            // to get an approval amount set: AMOUNT~1.00
+            // to get a declined amount set: AMOUNT~1.12
             string parameters = "UN~demo123|PSWD~demo123|TERMS~Y|TRANXTYPE~Sale|";
             parameters += "ORDERID~1234|AMOUNT~1.00|";
 
