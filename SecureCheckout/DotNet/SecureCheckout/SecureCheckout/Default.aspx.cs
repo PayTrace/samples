@@ -20,14 +20,17 @@ namespace SecureCheckout
         protected void btnStartOrder_OnClick(object sender, EventArgs e)
         {
             //format parameters for request 
+            // to get an approval Set AMOUNT~1.00
+            // to get a decline Set AMOUNT~1.12
             string parameters = "UN~demo123|PSWD~demo123|TERMS~Y|TRANXTYPE~Sale|";
-            parameters += "ORDERID~1234|AMOUNT~1.12|";
+            parameters += "ORDERID~1234|AMOUNT~1.00|";
 
             string return_url = @"http://" + Request.Url.Authority;
             
             parameters += "ApproveURL~" + return_url + "/Approved.aspx|";
 
             parameters += "DeclineURL~" + return_url + "/Declined.aspx|";
+
             SendValidationRequest(parameters);
         }
 
@@ -43,24 +46,25 @@ namespace SecureCheckout
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = bytes.Length;
+            
+            // send validation request
             Stream str = request.GetRequestStream();
             str.Write(bytes, 0, bytes.Length);
             str.Flush();
             str.Close();
 
+            // get response and parse
             WebResponse response = request.GetResponse();
             Stream rsp_stream = response.GetResponseStream();
             StreamReader reader = new StreamReader(rsp_stream);
 
+            // read the response string
             string strResponse = reader.ReadToEnd();
             ParseResponse(strResponse);
             UpdateResponse(strResponse);
         }
 
-        /// <summary>
-        /// Show a Panel with parsed parameter data
-        /// </summary>
-        /// <param name="strResponse"></param>
+  
         private void UpdateResponse(string strResponse)
         {
             lblResponce.Text = strResponse;
@@ -74,6 +78,7 @@ namespace SecureCheckout
 
         private void ParseResponse(string strResponse)
         {
+            // if we have errors if so output to ui
             if (!strResponse.Contains("ERROR"))
             {
                 lblResponce.Text = strResponse;
