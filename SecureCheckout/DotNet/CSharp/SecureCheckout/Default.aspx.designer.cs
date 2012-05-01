@@ -22,6 +22,15 @@ namespace SecureCheckout {
         protected global::System.Web.UI.WebControls.Button btnStartOrder;
         
         /// <summary>
+        /// txtSilentPost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSilentPost;
+        
+        /// <summary>
         /// pnl_response control.
         /// </summary>
         /// <remarks>

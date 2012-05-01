@@ -31,6 +31,11 @@ namespace SecureCheckout
 
             parameters += "DeclineURL~" + return_url + "/Declined.aspx|";
 
+            if (txtSilentPost.Text.Length > 0)
+            {
+                parameters += "returnURL~" + Server.UrlEncode(txtSilentPost.Text) + "|";
+            }
+
             SendValidationRequest(parameters);
         }
 
@@ -38,10 +43,10 @@ namespace SecureCheckout
         {
             string parameter_list ="PARMLIST=";
 
-            parameter_list = parameter_list +  Parameters; 
+            parameter_list +=  Parameters; 
             ASCIIEncoding encoding = new ASCIIEncoding();
             byte[] bytes = encoding.GetBytes(parameter_list);
-
+            
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://paytrace.com/api/validate.pay");
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
@@ -72,7 +77,9 @@ namespace SecureCheckout
             lblAUTHKEY.Text = (string)Session["AuthKey"];
             string url = "https://paytrace.com/api/checkout.pay?parmList=orderID~{0}|AuthKey~{1}";
             
+
             lnkSendToBilling.NavigateUrl = string.Format(url, lblOrderID.Text, lblAUTHKEY.Text);
+
             pnl_response.Visible = true;
         }
 
