@@ -22,6 +22,15 @@ Namespace SecureCheckout
 		Protected btnStartOrder As Global.System.Web.UI.WebControls.Button
 
 		''' <summary>
+		''' txtSilentPost control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected txtSilentPost As Global.System.Web.UI.WebControls.TextBox
+
+		''' <summary>
 		''' pnl_response control.
 		''' </summary>
 		''' <remarks>

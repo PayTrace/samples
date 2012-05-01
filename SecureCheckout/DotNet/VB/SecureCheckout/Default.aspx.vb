@@ -25,13 +25,17 @@ Namespace SecureCheckout
 
 			parameters &= "DeclineURL~" & return_url & "/Declined.aspx|"
 
+			If txtSilentPost.Text.Length > 0 Then
+				parameters &= "returnURL~" & Server.UrlEncode(txtSilentPost.Text) & "|"
+			End If
+
 			SendValidationRequest(parameters)
 		End Sub
 
 		Private Sub SendValidationRequest(ByVal Parameters As String)
 			Dim parameter_list As String ="PARMLIST="
 
-			parameter_list = parameter_list & Parameters
+			parameter_list &= Parameters
 			Dim encoding As New ASCIIEncoding()
 			Dim bytes() As Byte = encoding.GetBytes(parameter_list)
 
@@ -66,7 +70,9 @@ Namespace SecureCheckout
 			lblAUTHKEY.Text = CStr(Session("AuthKey"))
 			Dim url As String = "https://paytrace.com/api/checkout.pay?parmList=orderID~{0}|AuthKey~{1}"
 
+
 			lnkSendToBilling.NavigateUrl = String.Format(url, lblOrderID.Text, lblAUTHKEY.Text)
+
 			pnl_response.Visible = True
 		End Sub
 

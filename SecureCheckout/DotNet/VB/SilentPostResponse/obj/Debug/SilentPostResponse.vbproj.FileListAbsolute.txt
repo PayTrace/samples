@@ -1,0 +1,10 @@
+C:\Projects\vb\SilentPostResponse\bin\SilentPostResponse.dll
+C:\Projects\vb\SilentPostResponse\bin\SilentPostResponse.pdb
+C:\Projects\vb\SilentPostResponse\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\vb\SilentPostResponse\obj\Debug\SilentPostResponse.dll
+C:\Projects\vb\SilentPostResponse\obj\Debug\SilentPostResponse.pdb
+C:\Projects\samples\SecureCheckout\DotNet\VB\SilentPostResponse\bin\SilentPostResponse.dll
+C:\Projects\samples\SecureCheckout\DotNet\VB\SilentPostResponse\bin\SilentPostResponse.pdb
+C:\Projects\samples\SecureCheckout\DotNet\VB\SilentPostResponse\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\SecureCheckout\DotNet\VB\SilentPostResponse\obj\Debug\SilentPostResponse.dll
+C:\Projects\samples\SecureCheckout\DotNet\VB\SilentPostResponse\obj\Debug\SilentPostResponse.pdb

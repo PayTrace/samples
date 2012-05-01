@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="PostModelModelStoreContainer" CdmEntityContainer="PostModelEntities">
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="PostModelModel.Post">
+        <MappingFragment StoreEntitySet="Posts">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AppCode" ColumnName="AppCode" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

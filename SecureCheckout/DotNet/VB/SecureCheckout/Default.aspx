@@ -9,6 +9,7 @@
 	</h2>
 	<p>
 		  <asp:Button runat="server" ID="btnStartOrder" Text=" click to start order" OnClick="btnStartOrder_OnClick" />
+		  <p>ResponseURL: <asp:TextBox runat="server" ID="txtSilentPost" /></p>
 	</p>
 	<asp:Panel ID="pnl_response" runat="server" Visible="false">
 		<fieldset >
@@ -18,7 +19,6 @@
 
 			<p>Order ID: <asp:Label runat="server" ID="lblOrderID" /></p>
 			<p>Auth Key: <asp:Label runat="server" ID="lblAUTHKEY" /></p>
-
 			<asp:HyperLink runat="server" ID="lnkSendToBilling" Text="Send to billing page."  />
 		</fieldset>
 	</asp:Panel>
