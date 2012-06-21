@@ -5,11 +5,8 @@ using System.Text;
 
 namespace PayTrace.Integration
 {
-    public enum AgreeToTerms
+    public class Authorization
     {
-        YES,
-        NO
-    }
 
-    
+    }
 }

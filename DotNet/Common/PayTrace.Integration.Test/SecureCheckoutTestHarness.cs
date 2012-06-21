@@ -3,6 +3,8 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PayTrace.Integration;
+
 
 namespace PayTrace.Integration.Test
 {
@@ -64,7 +66,11 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void Validate_new_order()
         {
-            
+
+            //SecureCheckout Checkout = new SecureCheckout( new Authentication());
+            //Authorization responce = Checkout.GetAuthorization();
+
+            //Assert.IsNotNull(responce);
         }
     }
 }

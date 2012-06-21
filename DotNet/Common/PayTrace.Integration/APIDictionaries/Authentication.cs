@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PayTrace.Integration.APIDictionaries
+namespace PayTrace.Integration
 {
     public class Authentication
     {
@@ -13,5 +13,6 @@ namespace PayTrace.Integration.APIDictionaries
 
         public AgreeToTerms AgreeToTerms { get; set; }
 
+       
     }
 }

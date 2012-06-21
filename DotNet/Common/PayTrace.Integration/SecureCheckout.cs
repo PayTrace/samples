@@ -7,6 +7,16 @@ namespace PayTrace.Integration
 {
     public class SecureCheckout
     {
-        
+        public readonly Authentication _authentication;
+
+        public SecureCheckout(Authentication authentication)
+        {
+            _authentication = authentication;
+        }
+
+        public Authorization GetAuthorization()
+        {
+            throw new NotImplementedException();         
+        }
     }
 }

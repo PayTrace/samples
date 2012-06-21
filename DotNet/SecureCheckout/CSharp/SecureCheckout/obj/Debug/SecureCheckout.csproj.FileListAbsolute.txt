@@ -13,3 +13,8 @@ C:\Projects\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\bin\SecureChecko
 C:\Projects\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\obj\Debug\SecureCheckout.dll
 C:\Projects\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\obj\Debug\SecureCheckout.pdb
+C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\bin\SecureCheckout.dll
+C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\bin\SecureCheckout.pdb
+C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\obj\Debug\ResolveAssemblyReference.cache
+C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\obj\Debug\SecureCheckout.dll
+C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SecureCheckout\obj\Debug\SecureCheckout.pdb
