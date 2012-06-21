@@ -43,6 +43,7 @@
     <Compile Include="APIDictionaries\Authentication.cs" />
     <Compile Include="APIDictionaries\Terms.cs" />
     <Compile Include="API\APIParser.cs" />
+    <Compile Include="API\ResponseError.cs" />
     <Compile Include="Interfaces\IAPIService.cs" />
     <Compile Include="API\Responce.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

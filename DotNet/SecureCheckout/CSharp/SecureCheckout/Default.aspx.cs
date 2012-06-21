@@ -22,8 +22,9 @@ namespace SecureCheckout
             //format parameters for request 
             // to get an approval amount set: AMOUNT~1.00
             // to get a declined amount set: AMOUNT~1.12
+            // to get amount error set: AMOUNT~0.00
             string parameters = "UN~demo123|PSWD~demo123|TERMS~Y|TRANXTYPE~Sale|";
-            parameters += "ORDERID~1234|AMOUNT~1.00|";
+            parameters += "ORDERID~1234|AMOUNT~0.xx|";
 
             string return_url = @"http://" + Request.Url.Authority;
             
