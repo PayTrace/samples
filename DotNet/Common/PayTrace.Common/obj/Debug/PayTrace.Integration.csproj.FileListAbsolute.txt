@@ -1,0 +1,8 @@
+C:\Projects\samples\DotNet\Common\PayTrace.Common\bin\Debug\PayTrace.Integration.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Common\bin\Debug\PayTrace.Integration.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Common\bin\Debug\StructureMap.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Common\bin\Debug\StructureMap.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Common\bin\Debug\StructureMap.xml
+C:\Projects\samples\DotNet\Common\PayTrace.Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\DotNet\Common\PayTrace.Common\obj\Debug\PayTrace.Integration.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Common\obj\Debug\PayTrace.Integration.pdb
