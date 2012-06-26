@@ -57,6 +57,19 @@ namespace PayTrace.Integration.Test
             Assert.AreEqual(ServiceResponse.ResponseValues["TestValue2"], also_expected);
         }
 
+        [TestMethod]
+        public void API_Builder_should_return_api_formatted_string()
+        {
+            Dictionary<string, string> api = new Dictionary<string, string>();
+            api.Add("Test1", "Value 1");
+            api.Add("Test2", "Value 2");
+
+            string api_call = APIBuilder.BuildAPICall(api);
+
+            Assert.AreEqual("Test1~Value 1|Test2~Value 2|", api_call);
+    
+        }
+
 
 
     }
