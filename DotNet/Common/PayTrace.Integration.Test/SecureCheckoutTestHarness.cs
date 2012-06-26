@@ -61,8 +61,13 @@ namespace PayTrace.Integration.Test
         //
         #endregion
 
-        
-        
+
+        [TestMethod]
+        public void Should_return_string_formated_for_api()
+        {
+
+        }
+
         [TestMethod]
         public void Validate_new_order()
         {

@@ -24,3 +24,16 @@ C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debu
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.pdb
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.xml
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\PayTrace.Integration.Test.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.Test.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.Test.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\Moq.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\Moq.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\Moq.xml
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.xml
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\PayTrace.Integration.Test.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\PayTrace.Integration.Test.pdb

@@ -5,8 +5,8 @@ using System.Text;
 
 namespace PayTrace.Integration.Interfaces
 {
-    interface IAPIService
+    public interface IAPIRequest
     {
-        Response SendRequest(string paramters);
+        string GetFormattedRequest();
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PayTrace.Integration;
+using PayTrace.Integration.API;
 
 namespace PayTrace.Integration.Test
 {
@@ -55,5 +56,8 @@ namespace PayTrace.Integration.Test
             Assert.AreEqual(ServiceResponse.ResponseValues["TestValue1"], expected);
             Assert.AreEqual(ServiceResponse.ResponseValues["TestValue2"], also_expected);
         }
+
+
+
     }
 }

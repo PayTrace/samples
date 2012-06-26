@@ -11,3 +11,8 @@ C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\bin\Debug\Pay
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\ResolveAssemblyReference.cache
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\PayTrace.Integration.dll
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\PayTrace.Integration.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Integration\bin\Debug\PayTrace.Integration.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Integration\bin\Debug\PayTrace.Integration.pdb
+C:\Projects\samples\DotNet\Common\PayTrace.Integration\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\samples\DotNet\Common\PayTrace.Integration\obj\Debug\PayTrace.Integration.dll
+C:\Projects\samples\DotNet\Common\PayTrace.Integration\obj\Debug\PayTrace.Integration.pdb

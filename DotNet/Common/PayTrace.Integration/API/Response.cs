@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace PayTrace.Integration
+namespace PayTrace.Integration.API
 {
-    public class Response
+    public class Response 
     {
         public bool HasError { get; set; } 
         public string Raw { get { return response; } }

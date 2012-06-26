@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PayTrace.Integration
+namespace PayTrace.Integration.API
 {
     internal class APIParser
     {
@@ -20,5 +20,6 @@ namespace PayTrace.Integration
 
             return pairs;
         }
+
     }
 }
