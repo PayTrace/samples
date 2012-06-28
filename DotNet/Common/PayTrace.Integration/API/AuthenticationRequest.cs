@@ -16,7 +16,7 @@ namespace PayTrace.Integration.API
 
 
 
-        public Dictionary<string, string> to_PayTraceAPI()
+        public Dictionary<string, string> ToAPI()
         {
             throw new NotImplementedException();
         }

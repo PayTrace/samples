@@ -12,7 +12,7 @@ namespace PayTrace.Integration.SecureCheckout
             throw new NotImplementedException(); 
         }
 
-        public Dictionary<string,string> to_PayTraceAPI()
+        public Dictionary<string,string> ToAPI()
         {
             
             throw new NotImplementedException();

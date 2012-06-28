@@ -61,6 +61,15 @@ namespace PayTrace.Integration.Test.TestData {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to TESTBOOLEAN.
+        /// </summary>
+        internal static string TestBoolean {
+            get {
+                return ResourceManager.GetString("TestBoolean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TestValue.
         /// </summary>
         internal static string TestKey {

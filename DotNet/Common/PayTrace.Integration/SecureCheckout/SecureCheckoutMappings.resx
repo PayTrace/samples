@@ -120,6 +120,9 @@
   <data name="ApprovalURL" xml:space="preserve">
     <value>APPROVEURL</value>
   </data>
+  <data name="DeclineURL" xml:space="preserve">
+    <value>DECLINEURL</value>
+  </data>
   <data name="ForceAddress" xml:space="preserve">
     <value>FORCEADDRESS</value>
   </data>

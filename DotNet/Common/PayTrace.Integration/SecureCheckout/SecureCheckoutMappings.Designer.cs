@@ -70,6 +70,15 @@ namespace PayTrace.Integration.SecureCheckout {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DECLINEURL.
+        /// </summary>
+        internal static string DeclineURL {
+            get {
+                return ResourceManager.GetString("DeclineURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to FORCEADDRESS.
         /// </summary>
         internal static string ForceAddress {

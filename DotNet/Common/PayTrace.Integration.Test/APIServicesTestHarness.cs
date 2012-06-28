@@ -85,6 +85,31 @@ namespace PayTrace.Integration.Test
 
         }
 
+        [TestMethod]
+        public void DictionaryBuilder_should_return_Y_if_true_for_boolean_poperties()
+        {
+            DictionaryBuilder DBuilder = new DictionaryBuilder(TestNameMap.ResourceManager);
+
+            DBuilder.Add("TestBoolean", true);
+
+            var actual = DBuilder.ToDictionary();
+
+            Assert.AreEqual(actual["TESTBOOLEAN"], "Y");
+            
+        }
+
+        [TestMethod]
+        public void DictionaryBuilder_should_not_contain_a_value_if_boolean_false()
+        {
+            DictionaryBuilder DBuilder = new DictionaryBuilder(TestNameMap.ResourceManager);
+
+            DBuilder.Add("TestBoolean", false);
+
+            var actual = DBuilder.ToDictionary();
+
+            Assert.IsFalse(actual.Any(x => x.Key == "TESTBOOLEAN"));
+        }
+
 
 
     }

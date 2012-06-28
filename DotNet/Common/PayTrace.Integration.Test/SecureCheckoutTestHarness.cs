@@ -63,7 +63,7 @@ namespace PayTrace.Integration.Test
         #endregion
 
 
-        [IgnoreAttribute]
+        [TestMethod]
         public void OrderValidation_Should_Return_be_able_to_generate_API_Format()
         {
             OrderValidation order = new OrderValidation();
@@ -75,7 +75,13 @@ namespace PayTrace.Integration.Test
             order.ForceEmail = true;
             order.OrderID = "1234";
 
-            var validation_items =  order.to_PayTraceAPI();
+            var validation_items =  order.ToAPI();
+            Assert.AreEqual(validation_items["APPROVEURL"], "www.example.com/approval.html");
+            Assert.AreEqual(validation_items["DECLINEURL"], "www.example.com/decline.html");
+            Assert.AreEqual(validation_items["FORCEEMAIL"], "Y");
+            Assert.IsFalse(validation_items.Any(x => x.Key == "FORCEADDRESS"));
+            Assert.AreEqual(validation_items["ORDERID"], "1234");
+
             
         }
 

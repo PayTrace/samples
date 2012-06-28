@@ -21,8 +21,21 @@ namespace PayTrace.Integration.API
 
         public void Add(string property, string value)
         {
-            APIAttributeValues.Add(Manager.GetString(property), value);
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                APIAttributeValues.Add(Manager.GetString(property), value);
+            }
         }
+
+        public void Add(string property, bool value)
+        {
+            if(value)
+            {
+                APIAttributeValues.Add(Manager.GetString(property), "Y");
+            }
+        }
+
+       
 
        
 

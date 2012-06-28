@@ -7,6 +7,6 @@ namespace PayTrace.Integration.Interfaces
 {
     public interface IAPIRequest
     {
-        Dictionary<string,string> to_PayTraceAPI();
+        Dictionary<string,string> ToAPI();
     }
 }
