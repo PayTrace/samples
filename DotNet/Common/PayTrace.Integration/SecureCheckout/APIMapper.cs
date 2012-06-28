@@ -10,7 +10,10 @@ namespace PayTrace.Integration.SecureCheckout
     internal class APIMapper
     {
         public readonly Dictionary<string, string> PropertyToAPIMapings;
-
+        
+        
+   
+        
         public APIMapper()
         {
             PropertyToAPIMapings = GetMappings();

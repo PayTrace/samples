@@ -5,6 +5,8 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PayTrace.Integration;
 using PayTrace.Integration.API;
+using PayTrace.Integration.SecureCheckout;
+using PayTrace.Integration.Test.TestData;
 
 namespace PayTrace.Integration.Test
 {
@@ -68,6 +70,19 @@ namespace PayTrace.Integration.Test
 
             Assert.AreEqual("Test1~Value 1|Test2~Value 2|", api_call);
     
+        }
+
+        [TestMethod]
+        public void API_DictionaryBuilder_should_return_a_dictionary()
+        {
+            DictionaryBuilder DBuilder = new DictionaryBuilder(TestNameMap.ResourceManager);
+
+            DBuilder.Add("TestKey", "1234");
+
+            var actual = DBuilder.ToDictionary();
+
+            Assert.AreEqual(actual["TestValue"], "1234");
+
         }
 
 

@@ -7,8 +7,14 @@ namespace PayTrace.Integration.SecureCheckout
 {
     public class SecureCheckoutRequest : IAPIRequest
     {
-        public string GetFormattedRequest()
+        public string SendValidationRequest()
         {
+            throw new NotImplementedException(); 
+        }
+
+        public Dictionary<string,string> to_PayTraceAPI()
+        {
+            
             throw new NotImplementedException();
         }
     }

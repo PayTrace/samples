@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PayTrace.Integration;
+using PayTrace.Integration.SecureCheckout;
 
 
 namespace PayTrace.Integration.Test
@@ -62,10 +63,20 @@ namespace PayTrace.Integration.Test
         #endregion
 
 
-        [TestMethod]
-        public void Should_return_string_formated_for_api()
+        [IgnoreAttribute]
+        public void OrderValidation_Should_Return_be_able_to_generate_API_Format()
         {
+            OrderValidation order = new OrderValidation();
 
+            order.ApprovalURL = "www.example.com/approval.html";
+            order.DeclineURL = "www.example.com/decline.html";
+            order.ReturnURL = "www.example.com/return.html";
+            order.ForceAddress = false;
+            order.ForceEmail = true;
+            order.OrderID = "1234";
+
+            var validation_items =  order.to_PayTraceAPI();
+            
         }
 
         [TestMethod]

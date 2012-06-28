@@ -17,8 +17,8 @@ namespace PayTrace.Integration.API
             }
 
             return api_builder.ToString();
-
-
         }
+
+        
     }
 }
