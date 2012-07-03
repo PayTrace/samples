@@ -10,28 +10,25 @@ namespace PayTrace.Integration.API
 {
     public class DictionaryBuilder
     {
-
-        private ResourceManager Manager;
-        public DictionaryBuilder(ResourceManager resourceManager)
+        public DictionaryBuilder()
         {
-            Manager = resourceManager;
         }
 
         private Dictionary<string, string> APIAttributeValues = new Dictionary<string, string>();
 
-        public void Add(string property, string value)
+        public void Add(string attribute, string value)
         {
             if (!string.IsNullOrWhiteSpace(value))
             {
-                APIAttributeValues.Add(Manager.GetString(property), value);
+                APIAttributeValues.Add(attribute, value);
             }
         }
 
-        public void Add(string property, bool value)
+        public void Add(string attribute, bool value)
         {
             if(value)
             {
-                APIAttributeValues.Add(Manager.GetString(property), "Y");
+                APIAttributeValues.Add(attribute, "Y");
             }
         }
 
@@ -42,6 +39,14 @@ namespace PayTrace.Integration.API
         public Dictionary<string, string> ToDictionary()
         {
             return APIAttributeValues;
+        }
+
+        public void AppendDictionary(Dictionary<string, string> dictionary)
+        {
+            foreach (var item in dictionary)
+            {
+                APIAttributeValues.Add(item.Key, item.Value);
+            }
         }
     }
 }

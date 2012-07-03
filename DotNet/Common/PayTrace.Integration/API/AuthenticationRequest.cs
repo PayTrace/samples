@@ -11,14 +11,20 @@ namespace PayTrace.Integration.API
 
         public string Password { get; set; }
 
-        public AgreeToTerms AgreeToTerms { get; set; }
+        public bool AgreeToTerms { get; set; }
 
 
 
 
         public Dictionary<string, string> ToAPI()
         {
-            throw new NotImplementedException();
+            DictionaryBuilder Builder = new DictionaryBuilder();
+            Builder.Add(AuthenticationMappings.UserName, UserName);
+            Builder.Add(AuthenticationMappings.Password, Password);
+            Builder.Add(AuthenticationMappings.Terms, AgreeToTerms);
+
+            return Builder.ToDictionary();
         }
+
     }
 }

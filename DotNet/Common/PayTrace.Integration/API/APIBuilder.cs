@@ -11,11 +11,10 @@ namespace PayTrace.Integration.API
         {
             StringBuilder api_builder = new StringBuilder();
             string formatString = "{0}~{1}|";
-            foreach(var item in api_dictionary)
+            foreach (var item in api_dictionary)
             {
-                api_builder.Append(string.Format(formatString,item.Key, item.Value));
+                api_builder.Append(string.Format(formatString, item.Key, item.Value));
             }
-
             return api_builder.ToString();
         }
 

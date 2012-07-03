@@ -17,5 +17,20 @@ namespace PayTrace.Integration.SecureCheckout
             
             throw new NotImplementedException();
         }
+
+        #region IAPIRequest Members
+
+
+        public bool IsValid
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public List<string> GetValidationErrors()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }

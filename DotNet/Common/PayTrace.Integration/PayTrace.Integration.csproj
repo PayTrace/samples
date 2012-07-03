@@ -52,11 +52,13 @@
     <Compile Include="API\DictionaryBuilder.cs" />
     <Compile Include="API\ResponseError.cs" />
     <Compile Include="API\Response.cs" />
+    <Compile Include="Interfaces\IAPIClient.cs" />
     <Compile Include="SecureCheckout\APIMapper.cs" />
     <Compile Include="Interfaces\IAPIRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecureCheckout\Authorization.cs" />
     <Compile Include="SecureCheckout\DictionaryList.cs" />
+    <Compile Include="SecureCheckout\SecureCheckout.cs" />
     <Compile Include="SecureCheckout\SecureCheckoutMappings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,8 +66,12 @@
     </Compile>
     <Compile Include="SecureCheckout\SecureCheckoutRequest.cs" />
     <Compile Include="SecureCheckout\OrderValidation.cs" />
+    <Compile Include="SecureCheckout\ValidationResponse.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="API\APIAttributes.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

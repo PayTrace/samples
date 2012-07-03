@@ -61,6 +61,15 @@ namespace PayTrace.Integration.SecureCheckout {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AMOUNT.
+        /// </summary>
+        internal static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to APPROVEURL.
         /// </summary>
         internal static string ApprovalURL {
@@ -120,6 +129,15 @@ namespace PayTrace.Integration.SecureCheckout {
         internal static string ReturnURL {
             get {
                 return ResourceManager.GetString("ReturnURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TRANXTYPE.
+        /// </summary>
+        internal static string TransactionType {
+            get {
+                return ResourceManager.GetString("TransactionType", resourceCulture);
             }
         }
     }

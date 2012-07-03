@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PayTrace.Integration;
 using PayTrace.Integration.SecureCheckout;
+using PayTrace.Integration.API;
 
 
 namespace PayTrace.Integration.Test
@@ -66,8 +67,9 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void OrderValidation_Should_Return_be_able_to_generate_API_Format()
         {
-            OrderValidation order = new OrderValidation();
+            OrderValidation order = new OrderValidation(new AuthenticationRequest());
 
+            order.Amount = 1.00m;
             order.ApprovalURL = "www.example.com/approval.html";
             order.DeclineURL = "www.example.com/decline.html";
             order.ReturnURL = "www.example.com/return.html";
@@ -85,14 +87,11 @@ namespace PayTrace.Integration.Test
             
         }
 
-        [TestMethod]
-        public void Validate_new_order()
-        {
-
-            //SecureCheckout Checkout = new SecureCheckout( new Authentication());
-            //Authorization responce = Checkout.GetAuthorization();
-
-            //Assert.IsNotNull(responce);
-        }
+        //[TestMethod]
+        //public void Validate_new_order()
+        //{
+        //    var order_info = new OrderValidation();
+        //    order_info.ApprovalURL = 
+        //}
     }
 }

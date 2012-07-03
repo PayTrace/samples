@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using PayTrace.Integration.API;
 
 namespace PayTrace.Integration.Interfaces
 {
-    public interface IAPIRequest
+    public interface IAPIClient
     {
-        Dictionary<string,string> ToAPI();
-       
+        Response SendRequest(IAPIRequest request);
     }
 }

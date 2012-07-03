@@ -11,6 +11,7 @@ namespace PayTrace.Integration.SecureCheckout
     public class OrderValidation :IAPIRequest
     {
         public string ReturnURL { get; set; }
+        public decimal Amount { get; set; }
         public string ApprovalURL { get; set; }
         public string DeclineURL { get; set; }
         public bool ForceEmail { get; set; }
@@ -18,34 +19,38 @@ namespace PayTrace.Integration.SecureCheckout
         public bool ForceCSC { get; set; }
         public string OrderID { get; set; }
 
+        private AuthenticationRequest _authorization = null;
+        public AuthenticationRequest Authentication
+        {   get 
+            {
+                return _authorization;
+            }
+        }
+
+        
         protected  string TransactionType = "Sale";
 
 
+        public OrderValidation(AuthenticationRequest authorization)
+        {
+            _authorization = authorization;
+        }
+
         public Dictionary<string,string> ToAPI()
         {
-            DictionaryBuilder Builder = new DictionaryBuilder(SecureCheckoutMappings.ResourceManager);
+            DictionaryBuilder Builder = new DictionaryBuilder();
 
-            var propertiesList = this.GetType().GetProperties();
-          
-            foreach (var propertyinfo in propertiesList)
-            {
-                var value = propertyinfo.GetValue(this, null);
-                
-                if(value == null)
-                {
-                    continue;
-                }
-                
-                if (value is bool)
-                {
-                    Builder.Add(propertyinfo.Name,(bool)value);
-                }
-                else
-                {
-                    Builder.Add(propertyinfo.Name, value.ToString());
-                }
-            }
-            
+            Builder.Add(SecureCheckoutMappings.OrderID, OrderID);
+            Builder.Add(SecureCheckoutMappings.Amount, Amount.ToString());
+            Builder.Add(SecureCheckoutMappings.ReturnURL, ReturnURL);
+            Builder.Add(SecureCheckoutMappings.ApprovalURL, ApprovalURL);
+            Builder.Add(SecureCheckoutMappings.DeclineURL, DeclineURL);
+            Builder.Add(SecureCheckoutMappings.ForceAddress, ForceAddress);
+            Builder.Add(SecureCheckoutMappings.ForceEmail, ForceEmail);
+            Builder.Add(SecureCheckoutMappings.ForceCSC, ForceCSC);
+            Builder.Add(SecureCheckoutMappings.TransactionType, TransactionType);
+            Builder.AppendDictionary(Authentication.ToAPI());
+
             return Builder.ToDictionary();
         }
 
@@ -57,13 +62,15 @@ namespace PayTrace.Integration.SecureCheckout
             }
             else
             {
-
                 return Activator.CreateInstance(property.PropertyType);
             }
 
             
 
         }
+
+
+
 
        
     }

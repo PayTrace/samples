@@ -75,9 +75,9 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void API_DictionaryBuilder_should_return_a_dictionary()
         {
-            DictionaryBuilder DBuilder = new DictionaryBuilder(TestNameMap.ResourceManager);
+            DictionaryBuilder DBuilder = new DictionaryBuilder();
 
-            DBuilder.Add("TestKey", "1234");
+            DBuilder.Add(TestNameMap.TestKey, "1234");
 
             var actual = DBuilder.ToDictionary();
 
@@ -88,9 +88,9 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void DictionaryBuilder_should_return_Y_if_true_for_boolean_poperties()
         {
-            DictionaryBuilder DBuilder = new DictionaryBuilder(TestNameMap.ResourceManager);
-
-            DBuilder.Add("TestBoolean", true);
+            DictionaryBuilder DBuilder = new DictionaryBuilder();
+      
+            DBuilder.Add(TestNameMap.TestBoolean, true);
 
             var actual = DBuilder.ToDictionary();
 
@@ -101,9 +101,9 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void DictionaryBuilder_should_not_contain_a_value_if_boolean_false()
         {
-            DictionaryBuilder DBuilder = new DictionaryBuilder(TestNameMap.ResourceManager);
+            DictionaryBuilder DBuilder = new DictionaryBuilder();
 
-            DBuilder.Add("TestBoolean", false);
+            DBuilder.Add(TestNameMap.TestBoolean, false);
 
             var actual = DBuilder.ToDictionary();
 
