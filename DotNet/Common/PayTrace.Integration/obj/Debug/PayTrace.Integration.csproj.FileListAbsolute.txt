@@ -1,7 +1,5 @@
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\ResolveAssemblyReference.cache
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\PayTrace.Integration.API.APIDestinations.resources
-C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\PayTrace.Integration.API.AuthenticationMappings.resources
-C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\PayTrace.Integration.SecureCheckout.SecureCheckoutMappings.resources
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\GenerateResource.read.1.tlog
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\obj\Debug\GenerateResource.write.1.tlog
 C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration\bin\Debug\PayTrace.Integration.dll

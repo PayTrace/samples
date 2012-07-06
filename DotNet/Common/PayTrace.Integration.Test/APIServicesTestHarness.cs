@@ -5,8 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PayTrace.Integration;
 using PayTrace.Integration.API;
-using PayTrace.Integration.SecureCheckout;
-using PayTrace.Integration.Test.TestData;
+
 
 namespace PayTrace.Integration.Test
 {
@@ -87,11 +86,11 @@ namespace PayTrace.Integration.Test
         {
             APIRequestBuilder DBuilder = new APIRequestBuilder();
 
-            DBuilder.Add(TestNameMap.TestKey, "1234");
+            DBuilder.Add(Keys.ORDERID, "1234");
 
             var actual = DBuilder.ToAPI();
 
-            Assert.AreEqual(actual["TestValue"], "1234");
+            Assert.AreEqual(actual[Keys.ORDERID], "1234");
 
         }
 
@@ -100,11 +99,11 @@ namespace PayTrace.Integration.Test
         {
             APIRequestBuilder DBuilder = new APIRequestBuilder();
       
-            DBuilder.Add(TestNameMap.TestBoolean, true);
+            DBuilder.Add(Keys.FORCECSC, true);
 
             var actual = DBuilder.ToAPI();
 
-            Assert.AreEqual(actual["TESTBOOLEAN"], "Y");
+            Assert.AreEqual(actual[Keys.FORCECSC], "Y");
             
         }
 
@@ -113,14 +112,14 @@ namespace PayTrace.Integration.Test
         {
             APIRequestBuilder DBuilder = new APIRequestBuilder();
 
-            DBuilder.Add(TestNameMap.TestBoolean, false);
+            DBuilder.Add(Keys.FORCEADDRESS, false);
 
             var actual = DBuilder.ToAPI();
 
             
             
 
-            Assert.IsFalse(actual.Any(x => x.Key == "TESTBOOLEAN"));
+            Assert.IsFalse(actual.Any(x => x.Key == Keys.FORCEADDRESS));
         }
 
 
