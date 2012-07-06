@@ -33,7 +33,7 @@ namespace PayTrace.Integration.API
                 return;
             }
 
-            ResponseValues = APIParser.ParseAPIMessage(response);
+            ResponseValues = Parser.ParseAPIMessage(response);
         }
 
         

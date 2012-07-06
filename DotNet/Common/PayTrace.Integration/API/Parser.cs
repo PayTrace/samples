@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PayTrace.Integration.API
 {
-    internal class APIParser
+    internal class Parser
     {
         public static Dictionary<string, string> ParseAPIMessage(string raw_response)
         {

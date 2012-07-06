@@ -7,6 +7,6 @@ namespace PayTrace.Integration.API
 {
     public class Destinations 
     {
-        public static Uri Validation { get { return new Uri( APIDestinations.Validation); } }
+        public static Uri Validation { get { return new Uri( DestinationList.Validation); } }
     }
 }

@@ -18,7 +18,7 @@ namespace PayTrace.Integration.Test
             string raw_response = "TestValue1~1|TestValue2~2";
             string expected = "1";
 
-            Dictionary<string, string> name_value_pairs = APIParser.ParseAPIMessage(raw_response);
+            Dictionary<string, string> name_value_pairs = Parser.ParseAPIMessage(raw_response);
             Assert.AreEqual(name_value_pairs["TestValue1"], expected);
         }
 
@@ -28,7 +28,7 @@ namespace PayTrace.Integration.Test
             string raw_response = "TestValue1~1|TestValue2~2|";
             string expected = "1";
 
-            Dictionary<string, string> name_value_pairs = APIParser.ParseAPIMessage(raw_response);
+            Dictionary<string, string> name_value_pairs = Parser.ParseAPIMessage(raw_response);
             Assert.AreEqual(name_value_pairs["TestValue1"], expected);
         }
 
@@ -69,22 +69,22 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
-        public void API_Builder_should_return_api_formatted_string()
+        public void Formatter_should_return_api_formatted_string()
         {
             Dictionary<string, string> api = new Dictionary<string, string>();
             api.Add("Test1", "Value 1");
             api.Add("Test2", "Value 2");
 
-            string api_call = APIBuilder.BuildAPICall(api);
+            string api_call = Formatter.BuildAPICall(api);
 
             Assert.AreEqual("Test1~Value 1|Test2~Value 2|", api_call);
     
         }
 
         [TestMethod]
-        public void APIRequestBuilder_should_return_a_dictionary()
+        public void Request_should_return_a_dictionary()
         {
-            APIRequestBuilder DBuilder = new APIRequestBuilder();
+            Request DBuilder = new Request();
 
             DBuilder.Add(Keys.ORDERID, "1234");
 
@@ -95,9 +95,9 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
-        public void APIRequestBuilder_should_return_Y_if_true_for_boolean_poperties()
+        public void Request_should_return_Y_if_true_for_boolean_poperties()
         {
-            APIRequestBuilder DBuilder = new APIRequestBuilder();
+            Request DBuilder = new Request();
       
             DBuilder.Add(Keys.FORCECSC, true);
 
@@ -108,9 +108,9 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
-        public void APIRequestBuilder_should_not_contain_a_value_if_boolean_false()
+        public void Request_should_not_contain_a_value_if_boolean_false()
         {
-            APIRequestBuilder DBuilder = new APIRequestBuilder();
+            Request DBuilder = new Request();
 
             DBuilder.Add(Keys.FORCEADDRESS, false);
 
@@ -118,6 +118,8 @@ namespace PayTrace.Integration.Test
 
             Assert.IsFalse(actual.Any(x => x.Key == Keys.FORCEADDRESS));
         }
+
+        
 
 
 

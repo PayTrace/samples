@@ -16,7 +16,7 @@ namespace PayTrace.Integration.API
 
         public Response SendRequest(IAPIRequest request)
         {
-            string parameters = APIBuilder.BuildAPICall(request.ToAPI());
+            string parameters = Formatter.BuildAPICall(request.ToAPI());
 
             Response response = new Response(SendRequest(parameters, request.Destination));
 

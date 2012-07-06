@@ -9,16 +9,16 @@ using PayTrace.Integration.Interfaces;
 
 namespace PayTrace.Integration.API
 {
-    public class APIRequestBuilder : IAPIRequest
+    public class Request : IAPIRequest
     {
         public Uri Destination{get;set;}
         
-        public APIRequestBuilder(Uri destination)
+        public Request(Uri destination)
         {
             Destination = destination;
         }
 
-        public APIRequestBuilder() { }
+        public Request() { }
 
 
         private Dictionary<string, string> APIAttributeValues = new Dictionary<string, string>();
@@ -54,6 +54,12 @@ namespace PayTrace.Integration.API
             {
                 APIAttributeValues.Add(item.Key, item.Value);
             }
+        }
+
+        public Response Send()
+        {
+            Client client = new Client();
+            return client.SendRequest(this);
         }
 
 

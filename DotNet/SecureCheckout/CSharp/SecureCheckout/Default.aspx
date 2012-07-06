@@ -9,7 +9,7 @@
     </h2>
     <p>
           <asp:Button runat="server" ID="btnStartOrder" Text=" click to start order" OnClick="btnStartOrder_OnClick" />
-          <p>ResponseURL: <asp:TextBox runat="server" ID="txtSilentPost" /></p>
+          <p>ResponseURL: <asp:TextBox runat="server" ID="txtSilentPost" CssClass="textEntry"/></p>
     </p>
     <asp:Panel ID="pnl_response" runat="server" Visible="false">
         <fieldset >

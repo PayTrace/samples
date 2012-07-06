@@ -40,17 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\APIDestinations.Designer.cs">
+    <Compile Include="API\DestinationList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>APIDestinations.resx</DependentUpon>
+      <DependentUpon>DestinationList.resx</DependentUpon>
     </Compile>
     <Compile Include="API\Client.cs" />
     <Compile Include="API\Destinations.cs" />
     <Compile Include="API\Keys.cs" />
-    <Compile Include="API\APIBuilder.cs" />
-    <Compile Include="API\APIParser.cs" />
-    <Compile Include="API\APIRequestBuilder.cs" />
+    <Compile Include="API\Formatter.cs" />
+    <Compile Include="API\Parser.cs" />
+    <Compile Include="API\Request.cs" />
     <Compile Include="API\ResponseError.cs" />
     <Compile Include="API\Response.cs" />
     <Compile Include="Interfaces\IAPIClient.cs" />
@@ -58,9 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="API\APIDestinations.resx">
+    <EmbeddedResource Include="API\DestinationList.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>APIDestinations.Designer.cs</LastGenOutput>
+      <LastGenOutput>DestinationList.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

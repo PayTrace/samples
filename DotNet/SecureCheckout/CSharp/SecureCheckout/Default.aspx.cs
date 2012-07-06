@@ -26,34 +26,35 @@ namespace SecureCheckout
             // to get a declined amount set: AMOUNT~1.12
             // to get amount error set: AMOUNT~0.00
 
-            APIRequestBuilder apiBuilder = new APIRequestBuilder(Destinations.Validation);
+            Request request = new Request(Destinations.Validation);
 
-            apiBuilder.Add(Keys.UN, "demo123");
-            apiBuilder.Add(Keys.PSWD, "demo123");
-            apiBuilder.Add(Keys.TERMS, "Y");
-            apiBuilder.Add(Keys.TRANXTYPE, "Sale");
-            apiBuilder.Add(Keys.ORDERID, "1234");
-            apiBuilder.Add(Keys.AMOUNT, "1.00");
+            request.Add(Keys.UN, "demo123");
+            request.Add(Keys.PSWD, "demo123");
+            request.Add(Keys.TERMS, "Y");
+            request.Add(Keys.TRANXTYPE, "Sale");
+            request.Add(Keys.ORDERID, "1234");
+            request.Add(Keys.AMOUNT, "1.00");
 
             if (txtSilentPost.Text.Length > 0)
             {
-                apiBuilder.Add(Keys.RETURNURL,Server.UrlEncode(txtSilentPost.Text));
+                request.Add(Keys.RETURNURL,Server.UrlEncode(txtSilentPost.Text));
             }
 
             string return_url = @"http://" + Request.Url.Authority;
             
-            apiBuilder.Add(Keys.APPROVEURL, return_url + "/Approved.aspx");
-            apiBuilder.Add(Keys.DECLINEURL, return_url + "/Declined.aspx");
+            request.Add(Keys.APPROVEURL, return_url + "/Approved.aspx");
+            request.Add(Keys.DECLINEURL, return_url + "/Declined.aspx");
 
-            Client client = new Client();
-            Response response = client.SendRequest(apiBuilder);
+
+            Response response = request.Send();
             
-            BindeData(response);
+            BindData(response);
 
         }
 
 
-        private void BindeData(Response response)
+
+        private void BindData(Response response)
         {
             // if we have errors output to ui
             ClearPanel();

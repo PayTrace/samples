@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PayTrace.Integration.API
 {
-    internal class APIBuilder
+    internal class Formatter
     {
         public static string BuildAPICall(Dictionary<string,string> api_dictionary)
         {

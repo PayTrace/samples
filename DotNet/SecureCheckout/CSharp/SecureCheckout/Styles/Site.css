@@ -221,8 +221,9 @@ legend
 
 input.textEntry 
 {
-    width: 320px;
+    width: 450px;
     border: 1px solid #ccc;
+    height:25px;
 }
 
 input.passwordEntry 
