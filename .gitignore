@@ -1,7 +1,10 @@
+Bin/
 Bin/*
 Bin/**/*
+bin/
 bin/*
 bin/**/*
+obj/
 obj/*
 obj/**/*
 Debug/*

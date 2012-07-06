@@ -9,7 +9,7 @@ using PayTrace.Integration.Interfaces;
 
 namespace PayTrace.Integration.API
 {
-    public class Request : IAPIRequest
+    public class Request : IRequest
     {
         public Uri Destination{get;set;}
         

@@ -6,8 +6,8 @@ using PayTrace.Integration.API;
 
 namespace PayTrace.Integration.Interfaces
 {
-    public interface IAPIClient
+    public interface IClient
     {
-        Response SendRequest(IAPIRequest request);
+        Response SendRequest(IRequest request);
     }
 }

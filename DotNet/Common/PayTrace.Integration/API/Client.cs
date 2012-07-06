@@ -9,12 +9,12 @@ using PayTrace.Integration.Interfaces;
 using System.Net;
 namespace PayTrace.Integration.API
 {
-    public class Client : IAPIClient
+    class Client : IClient
     {
 
         #region IAPIClient Members
 
-        public Response SendRequest(IAPIRequest request)
+        public Response SendRequest(IRequest request)
         {
             string parameters = Formatter.BuildAPICall(request.ToAPI());
 
