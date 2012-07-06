@@ -1,0 +1,16 @@
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\ResolveAssemblyReference.cache
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\PayTrace.Integration.Test.TestData.TestNameMap.resources
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\GenerateResource.read.1.tlog
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\GenerateResource.write.1.tlog
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.Test.dll
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.Test.pdb
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\Moq.dll
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.dll
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.dll
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\PayTrace.Integration.pdb
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\Moq.pdb
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\Moq.xml
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.pdb
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\bin\Debug\StructureMap.xml
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\PayTrace.Integration.Test.dll
+C:\DevProjects\paytrace\samples\DotNet\Common\PayTrace.Integration.Test\obj\Debug\PayTrace.Integration.Test.pdb

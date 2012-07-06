@@ -11,9 +11,15 @@ namespace PayTrace.Integration.API
 {
     public class APIRequestBuilder : IAPIRequest
     {
-        public APIRequestBuilder()
+        public Uri Destination{get;set;}
+        
+        public APIRequestBuilder(Uri destination)
         {
+            Destination = destination;
         }
+
+        public APIRequestBuilder() { }
+
 
         private Dictionary<string, string> APIAttributeValues = new Dictionary<string, string>();
 

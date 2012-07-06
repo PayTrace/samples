@@ -26,7 +26,7 @@ namespace SecureCheckout
             // to get a declined amount set: AMOUNT~1.12
             // to get amount error set: AMOUNT~0.00
 
-            APIRequestBuilder apiBuilder = new APIRequestBuilder();
+            APIRequestBuilder apiBuilder = new APIRequestBuilder(Destinations.Validation);
 
             apiBuilder.Add(Keys.UN, "demo123");
             apiBuilder.Add(Keys.PSWD, "demo123");

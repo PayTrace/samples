@@ -18,12 +18,12 @@ namespace PayTrace.Integration.API
         {
             string parameters = APIBuilder.BuildAPICall(request.ToAPI());
 
-            Response response = new Response(SendRequest(parameters));
+            Response response = new Response(SendRequest(parameters, request.Destination));
 
             return response;
         }
 
-        private string SendRequest(string parameters)
+        private string SendRequest(string parameters, Uri destination)
         {
             string parameter_list = "PARMLIST=";
 
@@ -31,7 +31,7 @@ namespace PayTrace.Integration.API
             ASCIIEncoding encoding = new ASCIIEncoding();
             byte[] bytes = encoding.GetBytes(parameter_list);
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://paytrace.com/api/validate.pay");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(destination);
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = bytes.Length;

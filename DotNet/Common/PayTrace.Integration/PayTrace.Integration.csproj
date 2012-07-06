@@ -40,7 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\APIDestinations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APIDestinations.resx</DependentUpon>
+    </Compile>
     <Compile Include="API\Client.cs" />
+    <Compile Include="API\Destinations.cs" />
     <Compile Include="API\Keys.cs" />
     <Compile Include="API\AuthenticationMappings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -68,12 +74,13 @@
     <Compile Include="SecureCheckout\ValidationResponse.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="API\APIAttributes.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="API\APIDestinations.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>APIDestinations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="API\AuthenticationMappings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AuthenticationMappings.Designer.cs</LastGenOutput>

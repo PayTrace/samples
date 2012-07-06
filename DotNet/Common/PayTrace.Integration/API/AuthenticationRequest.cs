@@ -26,5 +26,21 @@ namespace PayTrace.Integration.API
             return Builder.ToAPI();
         }
 
+
+        #region IAPIRequest Members
+
+        public Uri Destination
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        #endregion
     }
 }
