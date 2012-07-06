@@ -38,7 +38,7 @@ namespace PayTrace.Integration.SecureCheckout
 
         public Dictionary<string,string> ToAPI()
         {
-            DictionaryBuilder Builder = new DictionaryBuilder();
+            APIRequestBuilder Builder = new APIRequestBuilder();
 
             Builder.Add(SecureCheckoutMappings.OrderID, OrderID);
             Builder.Add(SecureCheckoutMappings.Amount, Amount.ToString());
@@ -51,7 +51,7 @@ namespace PayTrace.Integration.SecureCheckout
             Builder.Add(SecureCheckoutMappings.TransactionType, TransactionType);
             Builder.AppendDictionary(Authentication.ToAPI());
 
-            return Builder.ToDictionary();
+            return Builder.ToAPI();
         }
 
         private object get_type(System.Reflection.PropertyInfo property)

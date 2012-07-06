@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Client.cs" />
+    <Compile Include="API\Keys.cs" />
     <Compile Include="API\AuthenticationMappings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -49,15 +51,12 @@
     <Compile Include="APIDictionaries\Terms.cs" />
     <Compile Include="API\APIBuilder.cs" />
     <Compile Include="API\APIParser.cs" />
-    <Compile Include="API\DictionaryBuilder.cs" />
+    <Compile Include="API\APIRequestBuilder.cs" />
     <Compile Include="API\ResponseError.cs" />
     <Compile Include="API\Response.cs" />
     <Compile Include="Interfaces\IAPIClient.cs" />
-    <Compile Include="SecureCheckout\APIMapper.cs" />
     <Compile Include="Interfaces\IAPIRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecureCheckout\Authorization.cs" />
-    <Compile Include="SecureCheckout\DictionaryList.cs" />
     <Compile Include="SecureCheckout\SecureCheckout.cs" />
     <Compile Include="SecureCheckout\SecureCheckoutMappings.Designer.cs">
       <AutoGen>True</AutoGen>

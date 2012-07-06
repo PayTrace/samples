@@ -5,12 +5,13 @@ using System.Text;
 using System.Resources;
 using System.Collections;
 using System.Reflection;
+using PayTrace.Integration.Interfaces;
 
 namespace PayTrace.Integration.API
 {
-    public class DictionaryBuilder
+    public class APIRequestBuilder : IAPIRequest
     {
-        public DictionaryBuilder()
+        public APIRequestBuilder()
         {
         }
 
@@ -32,11 +33,11 @@ namespace PayTrace.Integration.API
             }
         }
 
-       
 
-       
 
-        public Dictionary<string, string> ToDictionary()
+
+
+        public Dictionary<string, string> ToAPI()
         {
             return APIAttributeValues;
         }
@@ -48,5 +49,9 @@ namespace PayTrace.Integration.API
                 APIAttributeValues.Add(item.Key, item.Value);
             }
         }
+
+
+
+       
     }
 }

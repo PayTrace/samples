@@ -18,12 +18,12 @@ namespace PayTrace.Integration.API
 
         public Dictionary<string, string> ToAPI()
         {
-            DictionaryBuilder Builder = new DictionaryBuilder();
+            APIRequestBuilder Builder = new APIRequestBuilder();
             Builder.Add(AuthenticationMappings.UserName, UserName);
             Builder.Add(AuthenticationMappings.Password, Password);
             Builder.Add(AuthenticationMappings.Terms, AgreeToTerms);
 
-            return Builder.ToDictionary();
+            return Builder.ToAPI();
         }
 
     }

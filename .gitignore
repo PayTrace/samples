@@ -1,7 +1,12 @@
-bin/
-obj/
-Debug/
+Bin/*
+Bin/**/*
+bin/*
+bin/**/*
+obj/*
+obj/**/*
+Debug/*
+Debug/**/*
 TestResults/
 Local.testsettings
 TraceAndTestImpact.testsettings
-SecureCheckout.vsmdi
+SecureCheckout.vsmdi	

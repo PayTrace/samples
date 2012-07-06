@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADDTAX" xml:space="preserve">
+    <value>ADDTAX</value>
+    <comment>Any tax generated from freight or other services associated with the transaction.</comment>
+  </data>
+  <data name="ADDTAXIND" xml:space="preserve">
+    <value>ADDTAXIND</value>
+    <comment>A flag used to indicate where additional tax was included in this transaction.</comment>
+  </data>
+  <data name="ADDTAXINDLI" xml:space="preserve">
+    <value>ADDTAXINDLI</value>
+    <comment>Descriptor used to describe additional tax that is applied to the transaction amount in reference to this specific line item.</comment>
+  </data>
+  <data name="ADDTAXLI" xml:space="preserve">
+    <value>ADDTAXLI</value>
+    <comment>Additional tax amount applied to the transaction applicable to this line item record.</comment>
+  </data>
+  <data name="ADDTAXRATE" xml:space="preserve">
+    <value>ADDTAXRATE</value>
+    <comment>Rate at which additional tax was assessed.</comment>
+  </data>
+  <data name="ADDTAXRATELI" xml:space="preserve">
+    <value>ADDTAXRATELI</value>
+    <comment>Rate at which additional tax was calculated in reference to this specific line item record.</comment>
+  </data>
+  <data name="AMOUNT" xml:space="preserve">
+    <value>AMOUNT</value>
+    <comment>Dollar amount of the transaction. Must be a positive number up to two decimal places.</comment>
+  </data>
+  <data name="AMOUNTLI" xml:space="preserve">
+    <value>AMOUNTLI</value>
+    <comment>Total amount included in the transaction amount generated from this line item record.</comment>
+  </data>
+  <data name="APPROVAL" xml:space="preserve">
+    <value>APPROVAL</value>
+    <comment>Approval code for the forced sale is only required and used if TranxType is set to 'Force'.</comment>
+  </data>
+  <data name="ApprovalUrl" xml:space="preserve">
+    <value>APPROVEURL</value>
+    <comment>Optional URL that the customer will have the option of selecting if their transaction is approved via the PayTrace API Secure Checkout</comment>
+  </data>
+  <data name="BATCHNUMBER" xml:space="preserve">
+    <value>BATCHNUMBER</value>
+    <comment>Number of the batch of transactions you wish to export via an ExportBatch request</comment>
+  </data>
+  <data name="BADDRESS" xml:space="preserve">
+    <value>BADDRESS</value>
+    <comment>Address that the credit card statement is delivered.</comment>
+  </data>
+  <data name="BADDRESS2" xml:space="preserve">
+    <value>BADDRESS2</value>
+    <comment>Second line of the address the credit card statement is delivered.</comment>
+  </data>
+  <data name="BCITY" xml:space="preserve">
+    <value>BCITY</value>
+    <comment>City that the credit card statement is delivered.</comment>
+  </data>
+  <data name="BCOUNTRY" xml:space="preserve">
+    <value>BCOUNTRY</value>
+    <comment>Country code where the billing address is located</comment>
+  </data>
+  <data name="BNAME" xml:space="preserve">
+    <value>BNAME</value>
+    <comment>Name that appears of the credit card.</comment>
+  </data>
+  <data name="BSTATE" xml:space="preserve">
+    <value>BSTATE</value>
+    <comment>State that the credit card statement is delivered.</comment>
+  </data>
+  <data name="BZIP" xml:space="preserve">
+    <value>BZIP</value>
+    <comment>Zip code that the credit card statement is delivered.</comment>
+  </data>
+  <data name="CASHADVANCE" xml:space="preserve">
+    <value>CASHADVANCE</value>
+    <comment>The attribute causes a  Sale transaction to be processed as a cash advance where cash is given to the customer as opposed to a product or service. Please note that Cash Advances may only be processed on accounts that are set up on the TSYS/Vital network and are configured to process Cash Advances. Also, only swiped/card present Sales may include the CashAdvance parameter</comment>
+  </data>
+  <data name="CHECKID" xml:space="preserve">
+    <value>CHECKID</value>
+    <comment>A unique identifier for each transaction in the PayTrace
+system. This value is returned in the CHECKIDENTIFIER parameter of an API response and will consequently be included in requests to email receipts, manage checks, etc.</comment>
+  </data>
+  <data name="CHECKTYPE" xml:space="preserve">
+    <value>CHECKTYPE</value>
+    <comment>The transaction type is the type of transaction you wish to process if the METHOD is set to ProcessCheck. CHECKTYPE must be set to one of the following: Sale, Hold, Refund, Fund, or Void.</comment>
+  </data>
+  <data name="CCODE" xml:space="preserve">
+    <value>CCODE</value>
+    <comment>Commodity code that generally applies to each product included in the order. Commodity codes are generally assigned by your merchant service provider.</comment>
+  </data>
+  <data name="CCODELI" xml:space="preserve">
+    <value>CCODELI</value>
+    <comment>The complete commodity code unique to the product referenced in this specific line item record. Commodity codes are generally assigned by your merchant service provider</comment>
+  </data>
+  <data name="CC" xml:space="preserve">
+    <value>CC</value>
+    <comment>Customer's credit card number must be a valid credit card number that your PayTrace account is set up to accept.</comment>
+  </data>
+  <data name="CSC" xml:space="preserve">
+    <value>CSC</value>
+    <comment>CSC is the 3 or 4 digit code found on the signature line of the credit card. CSC is found on the front of Amex cards.</comment>
+  </data>
+  <data name="CUSTOMDBA" xml:space="preserve">
+    <value>CUSTOMDBA</value>
+    <comment>Optional value that is sent to the cardholder’s issuer and overrides the business name stored in PayTrace. Custom DBA values are only used with requests to process sales or authorizations through accounts on the TSYS/Vital, Heartland, and Trident networks.</comment>
+  </data>
+  <data name="CUSTID" xml:space="preserve">
+    <value>CUSTID</value>
+    <comment>Unique identifier for a customer profile. Each customer must have their own unique ID.</comment>
+  </data>
+  <data name="CUSTPSWD" xml:space="preserve">
+    <value>CUSTPSWD</value>
+    <comment>Password that customer uses to log into customer profile in shopping cart. Only required if you are using the PayTrace shopping cart.</comment>
+  </data>
+  <data name="CUSTRECEIPT" xml:space="preserve">
+    <value>CUSTRECEIPT</value>
+    <comment>Defaulted to N, the customer receipt must be set to Y if a receipt should be emailed to the customer each time the recurring transaction is processed.</comment>
+  </data>
+  <data name="CUSTREF" xml:space="preserve">
+    <value>CUSTREF</value>
+    <comment>Customer reference ID is only used for transactions that are identified as corporate or purchasing credit cards. The customer reference ID is an identifier that your customer may ask you to provide in order to reference the transaction to their credit card statement.</comment>
+  </data>
+  <data name="CUSTOMERTAXID" xml:space="preserve">
+    <value>CUSTOMERTAXID</value>
+    <comment>Customer’s tax identifier used for tax reporting purposes</comment>
+  </data>
+  <data name="DDA" xml:space="preserve">
+    <value>DDA</value>
+    <comment>Checking account number for processing check transactions or managing customer profiles.</comment>
+  </data>
+  <data name="DCIND" xml:space="preserve">
+    <value>DCIND</value>
+    <comment>Flag used to determine whether the line item amount was a debit or a credit to the customer. Generally always a debit or a factor that increased the transaction amount. Possible values are D (net is a debit) and C (net is a credit).</comment>
+  </data>
+  <data name="DECLINEURL" xml:space="preserve">
+    <value>DECLINEURL</value>
+    <comment>Optional URL that the customer will have the option of selecting if their transaction is declined via the PayTrace API Secure Checkout</comment>
+  </data>
+  <data name="DISCOUNTIND" xml:space="preserve">
+    <value>DISCOUNTIND</value>
+    <comment>Flag used to indicate whether discount was applied to the transaction amount in reference to this specific line item record.</comment>
+  </data>
+  <data name="DISCOUNTLI" xml:space="preserve">
+    <value>DISCOUNTLI</value>
+    <comment>Discount amount applied to the transaction amount in reference to this line item record.</comment>
+  </data>
+  <data name="DISCOUNTRATE" xml:space="preserve">
+    <value>DISCOUNTRATE</value>
+    <comment>Rate at which discount was applied to the transaction in reference to this specific line item.</comment>
+  </data>
+  <data name="DUTY" xml:space="preserve">
+    <value>DUTY</value>
+    <comment>Duty should represent any costs associated with shipping through a country’s customs.</comment>
+  </data>
+  <data name="DESCRIPTION" xml:space="preserve">
+    <value>DESCRIPTION</value>
+    <comment>Optional text describing the transaction, products, customers, or other attributes of the transaction.</comment>
+  </data>
+  <data name="DISCOUNT" xml:space="preserve">
+    <value>DISCOUNT</value>
+    <comment>Discount value should represent the amount discounted from the original transaction amount</comment>
+  </data>
+  <data name="ACHCODE" xml:space="preserve">
+    <value>ACHCODE</value>
+    <comment>Flag that is returned for checks processed through a real-time check processor. 0/zero indicates that the check was accepted.</comment>
+  </data>
+  <data name="ACHMSG" xml:space="preserve">
+    <value>ACHMSG</value>
+    <comment>Message returned from real-time check processor</comment>
+  </data>
+  <data name="APPCODE" xml:space="preserve">
+    <value>APPCODE</value>
+    <comment>Approval code is generated by credit card issuer and returned when a successful call to ProcessTranx is requested.</comment>
+  </data>
+  <data name="APPMSG" xml:space="preserve">
+    <value>APPMSG</value>
+    <comment>Approval message is the textual response from the credit card issuer that is returned when a successful call to ProcessTranx is requested.</comment>
+  </data>
+  <data name="AUTHKEY" xml:space="preserve">
+    <value>AUTHKEY</value>
+    <comment>Authorization key is returned with a successful request to validate an order through the PayTrace API Secure Checkout.</comment>
+  </data>
+  <data name="AVSRESPONSE" xml:space="preserve">
+    <value>AVSRESPONSE</value>
+    <comment>The address verification system response is generated by the
+credit card issuer when a successful call to ProcessTranx is
+requested. AVS compares the billing address and billing zip code
+provided with the ProcessTranx request to the address where the
+customer's credit card statement is delivered. See Appendix B for
+possible AVS responses</comment>
+  </data>
+  <data name="BALANCEAMOUNT" xml:space="preserve">
+    <value>BALANCEAMOUNT</value>
+    <comment>Remaining balance on a prepaid or debit card. This value will only
+be returned if ENABLEPARTIALAUTH is set to Y.</comment>
+  </data>
+  <data name="BATCHNUM" xml:space="preserve">
+    <value>BATCHNUM</value>
+    <comment>Batch number is returned with a successful request to settle
+transactions. This value is the sequential number assigned to the
+batch that was initiated.</comment>
+  </data>
+  <data name="CHECKIDENTIFIER" xml:space="preserve">
+    <value>CHECKIDENTIFIER</value>
+    <comment>ID assigned by PayTrace to each check at the time the check is
+processed. CHECKIDENTIFIER is returned with a successful call to
+ProcessCheck.</comment>
+  </data>
+  <data name="CSCRESPONSE" xml:space="preserve">
+    <value>CSCRESPONSE</value>
+    <comment>The card security code response is generated by the credit card
+issuer when a successful call to the ProcessTranx is requested. The
+CSC provided with the ProcessTranx request. is compared to the
+CSC assigned to the credit card. See Appendix B for possible AVS
+responses</comment>
+  </data>
+  <data name="CUSTOMERID" xml:space="preserve">
+    <value>CUSTOMERID</value>
+    <comment>ID assigned by PayTrace to each customer at the time the
+customer profile is created. CustomerID is returned with a
+successful call to CreateCustomer or UpdateCustomer.</comment>
+  </data>
+  <data name="CUSTOMERRECORD" xml:space="preserve">
+    <value>CUSTOMERRECORD</value>
+    <comment>Formatted customer record returned when a successful call to
+ExportCustomers method is requested.</comment>
+  </data>
+  <data name="EDATE" xml:space="preserve">
+    <value>EDATE</value>
+    <comment>End date is used for export functions to indicate when to end searching for items to export. Must be a valid date formatted as MM/DD/YYYY</comment>
+  </data>
+  <data name="EMAIL" xml:space="preserve">
+    <value>EMAIL</value>
+    <comment>Customer's email address where the sales receipt may be sent.</comment>
+  </data>
+  <data name="ENABLEPARTIALAUTH" xml:space="preserve">
+    <value>ENABLEPARTIALAUTH</value>
+    <comment>Flag that must be set to ‘Y’ in order to support partial authorization and balance amounts in transaction responses.</comment>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>ERROR</value>
+    <comment>PayTrace validates each name / value pair it receives. If any errors
+or inconsistencies in this data or the request, PayTrace will return
+an error. Each request may return multiple errors.</comment>
+  </data>
+  <data name="EXPMNTH" xml:space="preserve">
+    <value>EXPMNTH</value>
+    <comment>Expiration month must be the two-digit month of the credit cards expiration date.</comment>
+  </data>
+  <data name="EXPYR" xml:space="preserve">
+    <value>EXPYR</value>
+    <comment>Expiration year must be the two digit year of the credit cards expiration date.</comment>
+  </data>
+  <data name="FAX" xml:space="preserve">
+    <value>FAX</value>
+    <comment>Customer's fax number (i.e. (555)555-5555, 555-555-5555, or 5555555555).</comment>
+  </data>
+  <data name="FORCEADDRESS" xml:space="preserve">
+    <value>FORCEADDRESS</value>
+    <comment>Setting in the PayTrace API Secure Checkout that may be set to ‘Y’ if the customer’s complete billing address is required.</comment>
+  </data>
+  <data name="FORCECSC" xml:space="preserve">
+    <value>FORCECSC</value>
+    <comment>Setting in the PayTrace API Secure Checkout that may be set to ‘Y’ if the customer’s CSC is required.</comment>
+  </data>
+  <data name="FORCEEMAIL" xml:space="preserve">
+    <value>FORCEEMAIL</value>
+    <comment>Setting in the PayTrace API Secure Checkout that may be set to ‘Y’ if the customer’s email address is required.</comment>
+  </data>
+  <data name="FREIGHT" xml:space="preserve">
+    <value>FREIGHT</value>
+    <comment>Freight value should represent the portion of the transaction amount that was generated from shipping costs.</comment>
+  </data>
+  <data name="FREQUENCY" xml:space="preserve">
+    <value>FREQUENCY</value>
+    <comment>The billing cycle of the recurring transaction must be 1 for annually, 8 for semi-annually, A for trimesterly, 2 for quarterly, 9 for bi-monthly, , 3 for monthly, 4 for biweekly, 7 for 1st and 15th, 5 for weekly, or 6 for daily.</comment>
+  </data>
+  <data name="IDEXP" xml:space="preserve">
+    <value>IDEXP</value>
+    <comment>Only used when processing Cash Advances. This required field is the expiration date of the card holder’s photo ID. MM/DD/YYYY</comment>
+  </data>
+  <data name="INVOICE" xml:space="preserve">
+    <value>INVOICE</value>
+    <comment>Invoice is the identifier for this transaction in your accounting or inventory management system.</comment>
+  </data>
+  <data name="IP" xml:space="preserve">
+    <value>IP</value>
+    <comment>IP address of the computer that originally requested the customer
+profile or transaction be created or processed formatted as a
+standard IP address (I.e. 111.111.111.111). IP address is returned
+with a successful call to ExportCustomers or ExportTranx.</comment>
+  </data>
+  <data name="LAST4" xml:space="preserve">
+    <value>LAST4</value>
+    <comment>Only used when processing Cash Advances. This required field is the last 4 digits of the card number as it appears on the face of the card.</comment>
+  </data>
+  <data name="MEASURE" xml:space="preserve">
+    <value>MEASURE</value>
+    <comment>Unit of measure applied to the product and its quantity. For example, LBS/LITERS, OUNCES, etc.</comment>
+  </data>
+  <data name="MERCHANTTAXID" xml:space="preserve">
+    <value>MERCHANTTAXID</value>
+    <comment>Merchant’s tax identifier used for tax reporting purposes.</comment>
+  </data>
+  <data name="METHOD" xml:space="preserve">
+    <value>METHOD</value>
+    <comment>Function that you are requesting PayTrace perform. All methods are discussed in section 4.</comment>
+  </data>
+  <data name="NETAMOUNT" xml:space="preserve">
+    <value>NETAMOUNT</value>
+    <comment>Net amount is returned with a successful request to settle
+transactions. This value is the net amount (sales minus refunds) of
+the batch that was initiated.</comment>
+  </data>
+  <data name="NETGROSSIND" xml:space="preserve">
+    <value>NETGROSSIND</value>
+    <comment>Flag used to indicate whether the line item amount is net or gross to specify whether the line item amount includes tax. Possible values are Y (includes tax) and N (does not include tax).</comment>
+  </data>
+  <data name="NEWCUSTID" xml:space="preserve">
+    <value>NEWCUSTID</value>
+    <comment>Unique identifier for a customer profile that may be sent with request to update a customer profile. This value will be the new customer ID.</comment>
+  </data>
+  <data name="NEWPSWD" xml:space="preserve">
+    <value>NEWPSWD</value>
+    <comment>Your new PayTrace password when updating user password through the UpdatePassword method.</comment>
+  </data>
+  <data name="NEWPSWD2" xml:space="preserve">
+    <value>NEWPSWD2</value>
+    <comment>Confirmation of you new PayTrace password when updating user password through the UpdatePassword method.</comment>
+  </data>
+  <data name="NEXT" xml:space="preserve">
+    <value>NEXT</value>
+    <comment>Next date the updated recurring transaction should be processed.</comment>
+  </data>
+  <data name="NTAX" xml:space="preserve">
+    <value>NTAX</value>
+    <comment>Portion of the original transaction amount that is national tax. Generally only applicable to orders shipped to countries with a national or value added tax.</comment>
+  </data>
+  <data name="ORDERID" xml:space="preserve">
+    <value>ORDERID</value>
+    <comment>Developer’s identifier for an order that is placed through the PayTrace API Secure Checkout</comment>
+  </data>
+  <data name="ORIGINALID" xml:space="preserve">
+    <value>ORIGINALID</value>
+    <comment>Unique identifier of the request from your system that will be returned in the response if RETURNID is set to Y</comment>
+  </data>
+  <data name="PAGESIZE" xml:space="preserve">
+    <value>PAGESIZE</value>
+    <comment>Number of records from result set that should be returned in the Export--- request. This can be used to return only a section of the complete result set.</comment>
+  </data>
+  <data name="PAGESTART" xml:space="preserve">
+    <value>PAGESTART</value>
+    <comment>First record from the result set that should be returned in the Export--- request. This can be used to return only a section of the complete result set.</comment>
+  </data>
+  <data name="PARTIALAMOUNT" xml:space="preserve">
+    <value>PARTIALAMOUNT</value>
+    <comment>Authorized transaction amount in the event that a transaction is
+partially approved. This value will only be returned if
+ENABLEPARTIALAUTH is set to Y.</comment>
+  </data>
+  <data name="PHONE" xml:space="preserve">
+    <value>PHONE</value>
+    <comment>Customer's phone number (i.e. (555)555-5555, 555-555-5555, or 5555555555).</comment>
+  </data>
+  <data name="PHOTOID" xml:space="preserve">
+    <value>PHOTOID</value>
+    <comment>Only used when processing Cash Advances. This required field may be the card holder’s drivers license number or other form of photo ID.</comment>
+  </data>
+  <data name="POSTURL" xml:space="preserve">
+    <value>POSTURL</value>
+    <comment>Optional URL with any request where the response/error generated from the request may be sent in addition to the comptuer that originated the request.</comment>
+  </data>
+  <data name="PRODUCTID" xml:space="preserve">
+    <value>PRODUCTID</value>
+    <comment>Your unique identifier for the product.</comment>
+  </data>
+  <data name="PSWD" xml:space="preserve">
+    <value>PSWD</value>
+    <comment>Your PayTrace password is required to authenticate your request.*</comment>
+  </data>
+  <data name="QUANTITY" xml:space="preserve">
+    <value>QUANTITY</value>
+    <comment>Item count of the product in this order</comment>
+  </data>
+  <data name="RECURID" xml:space="preserve">
+    <value>RECURID</value>
+    <comment>The ID of the Recurring Transaction that is being updated.</comment>
+  </data>
+  <data name="RECURTYPE" xml:space="preserve">
+    <value>RECURTYPE</value>
+    <comment>Default value is C which represents credit card number. Alternative is A which represents an ACH/check transaction.</comment>
+  </data>
+  <data name="REFUNDAMOUNT" xml:space="preserve">
+    <value>REFUNDAMOUNT</value>
+    <comment>Total amount of refunds included in a batch. This value is returned
+in ExportBatches requests.</comment>
+  </data>
+  <data name="REFUNDCOUNT" xml:space="preserve">
+    <value>REFUNDCOUNT</value>
+    <comment>Total number of refunds included in a batch. This value is returned
+in ExportBatches requests.</comment>
+  </data>
+  <data name="RESPONSE" xml:space="preserve">
+    <value>RESPONSE</value>
+    <comment>Sentence or two that confirms the method that was requested.</comment>
+  </data>
+  <data name="RETURNBIN" xml:space="preserve">
+    <value>RETURNBIN</value>
+    <comment>If set to Y, card numbers from ExportTranx and ExportCustomers requests will include the first 6 and last 4 digits of the card number</comment>
+  </data>
+  <data name="RETURNCLR" xml:space="preserve">
+    <value>RETURNCLR</value>
+    <comment>If set to Y, card level results will be returned w/ theresponse. Card level results include whether or not the card is a consumer, purchasing, check, rewards, etc. account. Card level results are only returned with requests to process sales or authorizations through accounts on the TSYS/Vital, Heartland, and Trident networks.</comment>
+  </data>
+  <data name="RETURNID" xml:space="preserve">
+    <value>RETURNID</value>
+    <comment>If set to Y will return the value of ORIGINALID in the response.</comment>
+  </data>
+  <data name="SADDRESS" xml:space="preserve">
+    <value>SADDRESS</value>
+    <comment>Address where the product is delivered.</comment>
+  </data>
+  <data name="SADDRESS2" xml:space="preserve">
+    <value>SADDRESS2</value>
+    <comment>Second line of the address where the product is delivered.</comment>
+  </data>
+  <data name="SALESAMOUNT" xml:space="preserve">
+    <value>SALESAMOUNT</value>
+    <comment>Total amount of sales included in a batch. This value is returned in
+ExportBatches requests.</comment>
+  </data>
+  <data name="SALESCOUNT" xml:space="preserve">
+    <value>SALESCOUNT</value>
+    <comment>Total number of sales included in a batch. This value is returned in
+ExportBatches requests.</comment>
+  </data>
+  <data name="SCITY" xml:space="preserve">
+    <value>SCITY</value>
+    <comment>City where the product is delivered.</comment>
+  </data>
+  <data name="SCOUNTRY" xml:space="preserve">
+    <value>SCOUNTRY</value>
+    <comment>Country that the package will be delivered to.</comment>
+  </data>
+  <data name="SCOUNTY" xml:space="preserve">
+    <value>SCOUNTY</value>
+    <comment>County where the product is delivered.</comment>
+  </data>
+  <data name="SDATE" xml:space="preserve">
+    <value>SDATE</value>
+    <comment>Start date is used for export functions to indicate when to start searching for items to export. Must be a valid date formatted as MM/DD/YYYY.</comment>
+  </data>
+  <data name="SEARCHTEXT" xml:space="preserve">
+    <value>SEARCHTEXT</value>
+    <comment>Text that will be searched to narrow down transaction and check results for ExportTranx and ExportCheck requests.</comment>
+  </data>
+  <data name="SETTLED" xml:space="preserve">
+    <value>SETTLED</value>
+    <comment>Date and Time returned with the TransactionRECORD formatted a
+general date (i.e. MM/DD/YYYY HH:MM:SS). Settled represents
+the date and time the transaction was settled/batched.</comment>
+  </data>
+  <data name="SHIPPERS" xml:space="preserve">
+    <value>SHIPPERS</value>
+    <comment>String of shipping service providers you would like shipping quotes from. String may contain USPS, FEDEX, or UPS in any order or combination.</comment>
+  </data>
+  <data name="SHIPPINGCOMPANY" xml:space="preserve">
+    <value>SHIPPINGCOMPANY</value>
+    <comment>The name of the shipping company that quoted the price (i.e. UPS,
+USPS, FEDEX).</comment>
+  </data>
+  <data name="SHIPPINGMETHOD" xml:space="preserve">
+    <value>SHIPPINGMETHOD</value>
+    <comment>The method of shipment that was quoted (i.e. Next Day, Priority,
+Ground, etc.).</comment>
+  </data>
+  <data name="SHIPPINGRATE" xml:space="preserve">
+    <value>SHIPPINGRATE</value>
+    <comment>Cost to use the specified shipping service provider and method
+formatted in U.S. dollars as provided by the shipping service
+provider.</comment>
+  </data>
+  <data name="SHIPPINGRECORD" xml:space="preserve">
+    <value>SHIPPINGRECORD</value>
+    <comment>Shipping records are returned when a successful call to
+CalculateShipping is requested.</comment>
+  </data>
+  <data name="SNAME" xml:space="preserve">
+    <value>SNAME</value>
+    <comment>Name of the person where the product is delivered.</comment>
+  </data>
+  <data name="SOURCESTATE" xml:space="preserve">
+    <value>SOURCESTATE</value>
+    <comment>State that the package will be sent from.</comment>
+  </data>
+  <data name="SOURCEZIP" xml:space="preserve">
+    <value>SOURCEZIP</value>
+    <comment>Zip code that the package will be sent from.</comment>
+  </data>
+  <data name="SSTATE" xml:space="preserve">
+    <value>SSTATE</value>
+    <comment>State where the product is delivered.</comment>
+  </data>
+  <data name="START" xml:space="preserve">
+    <value>START</value>
+    <comment>Date the recurring transaction should be processed for the first time.</comment>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>STATUS</value>
+    <comment>Status is returned with each transaction in the transaction list that
+is returned from a successful call to the ExportTranx method. If
+the status contains the letters "GB" then the transaction has been
+settled, and the batch number will be appended to the status. If
+the is "Y" then the transaction will be settled that evening. If the
+status is "N" then the transaction was voided or declined.</comment>
+  </data>
+  <data name="STRFWDDATE" xml:space="preserve">
+    <value>STRFWDDATE</value>
+    <comment>Optional future date when the transaction should beauthorized and settled. Only applicable if the TranxType is STR/FWD</comment>
+  </data>
+  <data name="SWIPE" xml:space="preserve">
+    <value>SWIPE</value>
+    <comment>The value of the magnetic stripe on the back of the credit
+card as recorded from a magnetic card reader. PayTrace
+strongly recommends that software providers avoid storing
+the swiped value. Because the first value in the magnetic
+stripe is a (%) symbol, we strongly recommend URL
+encoding the SWIPE value before posting it to PayTrace.
+Please note that PayTrace supports encrypted card
+readers. However, most encrypted card readers include
+pipe (|) symbols in the magstripe value. It is imperative
+that you replace these pipe symbols with “***” to ensure
+that the API is able to parse your request.</comment>
+  </data>
+  <data name="SZIP" xml:space="preserve">
+    <value>SZIP</value>
+    <comment>Zip code where the product is delivered.</comment>
+  </data>
+  <data name="TAX" xml:space="preserve">
+    <value>TAX</value>
+    <comment>Portion of the original transaction amount that is tax. Must
+be a number that reports the tax amount of the
+transaction. Use -1 if the transaction is tax exempt</comment>
+  </data>
+  <data name="TERMS" xml:space="preserve">
+    <value>TERMS</value>
+    <comment>Must be to 'Y' in order to process any methods through the
+PayTrace API. Setting this variable to 'Y' indicates that you agree to
+the PayTrace terms and conditions found at
+https://paytrace.com/terms.html</comment>
+  </data>
+  <data name="TEST" xml:space="preserve">
+    <value>TEST</value>
+    <comment>The TEST attribute may be used with any of the
+transaction types (TranxType) of the ProcessTranx
+method. The value of the TEST attribute may only be a
+“Y”. Transactions processed with a TEST value of “Y” will
+be processed as test transactions with standardized test
+responses. Test transactions will not place a hold on the
+customer’s credit card.</comment>
+  </data>
+  <data name="TOTALCOUNT" xml:space="preserve">
+    <value>TOTALCOUNT</value>
+    <comment>The total number of times the recurring transaction should
+be processed. Use 999 if the recurring transaction should
+be processed indefinitely.</comment>
+  </data>
+  <data name="TR" xml:space="preserve">
+    <value>TR</value>
+    <comment>Transit routing number for processing check transactions
+or managing customer profiles.</comment>
+  </data>
+  <data name="TRANSACTIONID" xml:space="preserve">
+    <value>TRANSACTIONID</value>
+    <comment>ID assigned by PayTrace to each transaction at the time the
+transaction is processed. TransactionID is returned with a
+successful call to ProcessTranx.</comment>
+  </data>
+  <data name="TRANSACTIONRECORD" xml:space="preserve">
+    <value>TRANSACTIONRECORD</value>
+    <comment>Formatted transaction record returned when a successful call to
+ExportTranx method is requested.</comment>
+  </data>
+  <data name="TRANXCOUNT" xml:space="preserve">
+    <value>TRANXCOUNT</value>
+    <comment>Transaction count is returned with a successful request to settle
+transactions. This value is the total number of transactions that
+were included in the batch.</comment>
+  </data>
+  <data name="TRANXID" xml:space="preserve">
+    <value>TRANXID</value>
+    <comment>A unique identifier for each transaction in the PayTrace
+system. This value is returned in the TRANSACTIONID
+parameter of an API response and will consequently be
+included in requests to email receipts, void transactions,
+add level 3 data, etc.</comment>
+  </data>
+  <data name="TRANXTYPE" xml:space="preserve">
+    <value>TRANXTYPE</value>
+    <comment>The transaction type is the type of transaction you wish to
+process if the METHOD is set to ProcessTranx. TRANXTYPE
+must be set to one of the following: Sale, Authorization,
+Str/Fwd, Refund, Void, Capture, Force or Deleteauthkey.</comment>
+  </data>
+  <data name="UN" xml:space="preserve">
+    <value>UN</value>
+    <comment>Your PayTrace user name is required to authenticate your
+request.</comment>
+  </data>
+  <data name="UNITCOST" xml:space="preserve">
+    <value>UNITCOST</value>
+    <comment>Product amount per quantity.</comment>
+  </data>
+  <data name="USER" xml:space="preserve">
+    <value>USER</value>
+    <comment>User is the user name of the PayTrace user who created or
+processed the customer or transaction you are trying to
+export. This variable is a search criterion for the export
+methods.</comment>
+  </data>
+  <data name="VISAREFUNDAMOUNT" xml:space="preserve">
+    <value>VISAREFUNDAMOUNT</value>
+    <comment>Total sum of Visa refunds that were settled in the exported batch.
+Similar values will be returned for all applicable card types, i.e.
+Total sum of Visa refunds that were settled in the exported batch.
+Similar values will be returned for all applicable card types, i.e.
+MasterCardRefundAmount, AmexRefundAmount,
+DiscoverRefundCount, etc.</comment>
+  </data>
+  <data name="VISAREFUNDCOUNT" xml:space="preserve">
+    <value>VISAREFUNDCOUNT</value>
+    <comment>Total number of Visa refunds that were settled in the exported
+batch. Similar values will be returned for all applicable card types,
+i.e. MasterCardRefundCount, AmexRefundCount,
+DiscoverRefundCount, etc.</comment>
+  </data>
+  <data name="VISASALESAMOUNT" xml:space="preserve">
+    <value>VISASALESAMOUNT</value>
+    <comment>Total sum of Visa sales that were settled in the exported batch.
+Similar values will be returned for all applicable card types, i.e.
+MasterCardSalesAmount, AmexSalesAmount, DiscoverSalesCount,
+etc.</comment>
+  </data>
+  <data name="VISASALESCOUNT" xml:space="preserve">
+    <value>VISASALESCOUNT</value>
+    <comment>Total number of Visa sales that were settled in the exported batch.
+Similar values will be returned for all applicable card types, i.e.
+MasterCardSalesCount, AmexSalesCount, DiscoverSalesCount, etc.</comment>
+  </data>
+  <data name="WEIGHT" xml:space="preserve">
+    <value>WEIGHT</value>
+    <comment>Weight of the package that is being shipped. Weight must
+be provided in pounds and my have up to two decimals.
+Weight must be less than 70 pounds</comment>
+  </data>
+  <data name="WHEN" xml:space="preserve">
+    <value>WHEN</value>
+    <comment>Date and Time returned with the TransactionRECORD and the
+CustomerRECORD formatted a general date (i.e. MM/DD/YYYY
+HH:MM:SS). When represents the date and time the transaction
+was first processed or the customer profile was created.</comment>
+  </data>
+</root>

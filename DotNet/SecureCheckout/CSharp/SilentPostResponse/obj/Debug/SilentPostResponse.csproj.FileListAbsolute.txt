@@ -1,13 +1,3 @@
-C:\Projects\samples\SecureCheckout\DotNet\CSharp\SilentPostResponse\bin\SilentPostResponse.dll
-C:\Projects\samples\SecureCheckout\DotNet\CSharp\SilentPostResponse\bin\SilentPostResponse.pdb
-C:\Projects\samples\SecureCheckout\DotNet\CSharp\SilentPostResponse\obj\Debug\ResolveAssemblyReference.cache
-C:\Projects\samples\SecureCheckout\DotNet\CSharp\SilentPostResponse\obj\Debug\SilentPostResponse.dll
-C:\Projects\samples\SecureCheckout\DotNet\CSharp\SilentPostResponse\obj\Debug\SilentPostResponse.pdb
-C:\Projects\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\bin\SilentPostResponse.dll
-C:\Projects\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\bin\SilentPostResponse.pdb
-C:\Projects\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\obj\Debug\ResolveAssemblyReference.cache
-C:\Projects\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\obj\Debug\SilentPostResponse.dll
-C:\Projects\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\obj\Debug\SilentPostResponse.pdb
 C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\bin\SilentPostResponse.dll
 C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\bin\SilentPostResponse.pdb
 C:\DevProjects\paytrace\samples\DotNet\SecureCheckout\CSharp\SilentPostResponse\obj\Debug\ResolveAssemblyReference.cache

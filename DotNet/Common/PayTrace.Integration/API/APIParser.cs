@@ -14,8 +14,11 @@ namespace PayTrace.Integration.API
 
             foreach (var name_value in parameters)
             {
-                var pair = name_value.Split('~');
-                pairs.Add(pair[0], pair[1]);
+                if (!string.IsNullOrEmpty(name_value))
+                {
+                    var pair = name_value.Split('~');
+                    pairs.Add(pair[0], pair[1]);
+                }
             }
 
             return pairs;

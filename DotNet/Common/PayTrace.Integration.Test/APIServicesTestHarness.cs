@@ -24,6 +24,16 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
+        public void API_parser_should_be_able_to_parse_with_blank_pipe_at_the_end()
+        {
+            string raw_response = "TestValue1~1|TestValue2~2|";
+            string expected = "1";
+
+            Dictionary<string, string> name_value_pairs = APIParser.ParseAPIMessage(raw_response);
+            Assert.AreEqual(name_value_pairs["TestValue1"], expected);
+        }
+
+        [TestMethod]
         public void Should_Parse_Error_an_error_message()
         {
             string raw_response_error = "ERROR~48. Please provide an Amount that is less than your Sale Ceiling Amount.|";
@@ -75,11 +85,11 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void API_DictionaryBuilder_should_return_a_dictionary()
         {
-            DictionaryBuilder DBuilder = new DictionaryBuilder();
+            APIRequestBuilder DBuilder = new APIRequestBuilder();
 
             DBuilder.Add(TestNameMap.TestKey, "1234");
 
-            var actual = DBuilder.ToDictionary();
+            var actual = DBuilder.ToAPI();
 
             Assert.AreEqual(actual["TestValue"], "1234");
 
@@ -88,11 +98,11 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void DictionaryBuilder_should_return_Y_if_true_for_boolean_poperties()
         {
-            DictionaryBuilder DBuilder = new DictionaryBuilder();
+            APIRequestBuilder DBuilder = new APIRequestBuilder();
       
             DBuilder.Add(TestNameMap.TestBoolean, true);
 
-            var actual = DBuilder.ToDictionary();
+            var actual = DBuilder.ToAPI();
 
             Assert.AreEqual(actual["TESTBOOLEAN"], "Y");
             
@@ -101,11 +111,14 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void DictionaryBuilder_should_not_contain_a_value_if_boolean_false()
         {
-            DictionaryBuilder DBuilder = new DictionaryBuilder();
+            APIRequestBuilder DBuilder = new APIRequestBuilder();
 
             DBuilder.Add(TestNameMap.TestBoolean, false);
 
-            var actual = DBuilder.ToDictionary();
+            var actual = DBuilder.ToAPI();
+
+            
+            
 
             Assert.IsFalse(actual.Any(x => x.Key == "TESTBOOLEAN"));
         }

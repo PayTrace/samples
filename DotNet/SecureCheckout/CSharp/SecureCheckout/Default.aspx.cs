@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Net;
 using System.Text;
 using System.IO;
+using PayTrace.Integration;
+using PayTrace.Integration.API;
 
 namespace SecureCheckout
 {
@@ -23,84 +25,67 @@ namespace SecureCheckout
             // to get an approval amount set: AMOUNT~1.00
             // to get a declined amount set: AMOUNT~1.12
             // to get amount error set: AMOUNT~0.00
-            string parameters = "UN~demo123|PSWD~demo123|TERMS~Y|TRANXTYPE~Sale|";
-            parameters += "ORDERID~1234|AMOUNT~0.xx|";
 
-            string return_url = @"http://" + Request.Url.Authority;
-            
-            parameters += "ApproveURL~" + return_url + "/Approved.aspx|";
+            APIRequestBuilder apiBuilder = new APIRequestBuilder();
 
-            parameters += "DeclineURL~" + return_url + "/Declined.aspx|";
+            apiBuilder.Add(Keys.UN, "demo123");
+            apiBuilder.Add(Keys.PSWD, "demo123");
+            apiBuilder.Add(Keys.TERMS, "Y");
+            apiBuilder.Add(Keys.TRANXTYPE, "Sale");
+            apiBuilder.Add(Keys.ORDERID, "1234");
+            apiBuilder.Add(Keys.AMOUNT, "1.00");
 
             if (txtSilentPost.Text.Length > 0)
             {
-                parameters += "returnURL~" + Server.UrlEncode(txtSilentPost.Text) + "|";
+                apiBuilder.Add(Keys.RETURNURL,Server.UrlEncode(txtSilentPost.Text));
             }
 
-            SendValidationRequest(parameters);
+            string return_url = @"http://" + Request.Url.Authority;
+            
+            apiBuilder.Add(Keys.APPROVEURL, return_url + "/Approved.aspx");
+            apiBuilder.Add(Keys.DECLINEURL, return_url + "/Declined.aspx");
+
+            Client client = new Client();
+            Response response = client.SendRequest(apiBuilder);
+            
+            BindeData(response);
+
         }
 
-        private void SendValidationRequest(string Parameters)
+
+        private void BindeData(Response response)
         {
-            string parameter_list ="PARMLIST=";
-
-            parameter_list +=  Parameters; 
-            ASCIIEncoding encoding = new ASCIIEncoding();
-            byte[] bytes = encoding.GetBytes(parameter_list);
-            
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://paytrace.com/api/validate.pay");
-            request.Method = "POST";
-            request.ContentType = "application/x-www-form-urlencoded";
-            request.ContentLength = bytes.Length;
-            
-            // send validation request
-            Stream str = request.GetRequestStream();
-            str.Write(bytes, 0, bytes.Length);
-            str.Flush();
-            str.Close();
-
-            // get response and parse
-            WebResponse response = request.GetResponse();
-            Stream rsp_stream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(rsp_stream);
-
-            // read the response string
-            string strResponse = reader.ReadToEnd();
-            ParseResponse(strResponse);
-            UpdateResponse(strResponse);
-        }
-
-  
-        private void UpdateResponse(string strResponse)
-        {
-            lblResponce.Text = strResponse;
-            lblOrderID.Text =   (string)Session["OrderID"];
-            lblAUTHKEY.Text = (string)Session["AuthKey"];
-            string url = "https://paytrace.com/api/checkout.pay?parmList=orderID~{0}|AuthKey~{1}";
-            
-
-            lnkSendToBilling.NavigateUrl = string.Format(url, lblOrderID.Text, lblAUTHKEY.Text);
-
-            pnl_response.Visible = true;
-        }
-
-        private void ParseResponse(string strResponse)
-        {
-            // if we have errors if so output to ui
-            if (!strResponse.Contains("ERROR"))
+            // if we have errors output to ui
+            ClearPanel();
+            if (response.HasError)
             {
-                lblResponce.Text = strResponse;
-                string[] parameters = strResponse.Split('|');
-                string OrderID = parameters[0].Split('~')[1];
-                string AUTHKEY = parameters[1].Split('~')[1];
-                Session["OrderID"] = OrderID;
-                Session["AuthKey"] = AUTHKEY;
+                lblResponce.Text = response.Error.Message;
             }
             else
             {
-                lblResponce.Text = strResponse;
+                // just so we can look at the raw response
+                lblResponce.Text = response.Raw;
+
+                lblOrderID.Text = response.ResponseValues[Keys.ORDERID];
+                lblAUTHKEY.Text = response.ResponseValues[Keys.AUTHKEY];
+                string url = "https://paytrace.com/api/checkout.pay?parmList=orderID~{0}|AuthKey~{1}";
+
+                lnkSendToBilling.NavigateUrl = string.Format(url, lblOrderID.Text, lblAUTHKEY.Text);
             }
+
+            pnl_response.Visible = true;
+
         }
+
+        private void ClearPanel()
+        {
+            lblResponce.Text = string.Empty;
+            lblOrderID.Text = string.Empty;
+            lblAUTHKEY.Text = string.Empty;
+            lnkSendToBilling.NavigateUrl = string.Empty;
+        }
+
+       
     }
 
 }
