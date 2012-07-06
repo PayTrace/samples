@@ -61,6 +61,33 @@ namespace PayTrace.Integration.API {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://paytrace.com/api/checkout.pay.
+        /// </summary>
+        internal static string Checkout {
+            get {
+                return ResourceManager.GetString("Checkout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://paytrace.com/api/default.pay.
+        /// </summary>
+        internal static string Default {
+            get {
+                return ResourceManager.GetString("Default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://paytrace.com/api/gateway.pay.
+        /// </summary>
+        internal static string Gateway {
+            get {
+                return ResourceManager.GetString("Gateway", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://paytrace.com/api/validate.pay.
         /// </summary>
         internal static string Validation {

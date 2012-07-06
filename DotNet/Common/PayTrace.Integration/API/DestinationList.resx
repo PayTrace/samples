@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Checkout" xml:space="preserve">
+    <value>https://paytrace.com/api/checkout.pay</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>https://paytrace.com/api/default.pay</value>
+  </data>
+  <data name="Gateway" xml:space="preserve">
+    <value>https://paytrace.com/api/gateway.pay</value>
+  </data>
   <data name="Validation" xml:space="preserve">
     <value>https://paytrace.com/api/validate.pay</value>
   </data>
