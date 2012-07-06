@@ -82,7 +82,7 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
-        public void API_DictionaryBuilder_should_return_a_dictionary()
+        public void APIRequestBuilder_should_return_a_dictionary()
         {
             APIRequestBuilder DBuilder = new APIRequestBuilder();
 
@@ -95,7 +95,7 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
-        public void DictionaryBuilder_should_return_Y_if_true_for_boolean_poperties()
+        public void APIRequestBuilder_should_return_Y_if_true_for_boolean_poperties()
         {
             APIRequestBuilder DBuilder = new APIRequestBuilder();
       
@@ -108,16 +108,13 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
-        public void DictionaryBuilder_should_not_contain_a_value_if_boolean_false()
+        public void APIRequestBuilder_should_not_contain_a_value_if_boolean_false()
         {
             APIRequestBuilder DBuilder = new APIRequestBuilder();
 
             DBuilder.Add(Keys.FORCEADDRESS, false);
 
             var actual = DBuilder.ToAPI();
-
-            
-            
 
             Assert.IsFalse(actual.Any(x => x.Key == Keys.FORCEADDRESS));
         }
