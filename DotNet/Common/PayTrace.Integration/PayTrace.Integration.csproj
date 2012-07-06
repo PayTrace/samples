@@ -53,8 +53,8 @@
     <Compile Include="API\Request.cs" />
     <Compile Include="API\ResponseError.cs" />
     <Compile Include="API\Response.cs" />
-    <Compile Include="Interfaces\IAPIClient.cs" />
-    <Compile Include="Interfaces\IAPIRequest.cs" />
+    <Compile Include="Interfaces\IClient.cs" />
+    <Compile Include="Interfaces\IRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

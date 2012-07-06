@@ -1,14 +1,6 @@
 Bin/
-Bin/*
-Bin/**/*
 bin/
-bin/*
-bin/**/*
 obj/
-obj/*
-obj/**/*
-Debug/*
-Debug/**/*
 TestResults/
 Local.testsettings
 TraceAndTestImpact.testsettings
