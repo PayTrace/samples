@@ -17,6 +17,17 @@ namespace Authorization
         public void BindData(Response response)
         {
             this.Visible = true;
+            lblShowErrorMessage.Visible = false;
+            ResponseGrid.Visible = false;
+
+            if (response.HasError)
+            {
+                lblShowErrorMessage.Visible = true;
+                lblShowErrorMessage.Text = response.Raw;
+                return;
+            }
+
+
             ResponseGrid.Visible = true;
             ResponseGrid.DataSource = response.ResponseValues;
             ResponseGrid.DataBind();
