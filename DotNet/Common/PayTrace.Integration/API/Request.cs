@@ -70,7 +70,11 @@ namespace PayTrace.Integration.API
         }
 
 
+        public void AddCreditCardInfo(CreditCard cc)
+        {
+            throw new NotImplementedException();
 
+        }
 
         public void AddShippingAddress(AddressInfo address)
         {

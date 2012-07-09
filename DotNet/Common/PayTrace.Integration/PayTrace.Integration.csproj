@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\Address.cs" />
+    <Compile Include="API\CreditCard.cs" />
     <Compile Include="API\DestinationList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -48,6 +49,7 @@
     </Compile>
     <Compile Include="API\Client.cs" />
     <Compile Include="API\Destinations.cs" />
+    <Compile Include="API\empty.cs" />
     <Compile Include="API\Keys.cs" />
     <Compile Include="API\Formatter.cs" />
     <Compile Include="API\Parser.cs" />
