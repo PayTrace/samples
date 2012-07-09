@@ -23,6 +23,11 @@ namespace PayTrace.Integration.API
 
         private Dictionary<string, string> APIAttributeValues = new Dictionary<string, string>();
 
+        public Dictionary<string, string> GetAPIDictionary()
+        {
+            return APIAttributeValues.Select(x => new { x.Key, x.Value }).ToDictionary(x => x.Key, x => x.Value);
+        }
+        
         public void Add(string attribute, string value)
         {
             if (!string.IsNullOrWhiteSpace(value))
@@ -38,6 +43,8 @@ namespace PayTrace.Integration.API
                 APIAttributeValues.Add(attribute, "Y");
             }
         }
+
+
 
 
 
@@ -64,6 +71,16 @@ namespace PayTrace.Integration.API
 
 
 
-       
+
+        public void AddShippingAddress(AddressInfo address)
+        {
+            APIAttributeValues.Add(Keys.SADDRESS, address.Street);
+            APIAttributeValues.Add(Keys.SADDRESS2, address.Street2);
+            APIAttributeValues.Add(Keys.SCITY, address.City);
+            APIAttributeValues.Add(Keys.SSTATE, address.Region);
+            APIAttributeValues.Add(Keys.SZIP, address.PostalCode);
+            APIAttributeValues.Add(Keys.SCOUNTY, address.County);
+            APIAttributeValues.Add(Keys.SCOUNTRY, address.Country);
+        }
     }
 }

@@ -119,6 +119,21 @@ namespace PayTrace.Integration.Test
             Assert.IsFalse(actual.Any(x => x.Key == Keys.FORCEADDRESS));
         }
 
+        [TestMethod]
+        public void Adding_shipping_to_a_request_should_add_shipping_info_to_library()
+        {
+            AddressInfo address = new AddressInfo("1234 happy lane",city:"Seattle");
+
+            Request request = new Request();
+
+            request.AddShippingAddress(address);
+
+            var dictionary =  request.GetAPIDictionary();
+
+            Assert.AreEqual(dictionary["SADDRESS"], "1234 happy lane");
+            Assert.AreEqual(dictionary[Keys.SCITY],"Seattle");
+        }
+
         
 
 
