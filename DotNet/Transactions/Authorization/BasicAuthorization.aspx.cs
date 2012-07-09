@@ -23,11 +23,11 @@ namespace Authorization
             request.Add(Keys.TERMS, "Y");
             request.Add(Keys.TRANXTYPE, TransactionTypes.Authorization);
             request.Add(Keys.METHOD, Methods.ProcessTransaction);
-            request.Add(Keys.AMOUNT, "0.43");
+            request.Add(Keys.AMOUNT, "1.00");
             request.Add(Keys.CC, "4111111111111111");
             request.Add(Keys.CSC, "999");
             request.Add(Keys.EXPMNTH, "01");
-            request.Add(Keys.EXPYR, "2012");
+            request.Add(Keys.EXPYR, "2015");
 
             Response response = request.Send();
 
