@@ -31,7 +31,9 @@ namespace Authorization
 
             Response response = request.Send();
 
-            lblRaw.Text = response.Raw;
+            ResponseList.BindData(response);
+
+            
         }
     }
 }
