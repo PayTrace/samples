@@ -53,9 +53,11 @@
     <Compile Include="API\Request.cs" />
     <Compile Include="API\ResponseError.cs" />
     <Compile Include="API\Response.cs" />
+    <Compile Include="API\TransactionTypes.cs" />
     <Compile Include="Interfaces\IClient.cs" />
     <Compile Include="Interfaces\IRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="API\Methods.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="API\DestinationList.resx">

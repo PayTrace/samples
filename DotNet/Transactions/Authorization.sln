@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization", "Authorization\Authorization.csproj", "{5424EE0D-81B1-4825-9CCF-476970F24D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayTrace.Integration", "..\Common\PayTrace.Integration\PayTrace.Integration.csproj", "{AED17CC6-5036-4951-85DB-F77BDB339C2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayTrace.Integration.Test", "..\Common\PayTrace.Integration.Test\PayTrace.Integration.Test.csproj", "{DA9AD87B-4FB2-4361-92E1-2288E7E8873D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5424EE0D-81B1-4825-9CCF-476970F24D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5424EE0D-81B1-4825-9CCF-476970F24D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5424EE0D-81B1-4825-9CCF-476970F24D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5424EE0D-81B1-4825-9CCF-476970F24D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED17CC6-5036-4951-85DB-F77BDB339C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED17CC6-5036-4951-85DB-F77BDB339C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED17CC6-5036-4951-85DB-F77BDB339C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED17CC6-5036-4951-85DB-F77BDB339C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9AD87B-4FB2-4361-92E1-2288E7E8873D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9AD87B-4FB2-4361-92E1-2288E7E8873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9AD87B-4FB2-4361-92E1-2288E7E8873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9AD87B-4FB2-4361-92E1-2288E7E8873D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
