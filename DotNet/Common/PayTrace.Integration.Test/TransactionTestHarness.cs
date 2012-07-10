@@ -44,5 +44,31 @@ namespace PayTrace.Integration.Test
 
             cc.Validate();
         }
+
+        [TestMethod]
+        public void Transaction_Request_should_have_credit_card_properties_as_key_value_pairs()
+        {
+            AddressInfo billing_address = new AddressInfo("2134 happy lane", city: "Seattle", region: "WA", postalcode: "98136", country: "United States");
+            DateTime? experation_date = null;
+            experation_date = new DateTime(2015, 1, 1);
+            CreditCard cc = new CreditCard(cc: "4111111111111111", amount: "1.00", billing_address: billing_address, experation_date: experation_date, csc: "999");
+            TranasctionRequest Request = new TranasctionRequest();
+            
+            Request.AddCreditCardInfo(cc);
+            var APIList = Request.GetAPIDictionary();
+
+            Assert.AreEqual(APIList[Keys.CC], "4111111111111111");
+            Assert.AreEqual(APIList[Keys.AMOUNT], "1.00");
+            Assert.AreEqual(APIList[Keys.CSC], "999");
+            Assert.AreEqual(APIList[Keys.BADDRESS], "2134 happy lane");
+            Assert.AreEqual(APIList[Keys.BCITY], "Seattle");
+            Assert.AreEqual(APIList[Keys.BSTATE], "WA");
+            Assert.AreEqual(APIList[Keys.BZIP], "98136");
+            
+
+        }
+
+
+
     }
 }
