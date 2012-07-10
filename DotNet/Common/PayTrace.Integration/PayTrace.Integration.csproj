@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\Address.cs" />
-    <Compile Include="API\CreditCard.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="CreditCard.cs" />
     <Compile Include="API\DestinationList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -57,6 +57,8 @@
     <Compile Include="API\ResponseError.cs" />
     <Compile Include="API\Response.cs" />
     <Compile Include="API\TransactionTypes.cs" />
+    <Compile Include="CreditCardValidationException.cs" />
+    <Compile Include="CreditCardValidator.cs" />
     <Compile Include="Interfaces\IClient.cs" />
     <Compile Include="Interfaces\IRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
