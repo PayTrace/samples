@@ -137,7 +137,7 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void CreditCard_should_pass_validation_tests()
         {
-            AddressInfo billing_address = new AddressInfo("1234 happy lane", city: "Seattle", region: "WA", postalcode: "98136", country: "United States");
+            AddressInfo billing_address = new AddressInfo("2134 happy lane", city: "Seattle", region: "WA", postalcode: "98136", country: "United States");
             DateTime? experation_date = null;
             experation_date =  new DateTime(2015, 1, 1);
             CreditCard cc = new CreditCard(cc: "4111111111111111", amount: "1.00", billing_address: billing_address, experation_date: experation_date);
@@ -163,7 +163,7 @@ namespace PayTrace.Integration.Test
             AddressInfo billing_address = new AddressInfo("1234 happy lane", city: "Seattle", region: "WA", postalcode: "98136", country: "United States");
             DateTime? experation_date = null;
             experation_date = new DateTime(2015, 1, 1);
-            CreditCard cc = new CreditCard(cc: "3311111111111111", amount: "1.00", billing_address: billing_address, experation_date: experation_date);
+            CreditCard cc = new CreditCard(cc: "4311111111111111", amount: "1.00", billing_address: billing_address, experation_date: experation_date);
 
             cc.Validate();
         }

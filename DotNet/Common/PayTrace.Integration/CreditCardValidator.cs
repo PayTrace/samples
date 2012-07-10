@@ -10,9 +10,9 @@ namespace PayTrace.Integration
     {
         public void ValidateCard(CreditCard cc)
         {
+            CheckRequiredFields(cc);
 
-            
-            if (ValidateCreditCardNumber(cc.Number))
+            if (! ValidateCreditCardNumber(cc.Number))
             {
                 throw new CreditCardValidationException("Please use valid credit card number.");
             }
