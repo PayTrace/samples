@@ -13,21 +13,17 @@ namespace PayTrace.Integration
 
         public AddressInfo BillingAddress { get; set; }
         public DateTime? ExperationDate { get; set; }
+        public string CSC { get; set; }
 
 
-        public CreditCard(string cc, string amount, AddressInfo billing_address = null, DateTime? experation_date = null)
+        public CreditCard(string cc, string amount, AddressInfo billing_address = null,string csc = null, DateTime? experation_date = null)
         {
-            this.Number = cc;
-            this.Amount = amount;
+            Number = cc;
+            Amount = amount;
             BillingAddress = billing_address;
             ExperationDate = experation_date;
+            CSC = csc;
         }
-
-
-
-
-
-
 
         public void Validate()
         {
@@ -36,6 +32,8 @@ namespace PayTrace.Integration
             Validator.ValidateCard(this);
 
         }
+
+
 
         
     }
