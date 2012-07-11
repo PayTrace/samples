@@ -40,7 +40,7 @@ namespace Authorization
             Response response = request.Authorize(1.00m);
             
             // change to properties 
-            //MyResponseList.BindData(response);
+            MyResponseList.BindData(response);
 
 
         }

@@ -44,10 +44,13 @@ namespace PayTrace.Integration
                 APIAttributeValues.Add(Keys.BCOUNTRY, BillingAddress.Country);
             }
         }
-        
+    
 
         public Response Authorize(decimal amount)
         {
+            BuildRequest();
+
+            APIAttributeValues.Add(Keys.AMOUNT, amount.ToString());
             APIAttributeValues.Add(Keys.TRANXTYPE, TransactionTypes.Authorization);
             APIAttributeValues.Add(Keys.METHOD, "ProcessTranx");
             return this.Send();
