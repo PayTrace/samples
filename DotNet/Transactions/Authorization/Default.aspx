@@ -5,13 +5,12 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        Sample Basic Authorization
+        Example implementation using the PayTrace API.
     </h2>
     <p>
-        To learn more about ASP.NET visit <a href="http://www.asp.net" title="ASP.NET Website">www.asp.net</a>.
+       
     </p>
     <p>
-        You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
-            title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
+        Documentation and help can be found here: <a href="http://help.paytrace.com/api"> The PayTrace API Integration Guides</a>
     </p>
 </asp:Content>

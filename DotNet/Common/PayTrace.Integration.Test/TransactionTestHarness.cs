@@ -52,7 +52,7 @@ namespace PayTrace.Integration.Test
             DateTime? experation_date = null;
             experation_date = new DateTime(2015, 1, 1);
             CreditCard cc = new CreditCard(cc: "4111111111111111", amount: "1.00", billing_address: billing_address, experation_date: experation_date, csc: "999");
-            TranasctionRequest Request = new TranasctionRequest();
+            TransactionRequest Request = new TransactionRequest(Destinations.Default);
             
             Request.AddCreditCardInfo(cc);
             var APIList = Request.GetAPIDictionary();

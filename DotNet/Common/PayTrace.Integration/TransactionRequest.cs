@@ -6,10 +6,20 @@ using PayTrace.Integration.API;
 
 namespace PayTrace.Integration
 {
-    public class TranasctionRequest : Request
+    public class TransactionRequest : Request
     {
+        public TransactionRequest(Uri destination) : base(destination) { }
+
+        public void AddAuthorizationInfo(Authorization authorization)
+        {
+            APIAttributeValues.Add(Keys.UN, authorization.UserName);
+            APIAttributeValues.Add(Keys.PSWD, authorization.Password);
+            APIAttributeValues.Add(Keys.TERMS,"Y"); 
+        }
         public void AddCreditCardInfo(CreditCard cc)
         {
+            cc.Validate();
+
             APIAttributeValues.Add(Keys.CC, cc.Number);
             APIAttributeValues.Add(Keys.AMOUNT, cc.Amount);
             APIAttributeValues.Add(Keys.EXPMNTH, cc.ExperationDate.Value.Month.ToString());
@@ -27,6 +37,13 @@ namespace PayTrace.Integration
                 APIAttributeValues.Add(Keys.BCOUNTRY, billing_address.Country);
             }
    
+        }
+
+        public Response SendAuthorizationRequest()
+        {
+            APIAttributeValues.Add(Keys.TRANXTYPE,TransactionTypes.Authorization);
+            APIAttributeValues.Add(Keys.METHOD,"ProcessTranx");
+            return this.Send();
         }
     }
 }

@@ -56,6 +56,8 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="AdvancedAuthorization.aspx" />
+    <Content Include="AuthorizationAndSale.aspx" />
     <Content Include="BasicAuthorization.aspx" />
     <Content Include="ResponseList.ascx" />
     <Content Include="Styles\Site.css" />
@@ -107,6 +109,20 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedAuthorization.aspx.cs">
+      <DependentUpon>AdvancedAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvancedAuthorization.aspx.designer.cs">
+      <DependentUpon>AdvancedAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorizationAndSale.aspx.cs">
+      <DependentUpon>AuthorizationAndSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthorizationAndSale.aspx.designer.cs">
+      <DependentUpon>AuthorizationAndSale.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasicAuthorization.aspx.cs">
       <DependentUpon>BasicAuthorization.aspx</DependentUpon>

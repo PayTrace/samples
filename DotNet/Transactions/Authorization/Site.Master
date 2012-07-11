@@ -32,7 +32,8 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/BasicAuthorization.aspx" Text="Basic" />
+                        <asp:MenuItem NavigateUrl="~/BasicAuthorization.aspx" Text="Basic Authorization" />
+                        <asp:MenuItem NavigateUrl="~/AdvancedAuthorization.aspx" Text="Advanced Authorization"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                     </Items>
                 </asp:Menu>
