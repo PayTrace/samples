@@ -7,21 +7,23 @@ namespace PayTrace.Integration
 {
     public class CreditCard
     {
-        public readonly string Number;
-        public readonly string Amount;
-
-
-        public AddressInfo BillingAddress { get; set; }
-        public DateTime? ExperationDate { get; set; }
+        public string Number { get; set; }
         public string CSC { get; set; }
+        public int ExpirationMonth { get; set; }
+        public int ExpirationYear { get; set; }
+        
+        public CreditCard() { }
 
-
-        public CreditCard(string cc, string amount, AddressInfo billing_address = null,string csc = null, DateTime? experation_date = null)
+        public CreditCard(
+            string number,  
+            int experationMonth,
+            int experationYear,
+            string csc = null 
+            )
         {
-            Number = cc;
-            Amount = amount;
-            BillingAddress = billing_address;
-            ExperationDate = experation_date;
+            Number = number;
+            ExpirationYear = experationMonth;
+            ExpirationYear = experationYear;
             CSC = csc;
         }
 

@@ -70,17 +70,18 @@ namespace PayTrace.Integration
         {
             if (string.IsNullOrWhiteSpace(cc.Number))
             {
-                throw new CreditCardValidationException("CC cannont be null or empty.");
+                throw new CreditCardValidationException("Credit Card Number cannont be null or empty.");
             }
 
-            if (string.IsNullOrWhiteSpace(cc.Amount))
+           
+            if (cc.ExpirationMonth < 1 && cc.ExpirationMonth > 12  )
             {
-                throw new CreditCardValidationException("Amount cannont be null or empty.");
+                throw new CreditCardValidationException("Experation Month was not set to a valid month.");
             }
 
-            if (cc.ExperationDate == null )
+            if (cc.ExpirationYear  < DateTime.Now.Year)
             {
-                throw new CreditCardValidationException("Experation Date cannont be null or empty.");
+                throw new CreditCardValidationException("Experation Year must be greater then or equal to the current year.");
             }
         }
 

@@ -8,41 +8,48 @@ namespace PayTrace.Integration
 {
     public class TransactionRequest : Request
     {
+        public AddressInfo BillingAddress = new AddressInfo();
+        public CreditCard CC = new CreditCard();
+
         public TransactionRequest(Uri destination) : base(destination) { }
 
-        public void AddAuthorizationInfo(Authorization authorization)
+        public TransactionRequest(string username, string password) :base (Destinations.Default) 
         {
-            APIAttributeValues.Add(Keys.UN, authorization.UserName);
-            APIAttributeValues.Add(Keys.PSWD, authorization.Password);
+            AddAuthorizationInfo(username, password);
+        }
+
+        public void AddAuthorizationInfo(string username, string password)
+        {
+            APIAttributeValues.Add(Keys.UN, username);
+            APIAttributeValues.Add(Keys.PSWD, password);
             APIAttributeValues.Add(Keys.TERMS,"Y"); 
         }
-        public void AddCreditCardInfo(CreditCard cc)
+        
+        internal void BuildRequest()
         {
-            cc.Validate();
+            CC.Validate();
 
-            APIAttributeValues.Add(Keys.CC, cc.Number);
-            APIAttributeValues.Add(Keys.AMOUNT, cc.Amount);
-            APIAttributeValues.Add(Keys.EXPMNTH, cc.ExperationDate.Value.Month.ToString());
-            APIAttributeValues.Add(Keys.EXPYR, cc.ExperationDate.Value.Year.ToString());
-            APIAttributeValues.Add(Keys.CSC, cc.CSC);
+            APIAttributeValues.Add(Keys.CC, CC.Number);
+            APIAttributeValues.Add(Keys.EXPMNTH, CC.ExpirationMonth.ToString());
+            APIAttributeValues.Add(Keys.EXPYR, CC.ExpirationYear.ToString());
+            APIAttributeValues.Add(Keys.CSC, CC.CSC);
             
-            if (cc.BillingAddress != null)
+            if (BillingAddress != null)
             {
-                AddressInfo billing_address = cc.BillingAddress;
-                APIAttributeValues.Add(Keys.BADDRESS, billing_address.Street);
-                APIAttributeValues.Add(Keys.BADDRESS2, billing_address.Street2);
-                APIAttributeValues.Add(Keys.BCITY, billing_address.City);
-                APIAttributeValues.Add(Keys.BSTATE, billing_address.Region);
-                APIAttributeValues.Add(Keys.BZIP, billing_address.PostalCode);
-                APIAttributeValues.Add(Keys.BCOUNTRY, billing_address.Country);
+                APIAttributeValues.Add(Keys.BADDRESS, BillingAddress.Street);
+                APIAttributeValues.Add(Keys.BADDRESS2, BillingAddress.Street2);
+                APIAttributeValues.Add(Keys.BCITY, BillingAddress.City);
+                APIAttributeValues.Add(Keys.BSTATE, BillingAddress.Region);
+                APIAttributeValues.Add(Keys.BZIP, BillingAddress.PostalCode);
+                APIAttributeValues.Add(Keys.BCOUNTRY, BillingAddress.Country);
             }
-   
         }
+        
 
-        public Response SendAuthorizationRequest()
+        public Response Authorize(decimal amount)
         {
-            APIAttributeValues.Add(Keys.TRANXTYPE,TransactionTypes.Authorization);
-            APIAttributeValues.Add(Keys.METHOD,"ProcessTranx");
+            APIAttributeValues.Add(Keys.TRANXTYPE, TransactionTypes.Authorization);
+            APIAttributeValues.Add(Keys.METHOD, "ProcessTranx");
             return this.Send();
         }
     }
