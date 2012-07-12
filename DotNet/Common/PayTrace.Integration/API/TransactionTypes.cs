@@ -8,5 +8,6 @@ namespace PayTrace.Integration.API
     public static class TransactionTypes
     {
         public static string Authorization { get { return "Authorization"; } }
+        public static string Void { get { return "Void"; } }
     }
 }

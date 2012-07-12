@@ -58,6 +58,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="AdvancedAuthorization.aspx" />
     <Content Include="AuthorizationAndSale.aspx" />
+    <Content Include="AuthorizeThenVoidTransaction.aspx" />
     <Content Include="BasicAuthorization.aspx" />
     <Content Include="ResponseList.ascx" />
     <Content Include="Styles\Site.css" />
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="AuthorizationAndSale.aspx.designer.cs">
       <DependentUpon>AuthorizationAndSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorizeThenVoidTransaction.aspx.cs">
+      <DependentUpon>AuthorizeThenVoidTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthorizeThenVoidTransaction.aspx.designer.cs">
+      <DependentUpon>AuthorizeThenVoidTransaction.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasicAuthorization.aspx.cs">
       <DependentUpon>BasicAuthorization.aspx</DependentUpon>

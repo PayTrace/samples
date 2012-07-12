@@ -55,5 +55,13 @@ namespace PayTrace.Integration
             APIAttributeValues.Add(Keys.METHOD, "ProcessTranx");
             return new TransactionResponse(this.Send());
         }
+
+        public TransactionResponse Void(string transactionID)
+        {
+            APIAttributeValues.Add(Keys.TRANXID, transactionID);
+            APIAttributeValues.Add(Keys.TRANXTYPE, TransactionTypes.Void);
+            APIAttributeValues.Add(Keys.METHOD, "ProcessTranx");
+            return new TransactionResponse(this.Send());
+        }
     }
 }
