@@ -13,15 +13,6 @@ namespace Authorization {
     public partial class AdvancedAuthorization {
         
         /// <summary>
-        /// ResponseList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Authorization.ResponseList ResponseList1;
-        
-        /// <summary>
         /// lblRaw control.
         /// </summary>
         /// <remarks>
@@ -40,12 +31,66 @@ namespace Authorization {
         protected global::System.Web.UI.WebControls.Button btnSubmit;
         
         /// <summary>
-        /// MyResponseList control.
+        /// pnlResponse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Authorization.ResponseList MyResponseList;
+        protected global::System.Web.UI.WebControls.Panel pnlResponse;
+        
+        /// <summary>
+        /// lblResponse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResponse;
+        
+        /// <summary>
+        /// lblTransactionID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTransactionID;
+        
+        /// <summary>
+        /// lblAppCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAppCode;
+        
+        /// <summary>
+        /// lblAppMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAppMessage;
+        
+        /// <summary>
+        /// lblAVSResponse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAVSResponse;
+        
+        /// <summary>
+        /// lblCSCResponse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCSCResponse;
     }
 }

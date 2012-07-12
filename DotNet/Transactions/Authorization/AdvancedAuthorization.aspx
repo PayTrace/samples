@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdvancedAuthorization.aspx.cs" Inherits="Authorization.AdvancedAuthorization" %>
-<%@ Register src="ResponseList.ascx" tagname="ResponseList" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -20,11 +19,39 @@
         <p>Region: WA</p>
         <p>Postal: Code: 98136</p>
         <p>Country: USA</p>
-        <uc1:ResponseList ID="ResponseList1" runat="server" />
     </div>
     <div style="clear:both">
     <p><asp:Label runat="server" ID="lblRaw" /></p>
-        <p><asp:Button runat="server" id="btnSubmit" Text="Submit" OnClick="OnbtnSubmitClick"  /> </p>
-        <uc1:ResponseList ID="MyResponseList" runat="server" />
+        <p><asp:Button runat="server" id="btnSubmit" Text="Submit" OnClick="OnbtnSubmitClick"  /> 
+        </p>
+       <asp:Panel ID="pnlResponse" runat="server" Visible="false" >
+       <table>
+        <tr>
+            <td>Response:</td>
+            <td> <asp:Label runat="server" id="lblResponse" /></td>
+        </tr>
+        <tr>
+            <td> TransactionID:</td>
+            <td><asp:Label runat="server" id="lblTransactionID" /> </td>
+        </tr>
+        <tr>
+            <td> AppCode:</td>
+            <td> <asp:Label runat="server" id="lblAppCode" /> </td>
+        </tr>
+        <tr>
+            <td>AppMessage:</td>
+            <td> <asp:Label runat="server" id="lblAppMessage" /> </td>
+        </tr>
+        <tr>
+            <td>AVSResponse:</td>
+            <td><asp:Label runat="server" id="lblAVSResponse" /></td>
+        </tr>
+        <tr>
+            <td>CSCResponse:</td>
+            <td> <asp:Label runat="server" id="lblCSCResponse" /></td>
+        </tr>
+       </table>
+        
+       </asp:Panel>
     </div>
 </asp:Content>

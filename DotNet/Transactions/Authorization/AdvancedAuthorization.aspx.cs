@@ -34,15 +34,28 @@ namespace Authorization
             request.BillingAddress.PostalCode = "98136";
             request.BillingAddress.Country = "USA";
             
-            
-            //To DO build TransactionResponse 
 
-            Response response = request.Authorize(1.00m);
-            
-            // change to properties 
-            MyResponseList.BindData(response);
+            // Display Response Data
+            TransactionResponse response = request.Authorize(1.00m);
 
+            BuildResponse(response);
 
+        }
+
+        private void BuildResponse(TransactionResponse response)
+        {
+            pnlResponse.Visible = true;
+            if (response.HasError)
+            {
+                lblResponse.Text = response.Error.Message;
+            }
+
+            lblResponse.Text = response.ResponseMessage;
+            lblTransactionID.Text = response.TransactionID;
+            lblAppCode.Text = response.AppCode;
+            lblAppMessage.Text = response.AppMessage;
+            lblAVSResponse.Text = response.AVSResponce;
+            lblCSCResponse.Text = response.CSCResponse;
         }
     }
 }

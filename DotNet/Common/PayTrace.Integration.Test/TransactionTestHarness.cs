@@ -73,6 +73,15 @@ namespace PayTrace.Integration.Test
 
         }
 
+        [TestMethod]
+        public void Transaction_Response_should_handle_error_response()
+        {
+            Response response = new Response("ERROR~48. Please provide an Amount that is less than your Sale Ceiling Amount.|");
+            TransactionResponse transaction_response = new TransactionResponse(response);
+
+            Assert.IsTrue(transaction_response.HasError);
+        }
+
 
 
     }
