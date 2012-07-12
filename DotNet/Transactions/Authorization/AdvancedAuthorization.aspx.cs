@@ -33,11 +33,12 @@ namespace Authorization
             request.BillingAddress.Region = "WA";
             request.BillingAddress.PostalCode = "98136";
             request.BillingAddress.Country = "USA";
-            
 
-            // Display Response Data
+
+            // authorize request
             TransactionResponse response = request.Authorize(1.00m);
 
+            // view response properties
             BuildResponseView(response);
 
         }

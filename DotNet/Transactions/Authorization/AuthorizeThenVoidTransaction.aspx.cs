@@ -22,24 +22,17 @@ namespace Authorization
             // add credit card info
             request.CC.Number = "4111111111111111";
             request.CC.ExpirationMonth = 1;
-            request.CC.ExpirationYear = 2015;
+            request.CC.ExpirationYear = 2015;            
 
-
-            //// add billing info
-            //request.BillingAddress.Street = "2134 happy lane";
-            //request.BillingAddress.City = "Seattle";
-            //request.BillingAddress.Region = "WA";
-            //request.BillingAddress.PostalCode = "98136";
-            //request.BillingAddress.Country = "USA";
-            
-
-            // Display Response Data
+            // authorize request
             TransactionResponse response = request.Authorize(1.00m);
 
+             // Display Response
             BuildResponseView(response);
 
         }
 
+        
         private void BuildResponseView(TransactionResponse response)
         {
             pnlResponse.Visible = true;
@@ -59,6 +52,7 @@ namespace Authorization
             lblCSCResponse.Text = response.CSCResponse;
         }
 
+     
         protected void OnbtnVoidClick(object source, EventArgs e)
         {
             if (string.IsNullOrEmpty(lblTransactionID.Text))
@@ -70,6 +64,8 @@ namespace Authorization
             BuildVoidResponseView( request.Void(lblTransactionID.Text));
         }
 
+
+        // view void response
         private void BuildVoidResponseView(TransactionResponse response)
         {
             VoidResponseList.BindData(response.UnderlyingResponse);

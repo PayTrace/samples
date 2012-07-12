@@ -46,6 +46,11 @@ namespace PayTrace.Integration
         }
 
 
+        /// <summary>
+        /// Request to Authorize a credit card transaction.
+        /// </summary>
+        /// <param name="amount">amount of the transaction</param>
+        /// <returns></returns>
         public TransactionResponse Authorize(decimal amount)
         {
             BuildRequest();
@@ -56,6 +61,11 @@ namespace PayTrace.Integration
             return new TransactionResponse(this.Send());
         }
 
+        /// <summary>
+        /// Request Void a transaction authorization. 
+        /// </summary>
+        /// <param name="transactionID">The ID of the transaction to void</param>
+        /// <returns></returns>
         public TransactionResponse Void(string transactionID)
         {
             APIAttributeValues.Add(Keys.TRANXID, transactionID);
