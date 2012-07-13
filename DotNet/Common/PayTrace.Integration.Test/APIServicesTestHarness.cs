@@ -135,7 +135,7 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void Adding_shipping_to_a_request_should_add_shipping_info_to_library()
         {
-            AddressInfo address = new AddressInfo("1234 happy lane",city:"Seattle");
+            AddressInfo address = new AddressInfo(street: "1234 happy lane",city:"Seattle");
 
             Request request = new Request();
 

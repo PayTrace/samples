@@ -8,6 +8,7 @@ namespace PayTrace.Integration
     
     public class AddressInfo
     {
+        public string FullName { get; set; }
         public string Street { get; set; }
         public string Street2 {get;set;}
         public string Region {get;set;}
@@ -16,8 +17,9 @@ namespace PayTrace.Integration
         public string Country { get; set; }
         public string County { get; set; }
 
-        public AddressInfo(string street=null,string street2 = null, string city =null, string region= null,string postalcode = null, string country = null, string county = null  )
+        public AddressInfo(string fullname = null, string street=null,string street2 = null, string city =null, string region= null,string postalcode = null, string country = null, string county = null  )
         {
+            FullName = fullname;
             Street = street;
             Street2 = street2;
             City = city;
@@ -30,7 +32,9 @@ namespace PayTrace.Integration
         public AddressInfo() { }
 
 
-       
+
+
+     
     }
 
     

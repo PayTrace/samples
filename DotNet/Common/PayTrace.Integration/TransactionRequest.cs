@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using PayTrace.Integration.API;
+using PayTrace.Integration.RequestBuilders;
 
 namespace PayTrace.Integration
 {
@@ -33,26 +34,21 @@ namespace PayTrace.Integration
         internal Request BuildAuthorizationRequest()
         {
             var request = new Request(Destination);
+            request = AddAuthorization(request);
+
             CC.Validate();
 
             request.Add(Keys.CC, CC.Number);
             request.Add(Keys.EXPMNTH, CC.ExpirationMonth.ToString());
             request.Add(Keys.EXPYR, CC.ExpirationYear.ToString());
             request.Add(Keys.CSC, CC.CSC);
-            
-            if (BillingAddress != null)
-            {
-                request.Add(Keys.BADDRESS, BillingAddress.Street);
-                request.Add(Keys.BADDRESS2, BillingAddress.Street2);
-                request.Add(Keys.BCITY, BillingAddress.City);
-                request.Add(Keys.BSTATE, BillingAddress.Region);
-                request.Add(Keys.BZIP, BillingAddress.PostalCode);
-                request.Add(Keys.BCOUNTRY, BillingAddress.Country);
-            }
 
-            request = AddAuthorization(request);
+            AddressBuilder address_builder = new AddressBuilder(request);
+            address_builder.ShippingAddress = ShippingAddress;
+            address_builder.BillingAddress = BillingAddress;
+            request = address_builder.Build();
 
-            return request;
+            return request; 
         }
 
         private Request AddAuthorization(Request request)
