@@ -9,5 +9,6 @@ namespace PayTrace.Integration.API
     {
         public static string Authorization { get { return "Authorization"; } }
         public static string Void { get { return "Void"; } }
+        public static string Sale { get { return "Sale"; } }
     }
 }

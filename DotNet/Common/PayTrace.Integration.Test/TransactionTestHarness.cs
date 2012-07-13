@@ -45,30 +45,29 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void Transaction_Request_should_have_credit_card_properties_as_key_value_pairs()
         {
-            TransactionRequest request = new TransactionRequest("demo123","demo123");
+            TransactionRequest transaction_request = new TransactionRequest("demo123","demo123");
 
-            request.CC.Number = "4111111111111111";
-            request.CC.ExpirationMonth = 1;
-            request.CC.ExpirationYear = 2015;
-            request.CC.CSC = "999";
-            request.BillingAddress.Street = "2134 happy lane";
-            request.BillingAddress.City = "Seattle"; 
-            request.BillingAddress.Region = "WA";
-            request.BillingAddress.PostalCode = "98136";
-            request.BillingAddress.Country =  "USA";
+            transaction_request.CC.Number = "4111111111111111";
+            transaction_request.CC.ExpirationMonth = 1;
+            transaction_request.CC.ExpirationYear = 2015;
+            transaction_request.CC.CSC = "999";
+            transaction_request.BillingAddress.Street = "2134 happy lane";
+            transaction_request.BillingAddress.City = "Seattle"; 
+            transaction_request.BillingAddress.Region = "WA";
+            transaction_request.BillingAddress.PostalCode = "98136";
+            transaction_request.BillingAddress.Country =  "USA";
             
             // need to build the request so we can see it.
-            request.BuildRequest();
 
-            var APIList = request.GetAPIDictionary();
+            var request = transaction_request.BuildAuthorizationRequest();
 
-            Assert.AreEqual(APIList[Keys.CC], "4111111111111111");
-            Assert.AreEqual(APIList[Keys.CSC], "999");
-            Assert.AreEqual(APIList[Keys.BADDRESS], "2134 happy lane");
-            Assert.AreEqual(APIList[Keys.BCITY], "Seattle");
-            Assert.AreEqual(APIList[Keys.BSTATE], "WA");
-            Assert.AreEqual(APIList[Keys.BZIP], "98136");
-            Assert.AreEqual(APIList[Keys.BCOUNTRY],"USA");
+            Assert.AreEqual(request[Keys.CC], "4111111111111111");
+            Assert.AreEqual(request[Keys.CSC], "999");
+            Assert.AreEqual(request[Keys.BADDRESS], "2134 happy lane");
+            Assert.AreEqual(request[Keys.BCITY], "Seattle");
+            Assert.AreEqual(request[Keys.BSTATE], "WA");
+            Assert.AreEqual(request[Keys.BZIP], "98136");
+            Assert.AreEqual(request[Keys.BCOUNTRY], "USA");
             
 
         }
@@ -80,6 +79,13 @@ namespace PayTrace.Integration.Test
             TransactionResponse transaction_response = new TransactionResponse(response);
 
             Assert.IsTrue(transaction_response.HasError);
+        }
+
+        [TestMethod]
+        public void Transaction_Request_should_contain_data_for_the_request()
+        {
+            TransactionRequest Request = new TransactionRequest("demo123", "demo123");
+            
         }
 
 

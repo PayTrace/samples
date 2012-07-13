@@ -35,6 +35,7 @@
                         <asp:MenuItem NavigateUrl="~/BasicAuthorization.aspx" Text="Basic Auth" />
                         <asp:MenuItem NavigateUrl="~/AdvancedAuthorization.aspx" Text="Advanced Auth"/>
                         <asp:MenuItem NavigateUrl="~/AuthorizeThenVoidTransaction.aspx" Text="Auth then Void"/>
+                        <asp:MenuItem NavigateUrl="~/AuthorizationAndSale.aspx" Text="Auth and Sale" />
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                     </Items>
                 </asp:Menu>

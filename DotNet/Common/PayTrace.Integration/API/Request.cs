@@ -9,7 +9,7 @@ using PayTrace.Integration.Interfaces;
 
 namespace PayTrace.Integration.API
 {
-    public class Request : IRequest
+    public class Request :  IRequest 
     {
         public Uri Destination{get;set;}
         
@@ -20,6 +20,31 @@ namespace PayTrace.Integration.API
 
         public Request() { }
 
+        public string this[string key]
+        {
+            get 
+            {
+                if (APIAttributeValues.ContainsKey(key))
+                {
+                    return APIAttributeValues[key];
+                }
+
+                return null;
+
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    APIAttributeValues.Remove(key);
+                }
+                else
+                {
+                    APIAttributeValues[key] = value;
+                }
+            }
+        }
 
         protected Dictionary<string, string> APIAttributeValues = new Dictionary<string, string>();
 
@@ -30,17 +55,18 @@ namespace PayTrace.Integration.API
         
         public void Add(string attribute, string value)
         {
-            if (!string.IsNullOrWhiteSpace(value))
-            {
-                APIAttributeValues.Add(attribute, value);
-            }
+            APIAttributeValues[attribute] = value;
         }
 
         public void Add(string attribute, bool value)
         {
-            if(value)
+            if (value)
             {
-                APIAttributeValues.Add(attribute, "Y");
+                APIAttributeValues[attribute] = "Y";
+            }
+            else
+            {
+                APIAttributeValues.Remove(attribute);
             }
         }
 
@@ -53,7 +79,7 @@ namespace PayTrace.Integration.API
         {
             foreach (var item in dictionary)
             {
-                APIAttributeValues.Add(item.Key, item.Value);
+                APIAttributeValues[item.Key] = item.Value;
             }
         }
 

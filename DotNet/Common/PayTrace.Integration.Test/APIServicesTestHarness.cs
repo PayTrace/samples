@@ -82,13 +82,26 @@ namespace PayTrace.Integration.Test
         }
 
         [TestMethod]
+        public void Request_should_not_add_key_values_where_value_is_null()
+        {
+            Request request = new Request();
+
+            request[Keys.ORDERID] =  "1234";
+            request[Keys.ORDERID] = null;
+
+            var actual = request.ToAPI();
+
+            Assert.IsFalse(actual.ContainsKey(Keys.ORDERID));
+        }
+
+        [TestMethod]
         public void Request_should_return_a_dictionary()
         {
-            Request DBuilder = new Request();
+            Request request = new Request();
 
-            DBuilder.Add(Keys.ORDERID, "1234");
+            request.Add(Keys.ORDERID, "1234");
 
-            var actual = DBuilder.ToAPI();
+            var actual = request.ToAPI();
 
             Assert.AreEqual(actual[Keys.ORDERID], "1234");
 
