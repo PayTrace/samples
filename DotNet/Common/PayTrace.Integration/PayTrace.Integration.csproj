@@ -66,6 +66,7 @@
     <Compile Include="API\Methods.cs" />
     <Compile Include="RequestBuilders\AddressBuilder.cs" />
     <Compile Include="RequestBuilders\AuthorizationBuilder.cs" />
+    <Compile Include="RequestBuilders\CreditCardBuilder.cs" />
     <Compile Include="TransactionRequest.cs" />
     <Compile Include="TransactionResponse.cs" />
   </ItemGroup>

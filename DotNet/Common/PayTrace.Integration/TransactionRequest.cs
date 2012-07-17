@@ -30,34 +30,41 @@ namespace PayTrace.Integration
         {
             Auth = new Authorization(username, password);
         }
+
+         
         
         internal Request BuildAuthorizationRequest()
         {
             var request = new Request(Destination);
+            
             request = AddAuthorization(request);
+            request = AddCreditCard(request);
+            request = AddAddressInfo(request);
+            
+            return request;
+        }
 
-            CreditCard.Validate();
-
-            request.Add(Keys.CC, CreditCard.Number);
-            request.Add(Keys.EXPMNTH, CreditCard.ExpirationMonth.ToString());
-            request.Add(Keys.EXPYR, CreditCard.ExpirationYear.ToString());
-            request.Add(Keys.CSC, CreditCard.CSC);
-
+        private Request AddAddressInfo(Request request)
+        {
             AddressBuilder address_builder = new AddressBuilder(request);
             address_builder.ShippingAddress = ShippingAddress;
             address_builder.BillingAddress = BillingAddress;
-            request = address_builder.Build();
-
-            return request; 
+            return address_builder.Build();
         }
 
         private Request AddAuthorization(Request request)
         {
-            request[Keys.UN] = Auth.UserName;
-            request[Keys.PSWD] =  Auth.Password.ToString();
-            request[Keys.TERMS] = "Y";
+            AuthorizationBuilder auth_builder = new AuthorizationBuilder(request);
+            auth_builder.Authorization = this.Auth;
+            return auth_builder.Build();
+        }
 
-            return request;
+        private Request AddCreditCard(Request request)
+        {
+            CreditCard.Validate();
+            CreditCardBuilder creditcard_builder = new CreditCardBuilder(request);
+            creditcard_builder.CreditCard = CreditCard;
+            return creditcard_builder.Build();
         }
 
 
@@ -72,7 +79,7 @@ namespace PayTrace.Integration
 
             request[Keys.AMOUNT] = amount.ToString();
             request[Keys.TRANXTYPE] = TransactionTypes.Authorization;
-            request[Keys.METHOD] = "ProcessTranx";
+            request[Keys.METHOD] = Methods.ProcessTransaction;
             return new TransactionResponse(request.Send());
         }
 
@@ -88,7 +95,7 @@ namespace PayTrace.Integration
 
             request[Keys.TRANXID] =  transactionID;
             request[Keys.TRANXTYPE] = TransactionTypes.Void;
-            request[Keys.METHOD] = "ProcessTranx";
+            request[Keys.METHOD] = Methods.ProcessTransaction;
             return new TransactionResponse(request.Send());
         }
 
@@ -103,7 +110,7 @@ namespace PayTrace.Integration
 
             request[Keys.TRANXID] = transactionID;
             request[Keys.TRANXTYPE] = TransactionTypes.Sale;
-            request[Keys.METHOD] = "ProcessTranx";
+            request[Keys.METHOD] = Methods.ProcessTransaction;
             return request.Send();
         }
     }

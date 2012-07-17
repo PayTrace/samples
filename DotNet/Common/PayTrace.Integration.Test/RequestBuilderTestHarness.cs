@@ -86,5 +86,27 @@ namespace PayTrace.Integration.Test
             Assert.AreEqual("pwd1233", actual[Keys.PSWD]);
             Assert.AreEqual("Y", actual[Keys.TERMS]);
         }
+
+        [TestMethod]
+        public void CreditCardBuilder_should_set_request_credit_card_info()
+        {      
+            
+            CreditCard cc = new CreditCard();
+            cc.CSC = "999";
+            cc.Number = "12345678910";
+            cc.ExpirationMonth = 1;
+            cc.ExpirationYear = 2015;
+
+            Request request = new Request();
+            CreditCardBuilder builder = new CreditCardBuilder(request);
+
+            builder.CreditCard = cc;
+            request = builder.Build();
+
+            Assert.AreEqual(cc.CSC, request[Keys.CSC]);
+            Assert.AreEqual(cc.Number, request[Keys.CC]);
+            Assert.AreEqual(cc.ExpirationYear.ToString(), request[Keys.EXPYR]);
+            Assert.AreEqual(cc.ExpirationMonth.ToString(), request[Keys.EXPMNTH]);
+        }
     }
 }
