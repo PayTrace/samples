@@ -60,6 +60,7 @@
     <Compile Include="API\TransactionTypes.cs" />
     <Compile Include="CreditCard\CreditCardValidationException.cs" />
     <Compile Include="CreditCard\CreditCardValidator.cs" />
+    <Compile Include="CustomerRequest.cs" />
     <Compile Include="Interfaces\IClient.cs" />
     <Compile Include="Interfaces\IRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

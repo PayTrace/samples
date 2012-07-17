@@ -8,5 +8,7 @@ namespace PayTrace.Integration.API
     public static class Methods
     {
         public static string ProcessTransaction { get { return "ProcessTranx"; } }
+
+        public static string CreateCustomer { get { return "CreateCustomer"; } }
     }
 }
