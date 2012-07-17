@@ -35,8 +35,8 @@ namespace PayTrace.Integration
         {
             ResponseMessage = GetAPIValue(Keys.RESPONSE);
             TransactionID = GetAPIValue(Keys.TRANSACTIONID);
-            AppCode = GetAPIValue(Keys.APPCODE);
-            AppMessage =  GetAPIValue(Keys.APPMSG);
+            ApprovalCode = GetAPIValue(Keys.APPCODE);
+            ApprovalMessage =  GetAPIValue(Keys.APPMSG);
             AVSResponce =  GetAPIValue(Keys.AVSRESPONSE);
             CSCResponse =  GetAPIValue(Keys.CSCRESPONSE);
         }
@@ -60,8 +60,8 @@ namespace PayTrace.Integration
         public string CSCResponse { get; set; }
         public string ResponseMessage { get; set; }
         public string TransactionID { get; set; }
-        public string AppCode { get; set; }
-        public string AppMessage { get; set; }
+        public string ApprovalCode { get; set; }
+        public string ApprovalMessage { get; set; }
         public string AVSResponce { get; set; }
         public  Response UnderlyingResponse { get { return _response; } }
 

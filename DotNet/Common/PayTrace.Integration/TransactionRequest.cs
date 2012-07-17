@@ -13,7 +13,7 @@ namespace PayTrace.Integration
         public AddressInfo ShippingAddress = new AddressInfo();
         protected Authorization Auth = null;
         public Uri Destination { get; set; }
-        public CreditCard CC = new CreditCard();
+        public CreditCard CreditCard = new CreditCard();
 
         public TransactionRequest(Uri destination) 
         {
@@ -36,12 +36,12 @@ namespace PayTrace.Integration
             var request = new Request(Destination);
             request = AddAuthorization(request);
 
-            CC.Validate();
+            CreditCard.Validate();
 
-            request.Add(Keys.CC, CC.Number);
-            request.Add(Keys.EXPMNTH, CC.ExpirationMonth.ToString());
-            request.Add(Keys.EXPYR, CC.ExpirationYear.ToString());
-            request.Add(Keys.CSC, CC.CSC);
+            request.Add(Keys.CC, CreditCard.Number);
+            request.Add(Keys.EXPMNTH, CreditCard.ExpirationMonth.ToString());
+            request.Add(Keys.EXPYR, CreditCard.ExpirationYear.ToString());
+            request.Add(Keys.CSC, CreditCard.CSC);
 
             AddressBuilder address_builder = new AddressBuilder(request);
             address_builder.ShippingAddress = ShippingAddress;

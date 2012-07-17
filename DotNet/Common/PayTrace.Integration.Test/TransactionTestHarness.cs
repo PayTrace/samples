@@ -47,10 +47,10 @@ namespace PayTrace.Integration.Test
         {
             TransactionRequest transaction_request = new TransactionRequest("demo123","demo123");
 
-            transaction_request.CC.Number = "4111111111111111";
-            transaction_request.CC.ExpirationMonth = 1;
-            transaction_request.CC.ExpirationYear = 2015;
-            transaction_request.CC.CSC = "999";
+            transaction_request.CreditCard.Number = "4111111111111111";
+            transaction_request.CreditCard.ExpirationMonth = 1;
+            transaction_request.CreditCard.ExpirationYear = 2015;
+            transaction_request.CreditCard.CSC = "999";
             transaction_request.BillingAddress.Street = "2134 happy lane";
             transaction_request.BillingAddress.City = "Seattle"; 
             transaction_request.BillingAddress.Region = "WA";

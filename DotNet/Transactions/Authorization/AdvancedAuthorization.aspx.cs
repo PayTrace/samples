@@ -22,9 +22,9 @@ namespace Authorization
             TransactionRequest request = new TransactionRequest("demo123","demo123");
 
             // add credit card info
-            request.CC.Number = "4111111111111111";
-            request.CC.ExpirationMonth = 1;
-            request.CC.ExpirationYear = 2015;
+            request.CreditCard.Number = "4111111111111111";
+            request.CreditCard.ExpirationMonth = 1;
+            request.CreditCard.ExpirationYear = 2015;
 
 
             // add billing info
@@ -53,8 +53,8 @@ namespace Authorization
 
             lblResponse.Text = response.ResponseMessage;
             lblTransactionID.Text = response.TransactionID;
-            lblAppCode.Text = response.AppCode;
-            lblAppMessage.Text = response.AppMessage;
+            lblAppCode.Text = response.ApprovalCode;
+            lblAppMessage.Text = response.ApprovalMessage;
             lblAVSResponse.Text = response.AVSResponce;
             lblCSCResponse.Text = response.CSCResponse;
         }

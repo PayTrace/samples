@@ -35,15 +35,15 @@
             <td><asp:Label runat="server" id="lblTransactionID" /> </td>
         </tr>
         <tr>
-            <td> AppCode:</td>
+            <td> Approval Code:</td>
             <td> <asp:Label runat="server" id="lblAppCode" /> </td>
         </tr>
         <tr>
-            <td>AppMessage:</td>
+            <td>Approval Message:</td>
             <td> <asp:Label runat="server" id="lblAppMessage" /> </td>
         </tr>
         <tr>
-            <td>AVSResponse:</td>
+            <td>Address Verification System Response:</td>
             <td><asp:Label runat="server" id="lblAVSResponse" /></td>
         </tr>
         <tr>
