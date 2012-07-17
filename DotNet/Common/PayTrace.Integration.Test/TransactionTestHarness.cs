@@ -59,7 +59,7 @@ namespace PayTrace.Integration.Test
             
             // need to build the request so we can see it.
 
-            var request = transaction_request.BuildAuthorizationRequest();
+            var request = transaction_request.BuildBaseSalesRequest();
 
             Assert.AreEqual(request[Keys.CC], "4111111111111111");
             Assert.AreEqual(request[Keys.CSC], "999");

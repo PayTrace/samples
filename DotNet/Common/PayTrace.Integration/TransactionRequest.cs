@@ -33,7 +33,7 @@ namespace PayTrace.Integration
 
          
         
-        internal Request BuildAuthorizationRequest()
+        internal Request BuildBaseSalesRequest()
         {
             var request = new Request(Destination);
             
@@ -69,21 +69,6 @@ namespace PayTrace.Integration
 
 
         /// <summary>
-        /// Request to authorize a credit card transaction.
-        /// </summary>
-        /// <param name="amount">amount of the transaction</param>
-        /// <returns></returns>
-        public TransactionResponse Authorize(decimal amount)
-        {
-            Request request = BuildAuthorizationRequest();
-
-            request[Keys.AMOUNT] = amount.ToString();
-            request[Keys.TRANXTYPE] = TransactionTypes.Authorization;
-            request[Keys.METHOD] = Methods.ProcessTransaction;
-            return new TransactionResponse(request.Send());
-        }
-
-        /// <summary>
         /// Request to void a transaction authorization. 
         /// </summary>
         /// <param name="transactionID">The ID of the transaction to void</param>
@@ -106,12 +91,27 @@ namespace PayTrace.Integration
         /// <returns></returns>
         public Response Process(string transactionID)
         {
-            Request request = BuildAuthorizationRequest();
+            Request request = BuildBaseSalesRequest();
 
             request[Keys.TRANXID] = transactionID;
             request[Keys.TRANXTYPE] = TransactionTypes.Sale;
             request[Keys.METHOD] = Methods.ProcessTransaction;
             return request.Send();
+        }
+
+        /// <summary>
+        /// Request to authorize a credit card transaction.
+        /// </summary>
+        /// <param name="amount">amount of the transaction</param>
+        /// <returns></returns>
+        public TransactionResponse Authorize(decimal amount)
+        {
+            Request request = BuildBaseSalesRequest();
+
+            request[Keys.AMOUNT] = amount.ToString();
+            request[Keys.TRANXTYPE] = TransactionTypes.Authorization;
+            request[Keys.METHOD] = Methods.ProcessTransaction;
+            return new TransactionResponse(request.Send());
         }
     }
 }
