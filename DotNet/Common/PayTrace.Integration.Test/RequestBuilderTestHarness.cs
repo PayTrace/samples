@@ -69,5 +69,22 @@ namespace PayTrace.Integration.Test
             Assert.AreEqual(request[Keys.SZIP], ShippingAddress.PostalCode);
             Assert.AreEqual(request[Keys.SCOUNTRY], ShippingAddress.Country);
         }
+
+        [TestMethod]
+        public void Authorization_builder_should_set_authorization_fields()
+        {
+            Request request = new Request();
+            Authorization auth = new Authorization("username123", "pwd1233");
+
+            AuthorizationBuilder builder = new AuthorizationBuilder(request);
+
+            builder.Authorization = auth;
+
+            var actual = builder.Build();
+
+            Assert.AreEqual("username123", actual[Keys.UN]);
+            Assert.AreEqual("pwd1233", actual[Keys.PSWD]);
+            Assert.AreEqual("Y", actual[Keys.TERMS]);
+        }
     }
 }
