@@ -6,17 +6,14 @@ using PayTrace.Integration.API;
 
 namespace PayTrace.Integration.RequestBuilders
 {
-    public class AuthorizationBuilder
+    public class AuthorizationBuilder : RequestBuilderBase
     {
-        private API.Request _request;
 
-        public Authorization Authorization { get; set; } 
-        public AuthorizationBuilder(Request request)
-        {
-            _request = request;
-        }
-
-        public Request Build()
+        public AuthorizationInfo Authorization { get; set; } 
+        
+        public AuthorizationBuilder(Request request):base(request){}
+      
+        public override Request Build()
         {
             _request[Keys.UN] = Authorization.UserName;
             _request[Keys.PSWD] = Authorization.Password.ToString();

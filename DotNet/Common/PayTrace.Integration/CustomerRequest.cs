@@ -9,7 +9,7 @@ namespace PayTrace.Integration
 {
     public class CustomerRequest
     {
-        public Authorization Athorization { get; set; }
+        public AuthorizationInfo Athorization { get; set; }
         public AddressInfo BillingAddress { get; set; }
         public AddressInfo ShippingAddress { get; set; }
         public CreditCard CreditCard { get; set; }
@@ -19,7 +19,7 @@ namespace PayTrace.Integration
         public CustomerRequest(string username, string password)
         {
             this.Destination = Destinations.Default;
-            this.Athorization = new Authorization(username, password);
+            this.Athorization = new AuthorizationInfo(username, password);
             
         }
 

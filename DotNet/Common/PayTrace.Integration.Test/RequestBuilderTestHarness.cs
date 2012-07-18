@@ -74,7 +74,7 @@ namespace PayTrace.Integration.Test
         public void Authorization_builder_should_set_authorization_fields()
         {
             Request request = new Request();
-            Authorization auth = new Authorization("username123", "pwd1233");
+            AuthorizationInfo auth = new AuthorizationInfo("username123", "pwd1233");
 
             AuthorizationBuilder builder = new AuthorizationBuilder(request);
 

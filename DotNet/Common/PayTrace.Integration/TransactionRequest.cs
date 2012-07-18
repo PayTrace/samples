@@ -11,7 +11,7 @@ namespace PayTrace.Integration
     {
         public AddressInfo BillingAddress = new AddressInfo();
         public AddressInfo ShippingAddress = new AddressInfo();
-        protected Authorization Auth = null;
+        protected AuthorizationInfo Auth = null;
         public Uri Destination { get; set; }
         public CreditCard CreditCard = new CreditCard();
 
@@ -28,7 +28,7 @@ namespace PayTrace.Integration
 
         public void AddAuthorizationInfo(string username, string password)
         {
-            Auth = new Authorization(username, password);
+            Auth = new AuthorizationInfo(username, password);
         }
 
          

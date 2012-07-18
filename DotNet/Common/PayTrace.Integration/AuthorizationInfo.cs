@@ -5,12 +5,12 @@ using System.Text;
 
 namespace PayTrace.Integration
 {
-    public class Authorization
+    public class AuthorizationInfo
     {
         public string UserName { get; set; }
         public string Password { get; set; }
 
-        public Authorization(string username, string password)
+        public AuthorizationInfo(string username, string password)
         {
             UserName = username;
             Password = password;

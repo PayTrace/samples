@@ -6,18 +6,15 @@ using PayTrace.Integration.API;
 
 namespace PayTrace.Integration.RequestBuilders
 {
-    public class CreditCardBuilder
+    public class CreditCardBuilder:RequestBuilderBase
     {
-        private Request _request;
         
         public CreditCard CreditCard{get;set;}
 
-        public CreditCardBuilder( Request request)
-        {
-            _request = request;
-        }
+        public CreditCardBuilder(Request request):base(request) { }
+      
 
-        public Request Build()
+        public override Request Build()
         {
             _request[Keys.CC] = CreditCard.Number;
             _request[Keys.EXPMNTH] = CreditCard.ExpirationMonth.ToString();
@@ -26,6 +23,5 @@ namespace PayTrace.Integration.RequestBuilders
 
             return _request;
         }
-
     }
 }

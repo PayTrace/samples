@@ -2,11 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>
-        Create Customer
+    <div style="width:100%">
+    <h2 style="float:left;width:60%;">
+        Create Customer 
     </h2>
+    <div style="clear:both;float:right;margin:10px;">
+        <asp:Button runat="server" ID="Top_btnSubmit" Text="Submit" OnClick="OnbtnSubmit" />
+    </div>
+    </div>
         <div style="float:left;width:42%;" >
-            <fieldset>
+            <fieldset>               
             <legend>Customer Form</legend>
                 <p>
                     <asp:Label ID="CustomerNameLabel" runat="server" AssociatedControlID="tbCustomerName">Customer Name:</asp:Label><br />
@@ -51,6 +56,68 @@
                         <asp:TextBox TextMode="SingleLine" runat="server" ID="tbYear"  CssClass="" MaxLength="4" Text="2015" Width="30px"   />
                     </p>
                     </fieldset>  
-                </div>       
+                </div>
+                <div id="address" style="clear:both" > 
+                <div style="float:left;width:42%;"> 
+                <fieldset >
+                <legend>Billing Address</legend>
+                    <p>
+                        <label>Street:</label><br />
+                     <asp:TextBox runat="server" ID="tbBillingStreet" CssClass="textEntry" TextMode="SingleLine" Text="1234 Happy Lane"/>
+                    </p>
+                    <p>
+                        <label>Street 2:</label><br />
+                     <asp:TextBox runat="server" ID="tbBillingStreet2" CssClass="textEntry" TextMode="SingleLine" />
+                    </p>
+                    <p>
+                        <label>City:</label><br />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbBillingCity"  CssClass="textEntry"  Text="Seattle"/>
+                    </p>
+                    <p>
+                        <label>State / Region:</label><br />
+                        <asp:TextBox TextMode=SingleLine runat="server" ID="tbBillingRegion"  CssClass="textEntry" Text="Washington" />
+                    </p>
+                    <p>
+                        <label>Postal Code / Zip:</label><br />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbBillingPostalCode"  CssClass="textEntry" Text="98104" />
+                    </p>
+                    <p>
+                        <label>Country:</label><br />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="TbBillingCountry"  CssClass="textEntry" Text="USA" />
+                    </p>
+                    
+                    </fieldset>       
+                </div>
+                 <div style="float:right;width:42%;">              
+                 <fieldset >
+                 <legend>Shipping Address</legend>
+                    <p>
+                        <label>Street:</label><br />
+                     <asp:TextBox runat="server" ID="tbShippingStreet" CssClass="textEntry" TextMode="SingleLine" Text="1234 Happy Lane" />
+                    </p>
+                    <p>
+                        <label>Street 2:</label><br />
+                     <asp:TextBox runat="server" ID="tbShippingStreet2" CssClass="textEntry" TextMode="SingleLine" />
+                    </p>
+                    <p>
+                        <label>City:</label><br />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbShippingCity"  CssClass="textEntry" Text="Seattle" />
+                    </p>
+                    <p>
+                        <label>State / Region:</label><br />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbShippingRegion"  CssClass="textEntry" Text="Washington" />
+                    </p>
+                    <p>
+                        <label>Postal Code / Zip:</label><br />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbShippingPostalCode"  CssClass="textEntry" Text="98104"/>
+                    </p>
+                    <p>
+                        <label>Country:</label><br />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbShippingCountry"  CssClass="textEntry" Text="USA" />
+                    </p>
+                    </fieldset>  
+                    </div >
+                        <div style="clear:both;float:right;margin:10px;"><asp:button runat="server" ID="bottom_btnSubmit" Text="Submit"  OnClick="OnbtnSubmit" /></div>
+                    </div>
             
 </asp:Content>

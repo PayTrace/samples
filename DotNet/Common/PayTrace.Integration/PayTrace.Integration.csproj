@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="Authorization.cs" />
+    <Compile Include="AddressInfo.cs" />
+    <Compile Include="AuthorizationInfo.cs" />
     <Compile Include="CreditCard\CreditCard.cs" />
     <Compile Include="API\DestinationList.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -68,6 +68,9 @@
     <Compile Include="RequestBuilders\AddressBuilder.cs" />
     <Compile Include="RequestBuilders\AuthorizationBuilder.cs" />
     <Compile Include="RequestBuilders\CreditCardBuilder.cs" />
+    <Compile Include="CustomerInfo.cs" />
+    <Compile Include="RequestBuilders\CustomerBuilder.cs" />
+    <Compile Include="RequestBuilders\RequestBuilderBase.cs" />
     <Compile Include="TransactionRequest.cs" />
     <Compile Include="TransactionResponse.cs" />
   </ItemGroup>
