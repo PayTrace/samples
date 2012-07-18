@@ -60,7 +60,9 @@
     <Content Include="AuthorizationAndSale.aspx" />
     <Content Include="AuthorizeThenVoidTransaction.aspx" />
     <Content Include="BasicAuthorization.aspx" />
+    <Content Include="CreateCustomer.aspx" />
     <Content Include="ResponseList.ascx" />
+    <Content Include="Scripts\Site.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -138,6 +140,13 @@
     </Compile>
     <Compile Include="BasicAuthorization.aspx.designer.cs">
       <DependentUpon>BasicAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateCustomer.aspx.cs">
+      <DependentUpon>CreateCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateCustomer.aspx.designer.cs">
+      <DependentUpon>CreateCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
