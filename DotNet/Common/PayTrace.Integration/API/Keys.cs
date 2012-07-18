@@ -10,7 +10,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Any tax generated from freight or other services associated with the transaction.
-        /// </summary   
+        /// </summary>   
         public static string ADDTAX
         {
             get { return "ADDTAX"; }
@@ -20,7 +20,7 @@ namespace PayTrace.Integration.API
         /// A flag used to indicate where additional tax was included in
         ///this transaction. Set to Y if additional tax was included
         ///and N if no additional tax was applied.
-        /// </summary   
+        /// </summary>   
         public static string ADDTAXIND
         {
             get { return "ADDTAXIND"; }
@@ -28,7 +28,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Descriptor used to describe additional tax that is applied to the transaction amount in reference to this specific line item.
-        /// </summary   
+        /// </summary>   
         public static string ADDTAXINDLI
         {
             get { return "ADDTAXINDLI"; }
@@ -36,7 +36,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Additional tax amount applied to the transaction applicable to this line item record.
-        /// </summary   
+        /// </summary>   
         public static string ADDTAXLI
         {
             get { return "ADDTAXLI"; }
@@ -44,7 +44,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Rate at which additional tax was assessed.
-        /// </summary   
+        /// </summary>   
         public static string ADDTAXRATE
         {
             get { return "ADDTAXRATE"; }
@@ -52,7 +52,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Rate at which additional tax was calculated in reference to this specific line item record.
-        /// </summary   
+        /// </summary>   
         public static string ADDTAXRATELI
         {
             get { return "ADDTAXRATELI"; }
@@ -60,7 +60,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Dollar amount of the transaction. Must be a positive number up to two decimal places.
-        /// </summary   
+        /// </summary>   
         public static string AMOUNT
         {
             get { return "AMOUNT"; }
@@ -68,7 +68,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Total amount included in the transaction amount generated from this line item record.
-        /// </summary   
+        /// </summary>   
         public static string AMOUNTLI
         {
             get { return "AMOUNTLI"; }
@@ -76,7 +76,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Approval code for the forced sale is only required and used if TranxType is set to 'Force'.
-        /// </summary   
+        /// </summary>   
         public static string APPROVAL
         {
             get { return "APPROVAL"; }
@@ -84,7 +84,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Optional URL that the customer will have the option of selecting if their transaction is approved via the PayTrace API Secure Checkout
-        /// </summary   
+        /// </summary>   
         public static string APPROVEURL
         {
             get { return "APPROVEURL"; }
@@ -92,7 +92,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Number of the batch of transactions you wish to export via an ExportBatch request
-        /// </summary   
+        /// </summary>   
         public static string BATCHNUMBER
         {
             get { return "BATCHNUMBER"; }
@@ -100,7 +100,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Address that the credit card statement is delivered.
-        /// </summary   
+        /// </summary>   
         public static string BADDRESS
         {
             get { return "BADDRESS"; }
@@ -108,7 +108,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Second line of the address the credit card statement is delivered.
-        /// </summary   
+        /// </summary>   
         public static string BADDRESS2
         {
             get { return "BADDRESS2"; }
@@ -116,7 +116,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// City that the credit card statement is delivered.
-        /// </summary   
+        /// </summary>   
         public static string BCITY
         {
             get { return "BCITY"; }
@@ -124,7 +124,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Country code where the billing address is located
-        /// </summary   
+        /// </summary>   
         public static string BCOUNTRY
         {
             get { return "BCOUNTRY"; }
@@ -132,7 +132,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Name that appears of the credit card.
-        /// </summary   
+        /// </summary>   
         public static string BNAME
         {
             get { return "BNAME"; }
@@ -140,7 +140,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// State that the credit card statement is delivered.
-        /// </summary   
+        /// </summary>   
         public static string BSTATE
         {
             get { return "BSTATE"; }
@@ -148,7 +148,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Zip code that the credit card statement is delivered.
-        /// </summary   
+        /// </summary>   
         public static string BZIP
         {
             get { return "BZIP"; }
@@ -158,7 +158,7 @@ namespace PayTrace.Integration.API
         /// The attribute causes a  Sale transaction to be processed as a cash advance where cash is given to the customer as opposed to a product or service. 
         /// Please note that Cash Advances may only be processed on accounts that are set up on the TSYS/Vital network and are configured to process Cash Advances. 
         /// Also, only swiped/card present Sales may include the CashAdvance parameter
-        /// </summary   
+        /// </summary>   
         public static string CASHADVANCE
         {
             get { return "CASHADVANCE"; }
@@ -167,7 +167,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// A unique identifier for each transaction in the PayTrace
         ///system. This value is returned in the CHECKIDENTIFIER parameter of an API response and will consequently be included in requests to email receipts, manage checks, etc.
-        /// </summary   
+        /// </summary>   
         public static string CHECKID
         {
             get { return "CHECKID"; }
@@ -175,7 +175,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// The transaction type is the type of transaction you wish to process if the METHOD is set to ProcessCheck. CHECKTYPE must be set to one of the following: Sale, Hold, Refund, Fund, or Void.
-        /// </summary   
+        /// </summary>   
         public static string CHECKTYPE
         {
             get { return "CHECKTYPE"; }
@@ -183,7 +183,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Commodity code that generally applies to each product included in the order. Commodity codes are generally assigned by your merchant service provider.
-        /// </summary   
+        /// </summary>   
         public static string CCODE
         {
             get { return "CCODE"; }
@@ -191,7 +191,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// The complete commodity code unique to the product referenced in this specific line item record. Commodity codes are generally assigned by your merchant service provider
-        /// </summary   
+        /// </summary>   
         public static string CCODELI
         {
             get { return "CCODELI"; }
@@ -199,7 +199,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Customer's credit card number must be a valid credit card number that your PayTrace account is set up to accept.
-        /// </summary   
+        /// </summary>   
         public static string CC
         {
             get { return "CC"; }
@@ -207,7 +207,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// CSC is the 3 or 4 digit code found on the signature line of the credit card. CSC is found on the front of Amex cards.
-        /// </summary   
+        /// </summary>   
         public static string CSC
         {
             get { return "CSC"; }
@@ -216,7 +216,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Optional value that is sent to the cardholder’s issuer and overrides the business name stored in PayTrace. 
         /// Custom DBA values are only used with requests to process sales or authorizations through accounts on the TSYS/Vital, Heartland, and Trident networks.
-        /// </summary   
+        /// </summary>   
         public static string CUSTOMDBA
         {
             get { return "CUSTOMDBA"; }
@@ -224,7 +224,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Unique identifier for a customer profile. Each customer must have their own unique ID.
-        /// </summary   
+        /// </summary>   
         public static string CUSTID
         {
             get { return "CUSTID"; }
@@ -232,7 +232,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Password that customer uses to log into customer profile in shopping cart. Only required if you are using the PayTrace shopping cart.
-        /// </summary   
+        /// </summary>   
         public static string CUSTPSWD
         {
             get { return "CUSTPSWD"; }
@@ -240,7 +240,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Defaulted to N, the customer receipt must be set to Y if a receipt should be emailed to the customer each time the recurring transaction is processed.
-        /// </summary   
+        /// </summary>   
         public static string CUSTRECEIPT
         {
             get { return "CUSTRECEIPT"; }
@@ -249,7 +249,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Customer reference ID is only used for transactions that are identified as corporate or purchasing credit cards. 
         /// The customer reference ID is an identifier that your customer may ask you to provide in order to reference the transaction to their credit card statement.
-        /// </summary   
+        /// </summary>   
         public static string CUSTREF
         {
             get { return "CUSTREF"; }
@@ -257,7 +257,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Customer’s tax identifier used for tax reporting purposes
-        /// </summary   
+        /// </summary>   
         public static string CUSTOMERTAXID
         {
             get { return "CUSTOMERTAXID"; }
@@ -265,16 +265,16 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Checking account number for processing check transactions or managing customer profiles.
-        /// </summary   
+        /// </summary>   
         public static string DDA
         {
             get { return "DDA"; }
         }
-
+        
         /// <summary>
-        /// Flag used to determine whether the line item amount was a debit or a credit to the customer. Generally always a debit or a factor that increased the transaction amount. 
+        /// Flag used to determine whether the line item amount was a debit or a credit to the customer. Generally always a debit or a factor that increased the transaction amount.
         /// Possible values are D (net is a debit) and C (net is a credit).
-        /// </summary   
+        /// </summary>   
         public static string DCIND
         {
             get { return "DCIND"; }
@@ -282,7 +282,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Optional URL that the customer will have the option of selecting if their transaction is declined via the PayTrace API Secure Checkout
-        /// </summary   
+        /// </summary>   
         public static string DECLINEURL
         {
             get { return "DECLINEURL"; }
@@ -290,7 +290,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Flag used to indicate whether discount was applied to the transaction amount in reference to this specific line item record.
-        /// </summary   
+        /// </summary>   
         public static string DISCOUNTIND
         {
             get { return "DISCOUNTIND"; }
@@ -298,7 +298,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Discount amount applied to the transaction amount in reference to this line item record.
-        /// </summary   
+        /// </summary>   
         public static string DISCOUNTLI
         {
             get { return "DISCOUNTLI"; }
@@ -306,7 +306,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Rate at which discount was applied to the transaction in reference to this specific line item.
-        /// </summary   
+        /// </summary>   
         public static string DISCOUNTRATE
         {
             get { return "DISCOUNTRATE"; }
@@ -314,7 +314,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Duty should represent any costs associated with shipping through a country’s customs.
-        /// </summary   
+        /// </summary>   
         public static string DUTY
         {
             get { return "DUTY"; }
@@ -322,7 +322,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Optional text describing the transaction, products, customers, or other attributes of the transaction.
-        /// </summary   
+        /// </summary>   
         public static string DESCRIPTION
         {
             get { return "DESCRIPTION"; }
@@ -330,7 +330,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Discount value should represent the amount discounted from the original transaction amount
-        /// </summary   
+        /// </summary>   
         public static string DISCOUNT
         {
             get { return "DISCOUNT"; }
@@ -338,7 +338,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Flag that is returned for checks processed through a real-time check processor. 0/zero indicates that the check was accepted.
-        /// </summary   
+        /// </summary>   
         public static string ACHCODE
         {
             get { return "ACHCODE"; }
@@ -346,7 +346,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Message returned from real-time check processor
-        /// </summary   
+        /// </summary>   
         public static string ACHMSG
         {
             get { return "ACHMSG"; }
@@ -354,7 +354,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Approval code is generated by credit card issuer and returned when a successful call to ProcessTranx is requested.
-        /// </summary   
+        /// </summary>   
         public static string APPCODE
         {
             get { return "APPCODE"; }
@@ -362,7 +362,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Approval message is the textual response from the credit card issuer that is returned when a successful call to ProcessTranx is requested.
-        /// </summary   
+        /// </summary>   
         public static string APPMSG
         {
             get { return "APPMSG"; }
@@ -370,7 +370,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Authorization key is returned with a successful request to validate an order through the PayTrace API Secure Checkout.
-        /// </summary   
+        /// </summary>   
         public static string AUTHKEY
         {
             get { return "AUTHKEY"; }
@@ -383,7 +383,7 @@ namespace PayTrace.Integration.API
         ///provided with the ProcessTranx request to the address where the
         ///customer's credit card statement is delivered. See Appendix B for
         ///possible AVS responses
-        /// </summary   
+        /// </summary>   
         public static string AVSRESPONSE
         {
             get { return "AVSRESPONSE"; }
@@ -392,7 +392,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Remaining balance on a prepaid or debit card. This value will only
         ///be returned if ENABLEPARTIALAUTH is set to Y.
-        /// </summary   
+        /// </summary>   
         public static string BALANCEAMOUNT
         {
             get { return "BALANCEAMOUNT"; }
@@ -402,7 +402,7 @@ namespace PayTrace.Integration.API
         /// Batch number is returned with a successful request to settle
         ///transactions. This value is the sequential number assigned to the
         ///batch that was initiated.
-        /// </summary   
+        /// </summary>   
         public static string BATCHNUM
         {
             get { return "BATCHNUM"; }
@@ -412,7 +412,7 @@ namespace PayTrace.Integration.API
         /// ID assigned by PayTrace to each check at the time the check is
         ///processed. CHECKIDENTIFIER is returned with a successful call to
         ///ProcessCheck.
-        /// </summary   
+        /// </summary>   
         public static string CHECKIDENTIFIER
         {
             get { return "CHECKIDENTIFIER"; }
@@ -424,7 +424,7 @@ namespace PayTrace.Integration.API
         ///CSC provided with the ProcessTranx request. is compared to the
         ///CSC assigned to the credit card. See Appendix B for possible AVS
         ///responses
-        /// </summary   
+        /// </summary>   
         public static string CSCRESPONSE
         {
             get { return "CSCRESPONSE"; }
@@ -434,7 +434,7 @@ namespace PayTrace.Integration.API
         /// ID assigned by PayTrace to each customer at the time the
         ///customer profile is created. CustomerID is returned with a
         ///successful call to CreateCustomer or UpdateCustomer.
-        /// </summary   
+        /// </summary>   
         public static string CUSTOMERID
         {
             get { return "CUSTOMERID"; }
@@ -443,7 +443,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Formatted customer record returned when a successful call to
         ///ExportCustomers method is requested.
-        /// </summary   
+        /// </summary>   
         public static string CUSTOMERRECORD
         {
             get { return "CUSTOMERRECORD"; }
@@ -451,7 +451,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// End date is used for export functions to indicate when to end searching for items to export. Must be a valid date formatted as MM/DD/YYYY
-        /// </summary   
+        /// </summary>   
         public static string EDATE
         {
             get { return "EDATE"; }
@@ -459,7 +459,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Customer's email address where the sales receipt may be sent.
-        /// </summary   
+        /// </summary>   
         public static string EMAIL
         {
             get { return "EMAIL"; }
@@ -467,7 +467,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Flag that must be set to ‘Y’ in order to support partial authorization and balance amounts in transaction responses.
-        /// </summary   
+        /// </summary>   
         public static string ENABLEPARTIALAUTH
         {
             get { return "ENABLEPARTIALAUTH"; }
@@ -477,7 +477,7 @@ namespace PayTrace.Integration.API
         /// PayTrace validates each name / value pair it receives. If any errors
         ///or inconsistencies in this data or the request, PayTrace will return
         ///an error. Each request may return multiple errors.
-        /// </summary   
+        /// </summary>   
         public static string ERROR
         {
             get { return "ERROR"; }
@@ -485,7 +485,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Expiration month must be the two-digit month of the credit cards expiration date.
-        /// </summary   
+        /// </summary>   
         public static string EXPMNTH
         {
             get { return "EXPMNTH"; }
@@ -493,7 +493,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Expiration year must be the two digit year of the credit cards expiration date.
-        /// </summary   
+        /// </summary>   
         public static string EXPYR
         {
             get { return "EXPYR"; }
@@ -501,7 +501,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Customer's fax number (i.e. (555)555-5555, 555-555-5555, or 5555555555).
-        /// </summary   
+        /// </summary>   
         public static string FAX
         {
             get { return "FAX"; }
@@ -509,7 +509,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Setting in the PayTrace API Secure Checkout that may be set to ‘Y’ if the customer’s complete billing address is required.
-        /// </summary   
+        /// </summary>   
         public static string FORCEADDRESS
         {
             get { return "FORCEADDRESS"; }
@@ -517,7 +517,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Setting in the PayTrace API Secure Checkout that may be set to ‘Y’ if the customer’s CSC is required.
-        /// </summary   
+        /// </summary>   
         public static string FORCECSC
         {
             get { return "FORCECSC"; }
@@ -525,7 +525,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Setting in the PayTrace API Secure Checkout that may be set to ‘Y’ if the customer’s email address is required.
-        /// </summary   
+        /// </summary>   
         public static string FORCEEMAIL
         {
             get { return "FORCEEMAIL"; }
@@ -533,7 +533,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Freight value should represent the portion of the transaction amount that was generated from shipping costs.
-        /// </summary   
+        /// </summary>   
         public static string FREIGHT
         {
             get { return "FREIGHT"; }
@@ -542,7 +542,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// The billing cycle of the recurring transaction must be 1 for annually, 8 for semi-annually, A for trimesterly, 2 for quarterly, 9 for bi-monthly, , 3 for monthly, 4 for biweekly, 7 
         /// for 1st and 15th, 5 for weekly, or 6 for daily.
-        /// </summary   
+        /// </summary>   
         public static string FREQUENCY
         {
             get { return "FREQUENCY"; }
@@ -550,7 +550,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Only used when processing Cash Advances. This required field is the expiration date of the card holder’s photo ID. MM/DD/YYYY
-        /// </summary   
+        /// </summary>   
         public static string IDEXP
         {
             get { return "IDEXP"; }
@@ -558,7 +558,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Invoice is the identifier for this transaction in your accounting or inventory management system.
-        /// </summary   
+        /// </summary>   
         public static string INVOICE
         {
             get { return "INVOICE"; }
@@ -569,7 +569,7 @@ namespace PayTrace.Integration.API
         ///profile or transaction be created or processed formatted as a
         ///standard IP address (I.e. 111.111.111.111). IP address is returned
         ///with a successful call to ExportCustomers or ExportTranx.
-        /// </summary   
+        /// </summary>   
         public static string IP
         {
             get { return "IP"; }
@@ -577,7 +577,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Only used when processing Cash Advances. This required field is the last 4 digits of the card number as it appears on the face of the card.
-        /// </summary   
+        /// </summary>   
         public static string LAST4
         {
             get { return "LAST4"; }
@@ -585,7 +585,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Unit of measure applied to the product and its quantity. For example, LBS/LITERS, OUNCES, etc.
-        /// </summary   
+        /// </summary>   
         public static string MEASURE
         {
             get { return "MEASURE"; }
@@ -593,7 +593,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Merchant’s tax identifier used for tax reporting purposes.
-        /// </summary   
+        /// </summary>   
         public static string MERCHANTTAXID
         {
             get { return "MERCHANTTAXID"; }
@@ -601,7 +601,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Function that you are requesting PayTrace perform. All methods are discussed in section 4.
-        /// </summary   
+        /// </summary>   
         public static string METHOD
         {
             get { return "METHOD"; }
@@ -611,7 +611,7 @@ namespace PayTrace.Integration.API
         /// Net amount is returned with a successful request to settle
         ///transactions. This value is the net amount (sales minus refunds) of
         ///the batch that was initiated.
-        /// </summary   
+        /// </summary>   
         public static string NETAMOUNT
         {
             get { return "NETAMOUNT"; }
@@ -620,7 +620,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Flag used to indicate whether the line item amount is net or gross to specify whether the line item amount includes tax. 
         /// Possible values are Y (includes tax) and N (does not include tax).
-        /// </summary   
+        /// </summary>   
         public static string NETGROSSIND
         {
             get { return "NETGROSSIND"; }
@@ -628,7 +628,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Unique identifier for a customer profile that may be sent with request to update a customer profile. This value will be the new customer ID.
-        /// </summary   
+        /// </summary>   
         public static string NEWCUSTID
         {
             get { return "NEWCUSTID"; }
@@ -636,7 +636,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Your new PayTrace password when updating user password through the UpdatePassword method.
-        /// </summary   
+        /// </summary>   
         public static string NEWPSWD
         {
             get { return "NEWPSWD"; }
@@ -644,7 +644,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Confirmation of you new PayTrace password when updating user password through the UpdatePassword method.
-        /// </summary   
+        /// </summary>   
         public static string NEWPSWD2
         {
             get { return "NEWPSWD2"; }
@@ -652,7 +652,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Next date the updated recurring transaction should be processed.
-        /// </summary   
+        /// </summary>   
         public static string NEXT
         {
             get { return "NEXT"; }
@@ -660,7 +660,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Portion of the original transaction amount that is national tax. Generally only applicable to orders shipped to countries with a national or value added tax.
-        /// </summary   
+        /// </summary>   
         public static string NTAX
         {
             get { return "NTAX"; }
@@ -668,7 +668,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Developer’s identifier for an order that is placed through the PayTrace API Secure Checkout
-        /// </summary   
+        /// </summary>   
         public static string ORDERID
         {
             get { return "ORDERID"; }
@@ -676,7 +676,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Unique identifier of the request from your system that will be returned in the response if RETURNID is set to Y
-        /// </summary   
+        /// </summary>   
         public static string ORIGINALID
         {
             get { return "ORIGINALID"; }
@@ -684,7 +684,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Number of records from result set that should be returned in the Export--- request. This can be used to return only a section of the complete result set.
-        /// </summary   
+        /// </summary>   
         public static string PAGESIZE
         {
             get { return "PAGESIZE"; }
@@ -692,7 +692,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// First record from the result set that should be returned in the Export--- request. This can be used to return only a section of the complete result set.
-        /// </summary   
+        /// </summary>   
         public static string PAGESTART
         {
             get { return "PAGESTART"; }
@@ -702,7 +702,7 @@ namespace PayTrace.Integration.API
         /// Authorized transaction amount in the event that a transaction is
         ///partially approved. This value will only be returned if
         ///ENABLEPARTIALAUTH is set to Y.
-        /// </summary   
+        /// </summary>   
         public static string PARTIALAMOUNT
         {
             get { return "PARTIALAMOUNT"; }
@@ -710,7 +710,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Customer's phone number (i.e. (555)555-5555, 555-555-5555, or 5555555555).
-        /// </summary   
+        /// </summary>   
         public static string PHONE
         {
             get { return "PHONE"; }
@@ -718,7 +718,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Only used when processing Cash Advances. This required field may be the card holder’s drivers license number or other form of photo ID.
-        /// </summary   
+        /// </summary>   
         public static string PHOTOID
         {
             get { return "PHOTOID"; }
@@ -726,7 +726,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Optional URL with any request where the response/error generated from the request may be sent in addition to the comptuer that originated the request.
-        /// </summary   
+        /// </summary>   
         public static string POSTURL
         {
             get { return "POSTURL"; }
@@ -734,7 +734,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Your unique identifier for the product.
-        /// </summary   
+        /// </summary>   
         public static string PRODUCTID
         {
             get { return "PRODUCTID"; }
@@ -742,7 +742,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Your PayTrace password is required to authenticate your request.*
-        /// </summary   
+        /// </summary>   
         public static string PSWD
         {
             get { return "PSWD"; }
@@ -750,7 +750,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Item count of the product in this order
-        /// </summary   
+        /// </summary>   
         public static string QUANTITY
         {
             get { return "QUANTITY"; }
@@ -758,7 +758,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// The ID of the Recurring Transaction that is being updated.
-        /// </summary   
+        /// </summary>   
         public static string RECURID
         {
             get { return "RECURID"; }
@@ -766,7 +766,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Default value is C which represents credit card number. Alternative is A which represents an ACH/check transaction.
-        /// </summary   
+        /// </summary>   
         public static string RECURTYPE
         {
             get { return "RECURTYPE"; }
@@ -775,7 +775,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Total amount of refunds included in a batch. This value is returned
         /// in ExportBatches requests.
-        /// </summary   
+        /// </summary>   
         public static string REFUNDAMOUNT
         {
             get { return "REFUNDAMOUNT"; }
@@ -784,7 +784,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Total number of refunds included in a batch. This value is returned
         /// in ExportBatches requests.
-        /// </summary   
+        /// </summary>   
         public static string REFUNDCOUNT
         {
             get { return "REFUNDCOUNT"; }
@@ -792,7 +792,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Sentence or two that confirms the method that was requested.
-        /// </summary   
+        /// </summary>   
         public static string RESPONSE
         {
             get { return "RESPONSE"; }
@@ -800,7 +800,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// If set to Y, card numbers from ExportTranx and ExportCustomers requests will include the first 6 and last 4 digits of the card number
-        /// </summary   
+        /// </summary>   
         public static string RETURNBIN
         {
             get { return "RETURNBIN"; }
@@ -809,7 +809,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// If set to Y, card level results will be returned w/ theresponse. Card level results include whether or not the card is a consumer, purchasing, check, rewards, etc. 
         /// account. Card level results are only returned with requests to process sales or authorizations through accounts on the TSYS/Vital, Heartland, and Trident networks.
-        /// </summary   
+        /// </summary>   
         public static string RETURNCLR
         {
             get { return "RETURNCLR"; }
@@ -817,7 +817,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// If set to Y will return the value of ORIGINALID in the response.
-        /// </summary   
+        /// </summary>   
         public static string RETURNID
         {
             get { return "RETURNID"; }
@@ -825,7 +825,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Address where the product is delivered.
-        /// </summary   
+        /// </summary>   
         public static string SADDRESS
         {
             get { return "SADDRESS"; }
@@ -833,7 +833,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Second line of the address where the product is delivered.
-        /// </summary   
+        /// </summary>   
         public static string SADDRESS2
         {
             get { return "SADDRESS2"; }
@@ -842,7 +842,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Total amount of sales included in a batch. This value is returned in
         /// ExportBatches requests.
-        /// </summary   
+        /// </summary>   
         public static string SALESAMOUNT
         {
             get { return "SALESAMOUNT"; }
@@ -851,7 +851,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Total number of sales included in a batch. This value is returned in
         /// ExportBatches requests.
-        /// </summary   
+        /// </summary>   
         public static string SALESCOUNT
         {
             get { return "SALESCOUNT"; }
@@ -859,7 +859,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// City where the product is delivered.
-        /// </summary   
+        /// </summary>   
         public static string SCITY
         {
             get { return "SCITY"; }
@@ -867,7 +867,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Country that the package will be delivered to.
-        /// </summary   
+        /// </summary>   
         public static string SCOUNTRY
         {
             get { return "SCOUNTRY"; }
@@ -875,7 +875,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// County where the product is delivered.
-        /// </summary   
+        /// </summary>   
         public static string SCOUNTY
         {
             get { return "SCOUNTY"; }
@@ -883,7 +883,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Start date is used for export functions to indicate when to start searching for items to export. Must be a valid date formatted as MM/DD/YYYY.
-        /// </summary   
+        /// </summary>   
         public static string SDATE
         {
             get { return "SDATE"; }
@@ -891,7 +891,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Text that will be searched to narrow down transaction and check results for ExportTranx and ExportCheck requests.
-        /// </summary   
+        /// </summary>   
         public static string SEARCHTEXT
         {
             get { return "SEARCHTEXT"; }
@@ -901,7 +901,7 @@ namespace PayTrace.Integration.API
         /// Date and Time returned with the TransactionRECORD formatted a
         /// general date (i.e. MM/DD/YYYY HH:MM:SS). Settled represents
         /// the date and time the transaction was settled/batched.
-        /// </summary   
+        /// </summary>   
         public static string SETTLED
         {
             get { return "SETTLED"; }
@@ -909,7 +909,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// String of shipping service providers you would like shipping quotes from. String may contain USPS, FEDEX, or UPS in any order or combination.
-        /// </summary   
+        /// </summary>   
         public static string SHIPPERS
         {
             get { return "SHIPPERS"; }
@@ -917,7 +917,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// The name of the shipping company that quoted the price (i.e. UPS, USPS, FEDEX).
-        /// </summary   
+        /// </summary>   
         public static string SHIPPINGCOMPANY
         {
             get { return "SHIPPINGCOMPANY"; }
@@ -925,7 +925,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// The method of shipment that was quoted (i.e. Next Day, Priority, Ground, etc.).
-        /// </summary   
+        /// </summary>   
         public static string SHIPPINGMETHOD
         {
             get { return "SHIPPINGMETHOD"; }
@@ -935,7 +935,7 @@ namespace PayTrace.Integration.API
         /// Cost to use the specified shipping service provider and method
         /// formatted in U.S. dollars as provided by the shipping service
         /// provider.
-        /// </summary   
+        /// </summary>   
         public static string SHIPPINGRATE
         {
             get { return "SHIPPINGRATE"; }
@@ -944,7 +944,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Shipping records are returned when a successful call to
         /// CalculateShipping is requested.
-        /// </summary   
+        /// </summary>   
         public static string SHIPPINGRECORD
         {
             get { return "SHIPPINGRECORD"; }
@@ -952,7 +952,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Name of the person where the product is delivered.
-        /// </summary   
+        /// </summary>   
         public static string SNAME
         {
             get { return "SNAME"; }
@@ -960,7 +960,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// State that the package will be sent from.
-        /// </summary   
+        /// </summary>   
         public static string SOURCESTATE
         {
             get { return "SOURCESTATE"; }
@@ -968,7 +968,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Zip code that the package will be sent from.
-        /// </summary   
+        /// </summary>   
         public static string SOURCEZIP
         {
             get { return "SOURCEZIP"; }
@@ -976,7 +976,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// State where the product is delivered.
-        /// </summary   
+        /// </summary>   
         public static string SSTATE
         {
             get { return "SSTATE"; }
@@ -984,7 +984,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Date the recurring transaction should be processed for the first time.
-        /// </summary   
+        /// </summary>   
         public static string START
         {
             get { return "START"; }
@@ -997,7 +997,7 @@ namespace PayTrace.Integration.API
         /// settled, and the batch number will be appended to the status. If
         /// the is "Y" then the transaction will be settled that evening. If the
         /// status is "N" then the transaction was voided or declined.
-        /// </summary   
+        /// </summary>   
         public static string STATUS
         {
             get { return "STATUS"; }
@@ -1005,7 +1005,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Optional future date when the transaction should beauthorized and settled. Only applicable if the TranxType is STR/FWD
-        /// </summary   
+        /// </summary>   
         public static string STRFWDDATE
         {
             get { return "STRFWDDATE"; }
@@ -1023,7 +1023,7 @@ namespace PayTrace.Integration.API
         /// pipe (|) symbols in the magstripe value. It is imperative
         /// that you replace these pipe symbols with “***” to ensure
         /// that the API is able to parse your request.
-        /// </summary   
+        /// </summary>   
         public static string SWIPE
         {
             get { return "SWIPE"; }
@@ -1031,7 +1031,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Zip code where the product is delivered.
-        /// </summary   
+        /// </summary>   
         public static string SZIP
         {
             get { return "SZIP"; }
@@ -1041,7 +1041,7 @@ namespace PayTrace.Integration.API
         /// Portion of the original transaction amount that is tax. Must
         /// be a number that reports the tax amount of the
         /// transaction. Use -1 if the transaction is tax exempt
-        /// </summary   
+        /// </summary>   
         public static string TAX
         {
             get { return "TAX"; }
@@ -1052,7 +1052,7 @@ namespace PayTrace.Integration.API
         /// PayTrace API. Setting this variable to 'Y' indicates that you agree to
         /// the PayTrace terms and conditions found at
         /// https://paytrace.com/terms.html
-        /// </summary   
+        /// </summary>   
         public static string TERMS
         {
             get { return "TERMS"; }
@@ -1066,7 +1066,7 @@ namespace PayTrace.Integration.API
         ///be processed as test transactions with standardized test
         ///responses. Test transactions will not place a hold on the
         ///customer’s credit card.
-        /// </summary   
+        /// </summary>   
         public static string TEST
         {
             get { return "TEST"; }
@@ -1076,7 +1076,7 @@ namespace PayTrace.Integration.API
         /// The total number of times the recurring transaction should
         /// be processed. Use 999 if the recurring transaction should
         /// be processed indefinitely.
-        /// </summary   
+        /// </summary>   
         public static string TOTALCOUNT
         {
             get { return "TOTALCOUNT"; }
@@ -1085,7 +1085,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Transit routing number for processing check transactions
         /// or managing customer profiles.
-        /// </summary   
+        /// </summary>   
         public static string TR
         {
             get { return "TR"; }
@@ -1095,7 +1095,7 @@ namespace PayTrace.Integration.API
         /// ID assigned by PayTrace to each transaction at the time the
         /// transaction is processed. TransactionID is returned with a
         /// successful call to ProcessTranx.
-        /// </summary   
+        /// </summary>   
         public static string TRANSACTIONID
         {
             get { return "TRANSACTIONID"; }
@@ -1104,7 +1104,7 @@ namespace PayTrace.Integration.API
         /// <summary>
         /// Formatted transaction record returned when a successful call to
         /// ExportTranx method is requested.
-        /// </summary   
+        /// </summary>   
         public static string TRANSACTIONRECORD
         {
             get { return "TRANSACTIONRECORD"; }
@@ -1114,7 +1114,7 @@ namespace PayTrace.Integration.API
         /// Transaction count is returned with a successful request to settle
         /// transactions. This value is the total number of transactions that
         /// were included in the batch.
-        /// </summary   
+        /// </summary>   
         public static string TRANXCOUNT
         {
             get { return "TRANXCOUNT"; }
@@ -1126,7 +1126,7 @@ namespace PayTrace.Integration.API
         /// parameter of an API response and will consequently be
         /// included in requests to email receipts, void transactions,
         /// add level 3 data, etc.
-        /// </summary   
+        /// </summary>   
         public static string TRANXID
         {
             get { return "TRANXID"; }
@@ -1137,7 +1137,7 @@ namespace PayTrace.Integration.API
         /// process if the METHOD is set to ProcessTranx. TRANXTYPE
         /// must be set to one of the following: Sale, Authorization,
         /// Str/Fwd, Refund, Void, Capture, Force or Deleteauthkey.
-        /// </summary   
+        /// </summary>   
         public static string TRANXTYPE
         {
             get { return "TRANXTYPE"; }
@@ -1145,7 +1145,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Your PayTrace user name is required to authenticate your request.
-        /// </summary   
+        /// </summary>   
         public static string UN
         {
             get { return "UN"; }
@@ -1153,7 +1153,7 @@ namespace PayTrace.Integration.API
 
         /// <summary>
         /// Product amount per quantity.
-        /// </summary   
+        /// </summary>   
         public static string UNITCOST
         {
             get { return "UNITCOST"; }
@@ -1164,7 +1164,7 @@ namespace PayTrace.Integration.API
         /// processed the customer or transaction you are trying to
         /// export. This variable is a search criterion for the export
         /// methods.
-        /// </summary   
+        /// </summary>   
         public static string USER
         {
             get { return "USER"; }
@@ -1177,7 +1177,7 @@ namespace PayTrace.Integration.API
         /// Similar values will be returned for all applicable card types, i.e.
         /// MasterCardRefundAmount, AmexRefundAmount,
         /// DiscoverRefundCount, etc.
-        /// </summary   
+        /// </summary>   
         public static string VISAREFUNDAMOUNT
         {
             get { return "VISAREFUNDAMOUNT"; }
@@ -1188,7 +1188,7 @@ namespace PayTrace.Integration.API
         /// batch. Similar values will be returned for all applicable card types,
         /// i.e. MasterCardRefundCount, AmexRefundCount,
         /// DiscoverRefundCount, etc.
-        /// </summary   
+        /// </summary>   
         public static string VISAREFUNDCOUNT
         {
             get { return "VISAREFUNDCOUNT"; }
@@ -1199,7 +1199,7 @@ namespace PayTrace.Integration.API
         /// Similar values will be returned for all applicable card types, i.e.
         /// MasterCardSalesAmount, AmexSalesAmount, DiscoverSalesCount,
         /// etc.
-        /// </summary   
+        /// </summary>   
         public static string VISASALESAMOUNT
         {
             get { return "VISASALESAMOUNT"; }
@@ -1209,7 +1209,7 @@ namespace PayTrace.Integration.API
         /// Total number of Visa sales that were settled in the exported batch.
         /// Similar values will be returned for all applicable card types, i.e.
         /// MasterCardSalesCount, AmexSalesCount, DiscoverSalesCount, etc.
-        /// </summary   
+        /// </summary>   
         public static string VISASALESCOUNT
         {
             get { return "VISASALESCOUNT"; }
@@ -1219,7 +1219,7 @@ namespace PayTrace.Integration.API
         /// Weight of the package that is being shipped. Weight must
         /// be provided in pounds and my have up to two decimals.
         /// Weight must be less than 70 pounds
-        /// </summary   
+        /// </summary>   
         public static string WEIGHT
         {
             get { return "WEIGHT"; }
@@ -1230,7 +1230,7 @@ namespace PayTrace.Integration.API
         /// CustomerRECORD formatted a general date (i.e. MM/DD/YYYY
         /// HH:MM:SS). When represents the date and time the transaction
         /// was first processed or the customer profile was created.
-        /// </summary   
+        /// </summary>   
         public static string WHEN
         {
             get { return "WHEN"; }
