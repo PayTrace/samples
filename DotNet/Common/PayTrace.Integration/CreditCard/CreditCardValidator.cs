@@ -8,7 +8,7 @@ namespace PayTrace.Integration
 {
     class CreditCardValidator
     {
-        public void ValidateCard(CreditCard cc)
+        public void ValidateCard(CreditCardInfo cc)
         {
             CheckRequiredFields(cc);
 
@@ -66,7 +66,7 @@ namespace PayTrace.Integration
                 return false;
         }
 
-        private void CheckRequiredFields(CreditCard cc)
+        private void CheckRequiredFields(CreditCardInfo cc)
         {
             if (string.IsNullOrWhiteSpace(cc.Number))
             {

@@ -14,7 +14,7 @@ namespace PayTrace.Integration.Test
         [TestMethod]
         public void CreditCard_should_pass_validation_tests()
         {
-            CreditCard cc = new CreditCard("4111111111111111",1,2015,"999");
+            CreditCardInfo cc = new CreditCardInfo("4111111111111111",1,2015,"999");
             cc.Validate();
         }
 
@@ -22,7 +22,7 @@ namespace PayTrace.Integration.Test
         [ExpectedException(typeof(CreditCardValidationException))]
         public void CeditCard_should_throw_exception_when_validation_is_called_and_the_date_is_not_set()
         {
-            CreditCard cc = new CreditCard();
+            CreditCardInfo cc = new CreditCardInfo();
             cc.Number = "4111111111111111";
             cc.ExpirationMonth = 1;
             cc.Validate();
@@ -33,7 +33,7 @@ namespace PayTrace.Integration.Test
         [ExpectedException(typeof(CreditCardValidationException))]
         public void CreditCard_should_throw_exception_when_validation_is_called_with_bogus_credit_card_number()
         {
-            CreditCard cc = new CreditCard();
+            CreditCardInfo cc = new CreditCardInfo();
             cc.Number = "4311111111111111";
             cc.ExpirationMonth = 1;
             cc.ExpirationYear = 2015;

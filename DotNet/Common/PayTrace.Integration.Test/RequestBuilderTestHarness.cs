@@ -91,7 +91,7 @@ namespace PayTrace.Integration.Test
         public void CreditCardBuilder_should_set_request_credit_card_info()
         {      
             
-            CreditCard cc = new CreditCard();
+            CreditCardInfo cc = new CreditCardInfo();
             cc.CSC = "999";
             cc.Number = "12345678910";
             cc.ExpirationMonth = 1;
@@ -107,6 +107,29 @@ namespace PayTrace.Integration.Test
             Assert.AreEqual(cc.Number, request[Keys.CC]);
             Assert.AreEqual(cc.ExpirationYear.ToString(), request[Keys.EXPYR]);
             Assert.AreEqual(cc.ExpirationMonth.ToString(), request[Keys.EXPMNTH]);
+        }
+
+        [TestMethod]
+        public void CustomerBuilder_should_set_request_customer_related_info()
+        {
+            Request request = new Request();
+            CustomerInfo customer = new CustomerInfo();
+            customer.CheckingAccount = "12342323214334";
+            customer.Email = "bob@example.com";
+            customer.Fax = "123-123-1234";
+            customer.Phone = "123-123-1231";
+            customer.RoutingNumber = "3223223";
+
+            CustomerBuilder builder = new CustomerBuilder(request);
+            builder.Customer = customer;
+            request = builder.Build();
+
+            Assert.AreEqual(customer.Email, request[Keys.EMAIL]);
+            Assert.AreEqual(customer.Phone, request[Keys.PHONE]);
+            Assert.AreEqual(customer.RoutingNumber, request[Keys.TR]);
+            Assert.AreEqual(customer.CheckingAccount, request[Keys.DDA]);
+          
+
         }
     }
 }

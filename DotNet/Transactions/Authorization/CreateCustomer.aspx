@@ -36,11 +36,11 @@
                 <legend>Customer Login Info</legend>
                     <p>
                         <label>Customer User Name</label><br />
-                     <asp:TextBox runat="server" ID="TextUserName" CssClass="textEntry" />
+                     <asp:TextBox runat="server" ID="tbCustomerUserName" CssClass="textEntry" />
                     </p>
                     <p>
                         <label>Customer Password</label><br />
-                        <asp:TextBox TextMode="Password" runat="server" ID="txtPwd"  CssClass="passwordEntry" />
+                        <asp:TextBox TextMode="Password" runat="server" ID="tbPassword"  CssClass="passwordEntry" />
                     </p>
                     </fieldset>       
                 <fieldset >
@@ -51,9 +51,9 @@
                     </p>
                     <p>
                         <label> Experation Month:</label>
-                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbExperMonth"  CssClass="" MaxLength="2" Text="1" Width="10px"  />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbExpirMonth"  CssClass="" MaxLength="2" Text="1" Width="10px"  />
                          <label> Experation Year:</label>
-                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbYear"  CssClass="" MaxLength="4" Text="2015" Width="30px"   />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbExpirYear"  CssClass="" MaxLength="4" Text="2015" Width="30px"   />
                     </p>
                     </fieldset>  
                 </div>
@@ -62,8 +62,12 @@
                 <fieldset >
                 <legend>Billing Address</legend>
                     <p>
+                        <label>Full Name:</label><br />
+                        <asp:TextBox runat="server" ID="tbBillingFullName" CssClass="textEntry" TextMode="SingleLine" Text="Bob Smith"/>
+                    </p>
+                    <p>
                         <label>Street:</label><br />
-                     <asp:TextBox runat="server" ID="tbBillingStreet" CssClass="textEntry" TextMode="SingleLine" Text="1234 Happy Lane"/>
+                        <asp:TextBox runat="server" ID="tbBillingStreet" CssClass="textEntry" TextMode="SingleLine" Text="1234 Happy Lane"/>
                     </p>
                     <p>
                         <label>Street 2:</label><br />
@@ -91,6 +95,10 @@
                  <div style="float:right;width:42%;">              
                  <fieldset >
                  <legend>Shipping Address</legend>
+                     <p>
+                        <label>Full Name:</label><br />
+                        <asp:TextBox runat="server" ID="tbShippingFullName" CssClass="textEntry" TextMode="SingleLine" Text="Bob Smith"/>
+                    </p>
                     <p>
                         <label>Street:</label><br />
                      <asp:TextBox runat="server" ID="tbShippingStreet" CssClass="textEntry" TextMode="SingleLine" Text="1234 Happy Lane" />

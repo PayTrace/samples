@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="AddressInfo.cs" />
     <Compile Include="AuthorizationInfo.cs" />
-    <Compile Include="CreditCard\CreditCard.cs" />
+    <Compile Include="CreditCard\CreditCardInfo.cs" />
     <Compile Include="API\DestinationList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

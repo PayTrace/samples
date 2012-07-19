@@ -5,16 +5,16 @@ using System.Text;
 
 namespace PayTrace.Integration
 {
-    public class CreditCard
+    public class CreditCardInfo
     {
         public string Number { get; set; }
         public string CSC { get; set; }
         public int ExpirationMonth { get; set; }
         public int ExpirationYear { get; set; }
         
-        public CreditCard() { }
+        public CreditCardInfo() { }
 
-        public CreditCard(
+        public CreditCardInfo(
             string number,  
             int experationMonth,
             int experationYear,

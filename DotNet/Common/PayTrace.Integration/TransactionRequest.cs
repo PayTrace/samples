@@ -13,7 +13,7 @@ namespace PayTrace.Integration
         public AddressInfo ShippingAddress = new AddressInfo();
         protected AuthorizationInfo Auth = null;
         public Uri Destination { get; set; }
-        public CreditCard CreditCard = new CreditCard();
+        public CreditCardInfo CreditCard = new CreditCardInfo();
 
         public TransactionRequest(Uri destination) 
         {

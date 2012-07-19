@@ -94,22 +94,22 @@ namespace Authorization {
         protected global::System.Web.UI.WebControls.TextBox tbFax;
         
         /// <summary>
-        /// TextUserName control.
+        /// tbCustomerUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextUserName;
+        protected global::System.Web.UI.WebControls.TextBox tbCustomerUserName;
         
         /// <summary>
-        /// txtPwd control.
+        /// tbPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPwd;
+        protected global::System.Web.UI.WebControls.TextBox tbPassword;
         
         /// <summary>
         /// TextBox1 control.
@@ -121,22 +121,31 @@ namespace Authorization {
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// tbExperMonth control.
+        /// tbExpirMonth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbExperMonth;
+        protected global::System.Web.UI.WebControls.TextBox tbExpirMonth;
         
         /// <summary>
-        /// tbYear control.
+        /// tbExpirYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbYear;
+        protected global::System.Web.UI.WebControls.TextBox tbExpirYear;
+        
+        /// <summary>
+        /// tbBillingFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbBillingFullName;
         
         /// <summary>
         /// tbBillingStreet control.
@@ -191,6 +200,15 @@ namespace Authorization {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TbBillingCountry;
+        
+        /// <summary>
+        /// tbShippingFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbShippingFullName;
         
         /// <summary>
         /// tbShippingStreet control.

@@ -9,7 +9,7 @@ namespace PayTrace.Integration.RequestBuilders
     public class CreditCardBuilder:RequestBuilderBase
     {
         
-        public CreditCard CreditCard{get;set;}
+        public CreditCardInfo CreditCard{get;set;}
 
         public CreditCardBuilder(Request request):base(request) { }
       

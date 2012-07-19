@@ -13,7 +13,13 @@ namespace PayTrace.Integration.RequestBuilders
 
         public override Request Build()
         {
-            throw new NotImplementedException();
+            _request[Keys.FAX] = Customer.Fax;
+            _request[Keys.PHONE] = Customer.Phone;
+            _request[Keys.EMAIL] = Customer.Email;
+            _request[Keys.DDA] = Customer.CheckingAccount;
+            _request[Keys.TR] = Customer.RoutingNumber;
+
+            return _request;
         }
     }
 }
