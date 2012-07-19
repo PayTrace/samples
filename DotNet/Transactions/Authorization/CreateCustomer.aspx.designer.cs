@@ -22,6 +22,33 @@ namespace Authorization {
         protected global::System.Web.UI.WebControls.Button Top_btnSubmit;
         
         /// <summary>
+        /// divCustomerList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCustomerList;
+        
+        /// <summary>
+        /// CustomerResponseList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Authorization.ResponseList CustomerResponseList;
+        
+        /// <summary>
+        /// divCreateCustomerForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCreateCustomerForm;
+        
+        /// <summary>
         /// CustomerNameLabel control.
         /// </summary>
         /// <remarks>
@@ -112,13 +139,13 @@ namespace Authorization {
         protected global::System.Web.UI.WebControls.TextBox tbPassword;
         
         /// <summary>
-        /// TextBox1 control.
+        /// tbCreditCardNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tbCreditCardNumber;
         
         /// <summary>
         /// tbExpirMonth control.

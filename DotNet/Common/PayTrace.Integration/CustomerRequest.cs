@@ -56,7 +56,7 @@ namespace PayTrace.Integration
 
         private Request BuildCustomerRequest()
         {
-            var request = new Request();
+            var request = new Request(Destination);
             request = AddAuthorization(request);
             request = AddCustomer(request);
             request = AddAddressInfo(request);

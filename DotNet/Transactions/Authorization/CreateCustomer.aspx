@@ -1,15 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateCustomer.aspx.cs" Inherits="Authorization.CreateCustomer" %>
+<%@ Register src="ResponseList.ascx" tagname="ResponseList" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div style="width:100%">
-    <h2 style="float:left;width:60%;">
+    <h2>
         Create Customer 
     </h2>
-    <div style="clear:both;float:right;margin:10px;">
+    <div style="margin:10px;" >
         <asp:Button runat="server" ID="Top_btnSubmit" Text="Submit" OnClick="OnbtnSubmit" />
     </div>
+    <div runat="server" id="divCustomerList" style="display:none;margin:0 auto;clear:both;">
+        <uc1:ResponseList ID="CustomerResponseList" runat="server" /> 
     </div>
+    <div runat="server" id="divCreateCustomerForm">
         <div style="float:left;width:42%;" >
             <fieldset>               
             <legend>Customer Form</legend>
@@ -31,7 +35,7 @@
                 </p>
             </fieldset>
             </div>
-            <div style="float:right;width:42%;"> 
+        <div style="float:right;width:42%;"> 
                 <fieldset >
                 <legend>Customer Login Info</legend>
                     <p>
@@ -47,18 +51,18 @@
                 <legend>Customer Account Info</legend>
                     <p>
                         <label>Credit Card Number:</label><br />
-                     <asp:TextBox runat="server" ID="TextBox1" CssClass="textEntry" Text="4111111111111111" />
+                     <asp:TextBox runat="server" ID="tbCreditCardNumber" CssClass="textEntry" Text="4111111111111111" />
                     </p>
                     <p>
                         <label> Experation Month:</label>
-                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbExpirMonth"  CssClass="" MaxLength="2" Text="1" Width="10px"  />
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="tbExpirMonth"  CssClass="" MaxLength="2" Text="1" Width="15px"  />
                          <label> Experation Year:</label>
                         <asp:TextBox TextMode="SingleLine" runat="server" ID="tbExpirYear"  CssClass="" MaxLength="4" Text="2015" Width="30px"   />
                     </p>
                     </fieldset>  
                 </div>
-                <div id="address" style="clear:both" > 
-                <div style="float:left;width:42%;"> 
+        <div id="address" style="clear:both" > 
+            <div style="float:left;width:42%;"> 
                 <fieldset >
                 <legend>Billing Address</legend>
                     <p>
@@ -92,7 +96,7 @@
                     
                     </fieldset>       
                 </div>
-                 <div style="float:right;width:42%;">              
+            <div style="float:right;width:42%;">              
                  <fieldset >
                  <legend>Shipping Address</legend>
                      <p>
@@ -125,7 +129,8 @@
                     </p>
                     </fieldset>  
                     </div >
-                        <div style="clear:both;float:right;margin:10px;"><asp:button runat="server" ID="bottom_btnSubmit" Text="Submit"  OnClick="OnbtnSubmit" /></div>
-                    </div>
-            
+        </div>
+         <div style="clear:both;margin:10px;"><asp:button runat="server" ID="bottom_btnSubmit" Text="Submit"  OnClick="OnbtnSubmit" /></div>
+   </div> 
+   </div>     
 </asp:Content>

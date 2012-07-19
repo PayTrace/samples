@@ -25,12 +25,16 @@ namespace Authorization
 
             var response = customerRequest.CreateCustomer(tbCustomerUserName.Text, tbPassword.Text);
 
+            divCustomerList.Style.Add("display", "");
+            divCreateCustomerForm.Style.Add("display", "none");
+
+            CustomerResponseList.BindData(response);
         }
 
         private CreditCardInfo GetCreditCardInfo()
         {
             CreditCardInfo CreditCard = new CreditCardInfo();
-            CreditCard.Number = CreditCard.Number;
+            CreditCard.Number = tbCreditCardNumber.Text;
 
             if (!string.IsNullOrWhiteSpace(tbExpirMonth.Text))
             {
