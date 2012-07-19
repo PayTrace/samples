@@ -18,10 +18,6 @@
             <fieldset>               
             <legend>Customer Form</legend>
                 <p>
-                    <asp:Label ID="CustomerNameLabel" runat="server" AssociatedControlID="tbCustomerName">Customer Name:</asp:Label><br />
-                    <asp:TextBox runat="server" ID="tbCustomerName" Text="John Doe" CssClass="textEntry" />
-                </p>
-                <p>
                     <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="tbEmail">Email:</asp:Label><br />
                     <asp:TextBox runat="server" ID="tbEmail"  Text="test@example.com" CssClass="textEntry" />
                 </p>

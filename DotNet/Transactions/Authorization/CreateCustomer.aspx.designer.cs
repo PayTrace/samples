@@ -49,24 +49,6 @@ namespace Authorization {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCreateCustomerForm;
         
         /// <summary>
-        /// CustomerNameLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CustomerNameLabel;
-        
-        /// <summary>
-        /// tbCustomerName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbCustomerName;
-        
-        /// <summary>
         /// EmailLabel control.
         /// </summary>
         /// <remarks>
