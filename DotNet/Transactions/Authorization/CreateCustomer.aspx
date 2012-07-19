@@ -14,7 +14,7 @@
         <uc1:ResponseList ID="CustomerResponseList" runat="server" /> 
     </div>
     <div runat="server" id="divCreateCustomerForm">
-        <div style="float:left;width:42%;" >
+        <div class="formsectionleft" >
             <fieldset>               
             <legend>Customer Form</legend>
                 <p>
@@ -31,7 +31,7 @@
                 </p>
             </fieldset>
             </div>
-        <div style="float:right;width:42%;"> 
+        <div class="formsectionright"> 
                 <fieldset >
                 <legend>Customer Login Info</legend>
                     <p>
@@ -58,7 +58,7 @@
                     </fieldset>  
                 </div>
         <div id="address" style="clear:both" > 
-            <div style="float:left;width:42%;"> 
+            <div class="formsectionleft"> 
                 <fieldset >
                 <legend>Billing Address</legend>
                     <p>
@@ -92,7 +92,7 @@
                     
                     </fieldset>       
                 </div>
-            <div style="float:right;width:42%;">              
+            <div class="formsectionright">              
                  <fieldset >
                  <legend>Shipping Address</legend>
                      <p>

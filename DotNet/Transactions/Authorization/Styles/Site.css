@@ -187,6 +187,18 @@ div.menu ul li a:active
     text-decoration: none;
 }
 
+div.formsectionleft 
+{
+    width:42%;
+    float:left;
+}
+
+div.formsectionright
+{
+    width:42%;
+    float:right;
+}
+
 /* FORM ELEMENTS   
 ----------------------------------------------------------*/
 
