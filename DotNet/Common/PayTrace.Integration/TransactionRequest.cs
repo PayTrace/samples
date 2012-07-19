@@ -113,5 +113,15 @@ namespace PayTrace.Integration
             request[Keys.METHOD] = Methods.ProcessTransaction;
             return new TransactionResponse(request.Send());
         }
+
+        public TransactionResponse AdjustTransactionAmount(string transactionId, decimal amount)
+        {
+            Request request = new Request(Destination);
+            request = AddAuthorization(request);
+            request[Keys.TRANXID] = transactionId;
+            request[Keys.AMOUNT] = amount.ToString();
+            request[Keys.METHOD] = Methods.AdjustAmount;
+            return new TransactionResponse(request.Send());
+        }
     }
 }

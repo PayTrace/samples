@@ -10,5 +10,7 @@ namespace PayTrace.Integration.API
         public static string ProcessTransaction { get { return "ProcessTranx"; } }
 
         public static string CreateCustomer { get { return "CreateCustomer"; } }
+
+        public static string AdjustAmount { get { return "AdjustAmount"; } }
     }
 }

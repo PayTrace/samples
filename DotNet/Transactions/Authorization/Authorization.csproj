@@ -56,6 +56,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="AdjustingTransactionAmount.aspx" />
     <Content Include="AdvancedAuthorization.aspx" />
     <Content Include="AuthorizationAndSale.aspx" />
     <Content Include="AuthorizeThenVoidTransaction.aspx" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustingTransactionAmount.aspx.cs">
+      <DependentUpon>AdjustingTransactionAmount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdjustingTransactionAmount.aspx.designer.cs">
+      <DependentUpon>AdjustingTransactionAmount.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdvancedAuthorization.aspx.cs">
       <DependentUpon>AdvancedAuthorization.aspx</DependentUpon>
